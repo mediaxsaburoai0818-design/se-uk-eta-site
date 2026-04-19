@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #022444;
+  --color-navy-light: #0a3a6b;
+  --color-navy-dark: #011a33;
+  --color-red: #8d1812;
+  --color-red-dark: #6d120e;
+  --color-red-light: #a52a24;
+  --color-gray-bg: #F5F5F5;
+  --color-gray-light: #f0f0f0;
+  --color-gray-border: #e0e0e0;
+  --color-text: #333333;
+  --color-text-light: #666666;
+}
+
+body {
+  font-family: var(--font-noto-sans), 'Noto Sans', sans-serif;
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-noto-serif), 'Noto Serif', serif;
+  color: var(--color-navy);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-navy);
+  color: white;
+}
+
+.content-link {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.content-link:hover {
+  color: var(--color-navy-light);
+}
+
+.heading-band {
+  background-color: #022444;
+  color: white !important;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+@media (max-width: 767px) {
+  .heading-band {
+    font-size: 1.125rem;
+    padding: 1rem 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .heading-band {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
