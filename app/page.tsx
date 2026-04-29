@@ -38,8 +38,8 @@ export default function Home() {
                 href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl border-2 border-white bg-[#e67e22] hover:bg-[#d35400] transition shadow-lg text-center mx-auto"
-                style={{ color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px" }}
+                className="block transition shadow-lg"
+                style={{ color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px", marginLeft: "auto", marginRight: "auto", textAlign: "center", backgroundColor: "#e67e22", borderRadius: "12px", border: "2px solid white" }}
               >
                 <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>Ansok om UK ETA</span>
               </a>
