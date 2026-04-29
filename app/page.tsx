@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FAQAccordion from "./FAQAccordion";
 
 export default function Home() {
   return (
@@ -55,18 +56,26 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e67e22" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-payment.png" alt="" width={40} height={40} className="mx-auto mb-2" />
               <p className="text-3xl md:text-4xl font-bold" style={{ color: "#1a5276" }}>&pound;10-20</p>
               <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>Ansokningsavgift</p>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e67e22" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-clock.png" alt="" width={40} height={40} className="mx-auto mb-2" />
               <p className="text-3xl md:text-4xl font-bold" style={{ color: "#1a5276" }}>72h</p>
               <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>Max handlaggningstid</p>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e67e22" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-calendar.png" alt="" width={40} height={40} className="mx-auto mb-2" />
               <p className="text-3xl md:text-4xl font-bold" style={{ color: "#1a5276" }}>2 ar</p>
               <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>Giltighetstid</p>
             </div>
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e67e22" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/icon-suitcase.png" alt="" width={40} height={40} className="mx-auto mb-2" />
               <p className="text-3xl md:text-4xl font-bold" style={{ color: "#1a5276" }}>6 man.</p>
               <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>Max vistelse i UK</p>
             </div>
@@ -189,42 +198,11 @@ export default function Home() {
             Vanliga fragor
           </h2>
 
-          <div className="space-y-6">
-            <div className="pb-5" style={{ borderBottom: "1px solid #d5dbdb" }}>
-              <h3 className="font-bold mb-2" style={{ color: "#1a5276" }}>
-                Behover svenskar UK ETA?
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#5d6d7e" }}>
-                Ja. Fran den 2 april 2025 maste svenska medborgare (och ovriga
-                EU-medborgare) ha UK ETA innan resa till Storbritannien.
-                Detta galler turistresor, affarsresor och transit.
-              </p>
-            </div>
-
-            <div className="pb-5" style={{ borderBottom: "1px solid #d5dbdb" }}>
-              <h3 className="font-bold mb-2" style={{ color: "#1a5276" }}>
-                Hur mycket kostar UK ETA och hur lange galler den?
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#5d6d7e" }}>
-                Avgiften for UK ETA ar &pound;10 (cirka 140 SEK). Auktoriseringen
-                galler i 2 ar fran utfardandedatumet och tillater flera inresor
-                till UK, varje vistelse upp till 6 manader.
-              </p>
-            </div>
-
-            <div className="pb-5" style={{ borderBottom: "1px solid #d5dbdb" }}>
-              <h3 className="font-bold mb-2" style={{ color: "#1a5276" }}>
-                Vad ar skillnaden mellan UK ETA och visum?
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#5d6d7e" }}>
-                UK ETA ar en forenklad elektronisk auktorisering for korta
-                vistelser (upp till 6 manader). Kostnaden ar &pound;10 och
-                ansokan gors online. Brittiskt visum kraver besok pa ett
-                visumcenter, kostar fran &pound;100 och tillater langre
-                vistelser eller arbete.
-              </p>
-            </div>
-          </div>
+          <FAQAccordion items={[
+            { question: "Behover svenskar UK ETA?", answer: "Ja. Fran den 2 april 2025 maste svenska medborgare (och ovriga EU-medborgare) ha UK ETA innan resa till Storbritannien. Detta galler turistresor, affarsresor och transit." },
+            { question: "Hur mycket kostar UK ETA och hur lange galler den?", answer: "Avgiften for UK ETA ar \u00a310 (cirka 140 SEK). Auktoriseringen galler i 2 ar fran utfardandedatumet och tillater flera inresor till UK, varje vistelse upp till 6 manader." },
+            { question: "Vad ar skillnaden mellan UK ETA och visum?", answer: "UK ETA ar en forenklad elektronisk auktorisering for korta vistelser (upp till 6 manader). Kostnaden ar \u00a310 och ansokan gors online. Brittiskt visum kraver besok pa ett visumcenter, kostar fran \u00a3100 och tillater langre vistelser eller arbete." },
+          ]} />
 
           <div className="mt-6">
             <Link
@@ -245,49 +223,27 @@ export default function Home() {
             Anvandbar information
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              {
-                href: "/eta-info/what-is-eta/",
-                title: "Vad ar UK ETA?",
-                desc: "Grundlaggande information om ETA-systemet",
-              },
-              {
-                href: "/eta-info/application/",
-                title: "Hur ansoker man?",
-                desc: "Steg for steg genom formularet",
-              },
-              {
-                href: "/eta-info/fee/",
-                title: "Avgifter for UK ETA",
-                desc: "Detaljer om kostnader",
-              },
-              {
-                href: "/eta-info/expiration/",
-                title: "Giltighetstid",
-                desc: "Nar ska du fornya din ETA-auktorisering",
-              },
-              {
-                href: "/eta-info/required-documents/",
-                title: "Nodvandiga dokument",
-                desc: "Vad du behover forbereda innan ansokan",
-              },
-              {
-                href: "/eta-info/official-gov-uk/",
-                title: "Officiell GOV.UK-webbplats",
-                desc: "Lank till den officiella webbplatsen",
-              },
+              { href: "/eta-info/what-is-eta/", title: "Vad ar UK ETA?", desc: "Grundlaggande information om ETA-systemet", img: "/images/card-what-is-eta.png" },
+              { href: "/eta-info/application/", title: "Hur ansoker man?", desc: "Steg for steg genom formularet", img: "/images/card-application.png" },
+              { href: "/eta-info/fee/", title: "Avgifter for UK ETA", desc: "Detaljer om kostnader", img: "/images/card-fee.png" },
+              { href: "/eta-info/expiration/", title: "Giltighetstid", desc: "Nar ska du fornya din ETA-auktorisering", img: "/images/card-validity.png" },
+              { href: "/eta-info/required-documents/", title: "Nodvandiga dokument", desc: "Vad du behover forbereda innan ansokan", img: "/images/card-documents.png" },
+              { href: "/eta-info/official-gov-uk/", title: "Officiell GOV.UK-webbplats", desc: "Lank till den officiella webbplatsen", img: "/images/card-gov-uk.png" },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-4 hover:bg-white transition"
-                style={{ textDecoration: "none", borderBottom: "1px solid #d5dbdb" }}
+                className="block overflow-hidden transition hover:shadow-lg"
+                style={{ textDecoration: "none", borderRadius: "12px", backgroundColor: "white", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
               >
-                <h3 className="text-sm mb-1" style={{ color: "#1a5276", fontWeight: "bold" }}>
-                  {item.title}
-                </h3>
-                <p className="text-xs" style={{ color: "#5d6d7e" }}>{item.desc}</p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.title} className="w-full h-auto object-cover" style={{ aspectRatio: "4/3" }} />
+                <div style={{ padding: "14px 16px" }}>
+                  <h3 className="text-sm font-bold mb-1" style={{ color: "#1a5276" }}>{item.title}</h3>
+                  <p className="text-xs" style={{ color: "#5d6d7e" }}>{item.desc}</p>
+                </div>
               </Link>
             ))}
           </div>

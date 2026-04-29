@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       {/* Main footer */}
-      <div className="bg-[#0e3a56]">
+      <div className="bg-[#0e3a56]" style={{ color: "white" }}>
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Site info */}
@@ -28,7 +28,7 @@ export default function Footer() {
               <h3 className="text-sm font-bold mb-3 uppercase tracking-wider" style={{ color: "white" }}>
                 Information om UK ETA
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm" style={{ color: "white" }}>
                 <li>
                   <Link
                     href="/eta-info/what-is-eta/"
@@ -85,7 +85,7 @@ export default function Footer() {
               <h3 className="text-sm font-bold mb-3 uppercase tracking-wider" style={{ color: "white" }}>
                 Om webbplatsen
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm" style={{ color: "white" }}>
                 <li>
                   <Link
                     href="/site-info/about/"
@@ -134,7 +134,7 @@ export default function Footer() {
               <h3 className="text-sm font-bold mb-3 uppercase tracking-wider" style={{ color: "white" }}>
                 Officiella webbplatser
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm" style={{ color: "white" }}>
                 <li>
                   <a
                     href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
@@ -166,12 +166,13 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-              <div className="mt-4 p-3 bg-[#1a5276] border border-white/10 rounded text-xs text-gray-200">
+              <div className="mt-4 p-3 bg-[#1a5276] border border-white/10 rounded text-xs" style={{ color: "white" }}>
                 Denna webbplats ar inte ansluten till Storbritanniens regering. Officiell
                 UK ETA-sida:{" "}
                 <a
                   href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-                  className="text-gray-200 underline hover:text-white"
+                  className="underline hover:text-white"
+                  style={{ color: "white" }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -185,7 +186,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/10 py-4">
           <div className="max-w-6xl mx-auto px-4">
-            <p className="text-xs text-center text-gray-200">
+            <p className="text-xs text-center" style={{ color: "white" }}>
               &copy; {new Date().getFullYear()} UK ETA Online. Alla rattigheter
               forbehallna. | Informationswebbplats &mdash; detta ar inte en officiell
               webbplats for Storbritanniens regering.
