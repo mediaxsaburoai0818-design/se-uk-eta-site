@@ -33,17 +33,14 @@ export default function Home() {
             <p className="text-xs md:text-sm mb-6 md:mb-8 drop-shadow" style={{ color: "rgba(255,255,255,0.9)" }}>
               Electronic Travel Authorisation (ETA) | Sverige omfattas av kravet
             </p>
-            <div className="flex flex-col gap-3 items-center mt-2 w-full" style={{ maxWidth: "360px", margin: "0 auto" }}>
-              <a
-                href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition shadow-lg"
-                style={{ color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px", marginLeft: "auto", marginRight: "auto", textAlign: "center", backgroundColor: "#e67e22", borderRadius: "12px", border: "2px solid white" }}
-              >
-                <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>Ansok om UK ETA</span>
-              </a>
-            </div>
+            <a
+              href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "block", color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px", marginLeft: "auto", marginRight: "auto", marginTop: "8px", textAlign: "center", backgroundColor: "#e67e22", borderRadius: "12px", border: "2px solid white", boxShadow: "0 10px 15px rgba(0,0,0,0.1)" }}
+            >
+              <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>Ansok om UK ETA</span>
+            </a>
           </div>
         </div>
       </section>
