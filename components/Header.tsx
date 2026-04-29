@@ -28,7 +28,7 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50" style={{ backgroundColor: "#022444" }}>
+    <header className="sticky top-0 z-50" style={{ backgroundColor: "#1a5276" }}>
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -65,7 +65,7 @@ export default function Header() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#022444]"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1a5276]"
                     >
                       {child.label}
                     </Link>
@@ -90,7 +90,7 @@ export default function Header() {
               href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 bg-[#8d1812] hover:bg-[#6d120e] rounded-lg py-2.5 px-6 text-sm transition shadow-md"
+              className="ml-3 bg-[#e67e22] hover:bg-[#d35400] rounded-lg py-2.5 px-6 text-sm transition shadow-md"
               style={{ color: "white", textDecoration: "none" }}
             >
               <span style={{ color: "white" }}>Ansok om ETA</span>
@@ -155,7 +155,7 @@ export default function Header() {
               href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-[#8d1812] hover:bg-[#6d120e] rounded-lg py-3 px-6 text-sm text-center mt-2 transition shadow-md"
+              className="block bg-[#e67e22] hover:bg-[#d35400] rounded-lg py-3 px-6 text-sm text-center mt-2 transition shadow-md"
               style={{ color: "white", textDecoration: "none" }}
               onClick={() => setMobileMenuOpen(false)}
             >

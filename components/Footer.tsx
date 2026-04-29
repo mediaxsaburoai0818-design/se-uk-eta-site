@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       {/* Main footer */}
-      <div className="bg-[#011a33]">
+      <div className="bg-[#0e3a56]">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Site info */}
@@ -166,7 +166,7 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-              <div className="mt-4 p-3 bg-[#022444] border border-white/10 rounded text-xs text-gray-200">
+              <div className="mt-4 p-3 bg-[#1a5276] border border-white/10 rounded text-xs text-gray-200">
                 Denna webbplats ar inte ansluten till Storbritanniens regering. Officiell
                 UK ETA-sida:{" "}
                 <a
