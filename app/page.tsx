@@ -13,7 +13,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,82,118,0.55), rgba(26,82,118,0.45))" }} />
-        <div className="relative max-w-3xl mx-auto px-10 md:px-16 py-16 md:py-28 w-full">
+        <div className="relative max-w-3xl mx-auto px-6 md:px-16 py-16 md:py-28 w-full">
           <div className="max-w-3xl mx-auto text-center">
             <h1
               className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight drop-shadow-lg"
@@ -38,8 +38,8 @@ export default function Home() {
                 href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full transition shadow-lg text-center"
-                style={{ color: "white", textDecoration: "none", padding: "18px 24px", backgroundColor: "#e67e22", borderRadius: "8px" }}
+                className="block rounded-xl border-2 border-white bg-[#e67e22] hover:bg-[#d35400] transition shadow-lg text-center mx-auto"
+                style={{ color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px" }}
               >
                 <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>Ansok om UK ETA</span>
               </a>
@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* Key facts - floating cards on light blue */}
       <section style={{ backgroundColor: "#ebf5fb" }} className="py-12">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div style={{ backgroundColor: "white", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", padding: "24px 16px", borderTop: "3px solid #e67e22" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -85,7 +85,7 @@ export default function Home() {
 
       {/* UK ETA overview - white bg */}
       <section className="bg-white py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2 className="py-4 px-6 text-lg sm:text-xl md:text-2xl font-bold leading-snug mb-6" style={{ backgroundColor: "#1a5276", color: "white" }}>
             Vad ar UK ETA?
           </h2>
@@ -112,70 +112,50 @@ export default function Home() {
 
       {/* Application steps - light blue bg */}
       <section style={{ backgroundColor: "#ebf5fb" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2 className="py-4 px-6 text-lg sm:text-xl md:text-2xl font-bold leading-snug mb-6" style={{ backgroundColor: "#1a5276", color: "white" }}>
             Hur ansoker man om UK ETA?
           </h2>
 
           <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <span className="flex-shrink-0 w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: "#e67e22" }}>
-                1
-              </span>
-              <div>
-                <h3 className="font-bold mb-1" style={{ color: "#1a5276" }}>
-                  Ladda ner appen UK ETA
-                </h3>
-                <p className="text-sm" style={{ color: "#5d6d7e" }}>
-                  Ladda ner appen &quot;UK ETA&quot; fran App Store eller Google Play,
-                  eller besok GOV.UK:s webbplats.
-                </p>
-              </div>
+            <div>
+              <h3 className="font-bold mb-1 pb-1" style={{ color: "#1a5276", borderBottom: "2px solid #1a5276" }}>
+                Ladda ner appen UK ETA
+              </h3>
+              <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>
+                Ladda ner appen &quot;UK ETA&quot; fran App Store eller Google Play,
+                eller besok GOV.UK:s webbplats.
+              </p>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <span className="flex-shrink-0 w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: "#e67e22" }}>
-                2
-              </span>
-              <div>
-                <h3 className="font-bold mb-1" style={{ color: "#1a5276" }}>
-                  Skanna passet och ta ett foto
-                </h3>
-                <p className="text-sm" style={{ color: "#5d6d7e" }}>
-                  Skanna ditt biometriska pass med telefonen och ta ett
-                  ansiktsfoto (selfie).
-                </p>
-              </div>
+            <div>
+              <h3 className="font-bold mb-1 pb-1" style={{ color: "#1a5276", borderBottom: "2px solid #1a5276" }}>
+                Skanna passet och ta ett foto
+              </h3>
+              <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>
+                Skanna ditt biometriska pass med telefonen och ta ett
+                ansiktsfoto (selfie).
+              </p>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <span className="flex-shrink-0 w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: "#e67e22" }}>
-                3
-              </span>
-              <div>
-                <h3 className="font-bold mb-1" style={{ color: "#1a5276" }}>
-                  Fyll i formularet och betala (&pound;10)
-                </h3>
-                <p className="text-sm" style={{ color: "#5d6d7e" }}>
-                  Ange personuppgifter, reseinformation och betala med
-                  kort eller Apple/Google Pay.
-                </p>
-              </div>
+            <div>
+              <h3 className="font-bold mb-1 pb-1" style={{ color: "#1a5276", borderBottom: "2px solid #1a5276" }}>
+                Fyll i formularet och betala (&pound;10)
+              </h3>
+              <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>
+                Ange personuppgifter, reseinformation och betala med
+                kort eller Apple/Google Pay.
+              </p>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <span className="flex-shrink-0 w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: "#e67e22" }}>
-                4
-              </span>
-              <div>
-                <h3 className="font-bold mb-1" style={{ color: "#1a5276" }}>
-                  Vanta pa godkannande
-                </h3>
-                <p className="text-sm" style={{ color: "#5d6d7e" }}>
-                  De flesta ansokningar behandlas inom nagra timmar,
-                  men det kan ta upp till 72 timmar.
-                </p>
-              </div>
+            <div>
+              <h3 className="font-bold mb-1 pb-1" style={{ color: "#1a5276", borderBottom: "2px solid #1a5276" }}>
+                Vanta pa godkannande
+              </h3>
+              <p className="text-sm mt-2" style={{ color: "#5d6d7e" }}>
+                De flesta ansokningar behandlas inom nagra timmar,
+                men det kan ta upp till 72 timmar.
+              </p>
             </div>
           </div>
 
@@ -193,7 +173,7 @@ export default function Home() {
 
       {/* FAQ preview - white bg */}
       <section className="bg-white py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2 className="py-4 px-6 text-lg sm:text-xl md:text-2xl font-bold leading-snug mb-6" style={{ backgroundColor: "#1a5276", color: "white" }}>
             Vanliga fragor
           </h2>
@@ -218,7 +198,7 @@ export default function Home() {
 
       {/* Related pages - light blue bg */}
       <section style={{ backgroundColor: "#ebf5fb" }} className="py-16">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2 className="py-4 px-6 text-lg sm:text-xl md:text-2xl font-bold leading-snug mb-6" style={{ backgroundColor: "#1a5276", color: "white" }}>
             Anvandbar information
           </h2>
@@ -251,8 +231,8 @@ export default function Home() {
       </section>
 
       {/* CTA - warm accent */}
-      <section style={{ backgroundColor: "#1a5276" }} className="py-16 text-white text-center">
-        <div className="max-w-3xl mx-auto px-10 md:px-16">
+      <section style={{ backgroundColor: "#1a5276" }} className="pt-16 pb-40 text-white text-center">
+        <div className="max-w-3xl mx-auto px-6 md:px-16">
           <h2
             className="text-2xl md:text-3xl font-bold mb-4"
             style={{
@@ -266,13 +246,13 @@ export default function Home() {
             Forbered ditt biometriska pass och ansok via appen eller
             GOV.UK:s webbplats.
           </p>
-          <div style={{ maxWidth: "360px", margin: "0 auto" }}>
+          <div style={{ margin: "0 auto" }}>
             <a
               href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full transition shadow-lg text-center"
-              style={{ color: "white", textDecoration: "none", padding: "18px 24px", backgroundColor: "#e67e22", borderRadius: "8px" }}
+              className="block rounded-xl border-2 border-white bg-[#e67e22] hover:bg-[#d35400] transition shadow-lg text-center mx-auto"
+              style={{ color: "white", textDecoration: "none", padding: "18px 24px", width: "100%", maxWidth: "360px" }}
             >
               <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>Ansok om UK ETA</span>
             </a>
