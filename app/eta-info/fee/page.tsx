@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Avgifter for UK ETA - Hur mycket kostar ansokan?",
+  title: "UK ETA 2026 avgift £20 — höjning från £16 och betalningsmetoder",
   description:
-    "Avgiften for UK ETA ar 10 pund. Detaljer om kostnader, betalningsmetoder och varningar for falska webbplatser.",
+    "Aktuell UK ETA 2026 avgift är £20 (höjning från £16 den 9 april 2025). Engångsbetalning, giltighet 2 år, inga dolda kostnader.",
 };
 
 export default function Fee() {

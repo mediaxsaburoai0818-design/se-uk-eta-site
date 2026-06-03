@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Vad ar UK ETA? - Komplett guide",
+  title: "Vad är UK ETA? Komplett guide 2026",
   description:
-    "UK ETA (Electronic Travel Authorisation) - elektronisk reseauktorisering till Storbritannien. Lander som omfattas, villkor, skillnader mot visum.",
+    "UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisering som varit obligatorisk sedan den 2 april 2025. Förfarande, avgift £20, giltighet 2 år, beslut vanligtvis inom 3 dagar.",
 };
 
 export default function WhatIsEta() {

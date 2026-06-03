@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Nodvandiga dokument for UK ETA-ansokan",
+  title: "UK ETA 2026 obligatoriska dokument — pass, foto, krav",
   description:
-    "Lista over nodvandiga dokument for att ansoka om UK ETA. Biometriskt pass, foto, personuppgifter.",
+    "Dokument som krävs för UK ETA-ansökan: biometriskt pass, digitalt foto, betalkortsuppgifter. Komplett lista och tekniska krav.",
 };
 
 export default function RequiredDocuments() {

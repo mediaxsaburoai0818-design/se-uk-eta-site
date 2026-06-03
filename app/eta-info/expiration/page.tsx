@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "UK ETA giltighetstid - Nar ska du fornya?",
+  title: "UK ETA 2026 giltighet — 2 år och flera inresor",
   description:
-    "UK ETA galler i 2 ar fran godkannande. Lar dig nar du behover fornya auktoriseringen och vilka andringar som ogiltigforklarar den.",
+    "UK ETA gäller 2 år från godkännande. Flera inresor till Storbritannien möjliga. Lär dig när auktoriseringen ska förnyas.",
 };
 
 export default function Expiration() {

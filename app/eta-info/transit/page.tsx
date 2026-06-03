@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Transit genom Storbritannien - Behover jag UK ETA?",
+  title: "Transit genom Storbritannien — behöver du UK ETA 2026?",
   description:
-    "Kravs UK ETA vid transit genom Storbritannien? Regler for byten pa brittiska flygplatser.",
+    "Krävs UK ETA vid transit genom Storbritannien? Regler för byten och undantag för flygplatsens transitområde.",
 };
 
 export default function Transit() {

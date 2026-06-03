@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Svenska i Storbritannien - Svensk gemenskap i UK",
+  title: "Svenskar i Storbritannien — gemenskap och Settled Status",
   description:
-    "Information om den svenska gemenskapen i Storbritannien. Cirka 100 000 svenskar bor i UK. Anvandbar resurser och organisationer.",
+    "Cirka 25 000 svenskar bor i Storbritannien. Information om gemenskapen, Settled Status och UK ETA-relaterade frågor.",
 };
 
 export default function SwedishCommunity() {

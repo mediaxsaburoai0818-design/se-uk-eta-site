@@ -20,18 +20,18 @@ const notoSerif = Noto_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "UK ETA Online - Reseauktorisering till Storbritannien",
-    template: "%s | UK ETA Online",
+    default: "UK ETA Online 2026 | Steg-för-steg-ansökningsguide på svenska",
+    template: "%s ‐ UK ETA Online",
   },
   description:
-    "Komplett guide om UK ETA (Electronic Travel Authorisation) till Storbritannien. Ansokan, avgifter, FAQ och mer.",
+    "Komplett guide om UK ETA 2026 på svenska. För resor till Storbritannien: obligatoriskt från den 2 april 2025 — ansökan ska lämnas in 3 dagar före avresa. Se till att skicka in ansökan i tid.",
   keywords:
-    "UK ETA, Storbritannien, reseauktorisering, Electronic Travel Authorisation, ETA ansokan, Sverige, resa till England, GOV.UK",
+    "UK ETA, UK ETA 2026, Storbritannien, elektronisk reseauktorisering, ETA-ansökan, Sverige, avgift £20",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "UK ETA Online - Reseauktorisering till Storbritannien",
+    title: "UK ETA Online 2026 | Steg-för-steg-ansökningsguide på svenska",
     description:
-      "Komplett guide om UK ETA-systemet. Information, forfarande, kostnader och FAQ.",
+      "Komplett guide om UK ETA 2026 på svenska. För resor till Storbritannien: obligatoriskt från den 2 april 2025 — ansökan ska lämnas in 3 dagar före avresa. Se till att skicka in ansökan i tid.",
     locale: "sv_SE",
     type: "website",
   },

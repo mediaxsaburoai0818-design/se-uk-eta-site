@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Hur ansoker man om UK ETA - Steg-for-steg-guide",
+  title: "Hur man ansöker om UK ETA 2026 — steg-för-steg-guide",
   description:
-    "Detaljerad guide om hur du ansoker om UK ETA. Steg for steg fran forberedelse av dokument till godkannande.",
+    "Hur man ansöker om UK ETA steg för steg — från dokumentförberedelse till godkännande. Beslut vanligtvis inom 3 dagar, ofta inom några minuter.",
 };
 
 export default function Application() {

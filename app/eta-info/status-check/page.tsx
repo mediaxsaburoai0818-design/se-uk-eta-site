@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Kontrollera status for UK ETA-ansokan",
+  title: "UK ETA 2026 statuskontroll — innebörd av statusar",
   description:
-    "Hur du kontrollerar status for din UK ETA-ansokan. Mojliga statusar och vad de betyder.",
+    "Kontrollera statusen för din UK ETA-ansökan: innebörd av statusar (väntande, godkänd, avvisad) och normal handläggningstid på 3 dagar.",
 };
 
 export default function StatusCheck() {
