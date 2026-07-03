@@ -11,7 +11,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       <ol className="flex flex-wrap items-center space-x-1">
         <li>
           <Link href="/" className="hover:text-[#022444] transition">
-            Startsida
+Hem
           </Link>
         </li>
         {items.map((item, i) => (

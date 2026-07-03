@@ -3,115 +3,160 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "FAQ - Vanliga fragor om UK ETA",
+  title: "FAQ UK ETA 2026 - vanliga frågor om ansökan och avgifter",
   description:
-    "Svar pa vanliga fragor om UK ETA: forfarande, kostnader, giltighet, avslag och mycket mer.",
+    "Svar på de vanligaste frågorna om UK ETA 2026: procedur, avgift £20, giltighet 2 år, avslag på ansökan och undantag.",
 };
 
 const faqs = [
   {
-    q: "Vad ar UK ETA och vad anvands det till?",
-    a: "UK ETA (Electronic Travel Authorisation) ar en elektronisk reseauktorisering till Storbritannien. Fran den 2 april 2025 maste EU-medborgare, inklusive svenskar, ha ETA innan resa till UK for turism, affarer eller transit.",
+    q: "Vad är UK ETA och vad används den till?",
+    a: "UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisation till Storbritannien. Sedan 2 april 2025 måste EU-medborgare, däribland svenska, ha en ETA före resa till UK i turist-, affärs- eller transitsyfte.",
   },
   {
-    q: "Hur mycket kostar UK ETA-ansokan?",
-    a: "Avgiften for UK ETA ar \u00a310 (cirka 140 SEK). Avgiften debiteras vid insandning av ansokan och aterbetalas inte. Var forsiktig med falska webbplatser som tar ut \u00a350-150 for samma tjanst.",
+    q: "Vad kostar en UK ETA-ans\u00f6kan?",
+    a: "Avgiften f\u00f6r UK ETA \u00e4r \u00a320 (cirka 250 kr). Avgiften tas ut vid ans\u00f6kan och \u00e5terbetalas inte. Se upp f\u00f6r falska webbplatser som tar \u00a350-150 f\u00f6r samma tj\u00e4nst.",
   },
   {
-    q: "Hur lang tid tar handlaggningen av UK ETA?",
-    a: "De flesta ansokningar behandlas inom nagra timmar. I vissa fall kan handlaggningen ta upp till 72 timmar. Det rekommenderas att ansoka minst 72 timmar fore planerad resa.",
+    q: "Hur lång tid tar handläggningen av en UK ETA-ansökan?",
+    a: "De flesta ansökningar handläggs inom några timmar. I vissa fall kan handläggningen ta upp till 72 timmar. Det rekommenderas att du ansöker minst 72 timmar före den planerade resan.",
   },
   {
-    q: "Hur lange galler UK ETA-auktoriseringen?",
-    a: "UK ETA galler i 2 ar fran utfardandedatumet eller tills passet gar ut (beroende pa vad som intraffar forst). Under denna period kan du resa till UK flera ganger, varje vistelse upp till 6 manader.",
+    q: "Hur länge är en UK ETA giltig?",
+    a: "UK ETA är giltig i 2 år från utfärdandet eller tills passet löper ut (beroende på vad som inträffar först). Under denna period kan du resa in i UK flera gånger, varje vistelse upp till 6 månader.",
   },
   {
-    q: "Vad ar skillnaden mellan UK ETA och visum?",
-    a: "UK ETA ar en forenklad elektronisk auktorisering for korta vistelser (upp till 6 manader). Kostnad: \u00a310, ansokan online. Brittiskt visum kraver besok pa visumcenter, kostar fran \u00a3100 och tillater langre vistelser eller arbete.",
+    q: "Vad \u00e4r skillnaden mellan UK ETA och ett visum?",
+    a: "UK ETA \u00e4r en f\u00f6renklad elektronisk auktorisation f\u00f6r korta vistelser (upp till 6 m\u00e5nader). Kostnad: \u00a320, ans\u00f6kan online. Ett brittiskt visum kr\u00e4ver bes\u00f6k p\u00e5 ett viseringscenter, kostar fr\u00e5n \u00a3100 och till\u00e5ter l\u00e4ngre vistelser eller arbete.",
   },
   {
-    q: "Omfattas Sverige av UK ETA-kravet?",
-    a: "Ja. Fran den 2 april 2025 maste svenska medborgare (och alla EU-medborgare) ha UK ETA fore resa till Storbritannien. Detta galler turistresor, affarsresor och transit.",
+    q: "Omfattas Sverige av kravet på UK ETA?",
+    a: "Ja. Sedan 2 april 2025 måste svenska medborgare (och alla EU-medborgare) ha en UK ETA före resa till Storbritannien. Det gäller turist-, affärs- och transitresor.",
   },
   {
-    q: "Vad hander om min UK ETA-ansokan avslags?",
-    a: "Vid avslag pa UK ETA-ansokan far du ett e-postmeddelande med information om orsakerna. Du kan overklaga (administrative review) eller ansoka om turistvisum Standard Visitor visa. Avgiften pa \u00a310 aterbetalas inte.",
+    q: "Vad h\u00e4nder om min UK ETA-ans\u00f6kan avsl\u00e5s?",
+    a: "Om din UK ETA-ans\u00f6kan avsl\u00e5s f\u00e5r du ett mejl med information om sk\u00e4len till avslaget. Du kan beg\u00e4ra ompr\u00f6vning (administrative review) eller ans\u00f6ka om ett turistvisum, Standard Visitor visa. Avgiften p\u00e5 \u00a320 \u00e5terbetalas inte.",
   },
   {
-    q: "Behover jag UK ETA for transit genom Storbritannien?",
-    a: "Ja, UK ETA kravs aven vid transit genom Storbritannien, aven om du inte lamnar transitzonen pa flygplatsen. Detta galler t.ex. byten pa Heathrow.",
+    q: "Behöver jag UK ETA för transit genom Storbritannien?",
+    a: "Ja, UK ETA krävs även vid transit genom Storbritannien, även om du inte lämnar transitzonen på flygplatsen. Det gäller t.ex. byten på Heathrow.",
   },
   {
-    q: "Vilka dokument behovs for att ansoka om UK ETA?",
-    a: "Du behover ett giltigt biometriskt pass, en smartphone med kamera (for att skanna passet och ta selfie), en e-postadress samt ett betalkort (Visa/Mastercard) eller Apple Pay/Google Pay.",
+    q: "Vilka dokument behövs för en UK ETA-ansökan?",
+    a: "Du behöver ett giltigt biometriskt pass, en smartphone med kamera (för att skanna passet och ta en selfie), en e-postadress samt ett betalkort (Visa/Mastercard) eller Apple Pay/Google Pay.",
   },
   {
-    q: "Kan jag ansoka om UK ETA pa telefonen?",
-    a: "Ja, UK ETA-ansokan kan goras via den officiella mobilappen 'UK ETA' som finns for iOS och Android. Detta ar det rekommenderade sattet att ansoka eftersom appen mojliggor NFC-skanning av passet.",
+    q: "Kan jag ansöka om UK ETA på telefonen?",
+    a: "Ja, du kan ansöka om UK ETA via den officiella mobilappen 'UK ETA' som finns för iOS och Android. Det är det rekommenderade sättet att ansöka, eftersom appen kan skanna passet via NFC.",
   },
   {
     q: "Garanterar UK ETA inresa till Storbritannien?",
-    a: "Nej. UK ETA ar enbart en reseauktorisering. Det slutliga beslutet om inresa fattas av en tjanstemn vid UK Border Force vid ankomst. Inresa kan nekas aven med godkand ETA.",
+    a: "Nej. UK ETA är endast en reseauktorisation. Det slutgiltiga beslutet om inresa fattas av en tjänsteman från UK Border Force vid ankomsten. Tjänstemannen kan neka inresa även med en godkänd ETA.",
   },
   {
-    q: "Kan jag arbeta i UK med UK ETA?",
-    a: "Nej. UK ETA ger inte ratt att arbeta i Storbritannien. For arbete kravs lampligt arbetsvisum (t.ex. Skilled Worker visa). ETA ar avsedd enbart for turistbesok, affarsresor och transit.",
+    q: "Kan jag arbeta i UK med en UK ETA?",
+    a: "Nej. UK ETA ger inte rätt att arbeta i Storbritannien. För arbete krävs ett lämpligt arbetsvisum (t.ex. Skilled Worker visa). ETA är endast avsedd för turist-, affärs- och transitresor.",
   },
   {
-    q: "Behover barn UK ETA?",
-    a: "Ja, varje barn som reser till Storbritannien maste ha en egen UK ETA oavsett alder. Ett separat biometriskt pass kravs. Ansokan for barnet kan goras av en foralder eller vardnadshavare.",
+    q: "Behöver barn UK ETA?",
+    a: "Ja, varje barn som reser till Storbritannien måste ha en egen UK ETA, oavsett ålder. Ett eget biometriskt pass krävs. En förälder eller vårdnadshavare kan ansöka för barnets räkning.",
   },
   {
-    q: "Behover svenskar med settled status UK ETA?",
-    a: "Nej. Svenskar med settled eller pre-settled status inom ramen for EU Settlement Scheme behover inte UK ETA. Deras status ar kopplad till passet och verifieras automatiskt vid gransen.",
+    q: "Behöver svenskar med settled status UK ETA?",
+    a: "Nej. Svenskar som har settled eller pre-settled status inom EU Settlement Scheme behöver inte UK ETA. Deras status är kopplad till passet och verifieras automatiskt vid gränsen.",
   },
   {
-    q: "Var kan jag ansoka om UK ETA?",
-    a: "UK ETA-ansokan kan enbart goras pa den officiella GOV.UK-webbplatsen (gov.uk/eta) eller via den officiella mobilappen 'UK ETA'. Anvand inte formedlare som tar ut forhojda avgifter.",
+    q: "Var kan jag ansöka om UK ETA?",
+    a: "Du kan endast ansöka om UK ETA på den officiella GOV.UK-sidan (gov.uk/eta) eller via den officiella mobilappen 'UK ETA'. Använd inte mellanhänder som tar ut överpriser.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
-      <Breadcrumb items={[{ label: "FAQ" }]} />
+    <div>
+      <section className="sub-hero relative overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/sub-hero/faq.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 sub-hero-scrim" />
+        <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">
+          <p className="kicker mb-3 mt-4">FAQ</p>
+          <h1
+            className="deco-head text-3xl md:text-4xl font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-noto-serif), serif" }}
+          >
+            <span className="deco-line" />
+            Vanliga frågor (FAQ)
+          </h1>
+          <p className="text-white/85 leading-relaxed">
+            Svar på de vanligaste frågorna om UK ETA-systemet och att resa till
+            Storbritannien.
+          </p>
+        </div>
+      </section>
 
-      <h1
-        className="text-3xl md:text-4xl font-bold text-[#022444] mb-4"
-        style={{ fontFamily: "var(--font-noto-serif), serif" }}
-      >
-        Vanliga fragor (FAQ)
-      </h1>
-      <p className="text-gray-600 mb-10 leading-relaxed">
-        Svar pa vanliga fragor om UK ETA-systemet och resor till
-        Storbritannien.
-      </p>
-
-      <div className="space-y-6">
-        {faqs.map((faq, i) => (
-          <div key={i} className="border-b border-gray-200 pb-5">
-            <h2 className="font-bold text-[#022444] mb-2 text-base">
-              {faq.q}
-            </h2>
-            <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <div className="space-y-6">
+            {faqs.slice(0, 5).map((faq, i) => (
+              <div key={i} className="border-b border-gray-200 pb-5">
+                <h2 className="font-bold text-[#022444] mb-2 text-base">{faq.q}</h2>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      <div className="mt-10 bg-[#F5F5F5] border border-gray-200 rounded p-6">
-        <h2 className="font-bold text-[#022444] mb-2">
-          Hittade du inte svaret?
-        </h2>
-        <p className="text-gray-600 text-sm mb-4">
-          Kontakta oss sa svarar vi pa din fraga.
-        </p>
-        <Link
-          href="/site-info/contact/"
-          className="inline-block bg-[#022444] hover:bg-[#0a3a6b] text-white px-5 py-2 rounded font-bold text-sm transition"
-        >
-          Kontakta oss
-        </Link>
-      </div>
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <div className="space-y-6">
+            {faqs.slice(5, 10).map((faq, i) => (
+              <div key={i} className="border-b border-gray-200 pb-5">
+                <h2 className="font-bold text-[#022444] mb-2 text-base">{faq.q}</h2>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <div className="space-y-6">
+            {faqs.slice(10).map((faq, i) => (
+              <div key={i} className="border-b border-gray-200 pb-5">
+                <h2 className="font-bold text-[#022444] mb-2 text-base">{faq.q}</h2>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <div className="bg-gray-50 border border-gray-200 rounded p-6">
+            <h2 className="font-bold text-[#022444] mb-2">
+              Hittade du inget svar?
+            </h2>
+            <p className="text-gray-600 text-sm mb-4">
+              Kontakta oss så svarar vi på din fråga.
+            </p>
+            <Link
+              href="/site-info/contact/"
+              className="inline-block bg-[#022444] hover:bg-[#0a3a6b] text-white px-5 py-2 rounded font-bold text-sm transition"
+            >
+              Kontakta oss
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* breadcrumb-bottom */}
+      <section className="bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 pt-6 pb-2">
+          <Breadcrumb items={[{ label: "FAQ" }]} />
+        </div>
+      </section>
     </div>
   );
 }

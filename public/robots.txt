@@ -3,4 +3,4 @@ Allow: /
 Disallow: /_next/
 Disallow: /api/
 
-Sitemap: https://eta-se.com/sitemap.xml
+Sitemap: https://eta-pl.com/sitemap.xml
