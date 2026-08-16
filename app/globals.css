@@ -407,3 +407,30 @@ html {
 /* === Ⓒ brackets only: remove gold top line (okina 2026-06-17) === */
 .feature-card { border-top: 0 !important; }
 .card { border-top: 0 !important; }
+
+/* ── 非ラテン文字の言語（ko / he）────────────────────────────────
+   本文フォントは Work_Sans（ラテン文字専用）なので、韓国語・ヘブライ語の
+   グリフを持っていない。指定しないとブラウザ任せの代替フォントになり、
+   端末によって字面が大きく変わる。OS標準の該当フォントを明示して揃える。 */
+[lang="ko"], [lang="ko"] h1, [lang="ko"] h2, [lang="ko"] h3 {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR",
+               "Nanum Gothic", sans-serif;
+}
+[lang="he"], [lang="he"] h1, [lang="he"] h2, [lang="he"] h3 {
+  font-family: "Arial Hebrew", "Noto Sans Hebrew", "David Libre", Arial, sans-serif;
+}
+
+/* ── 右から左に読む言語（he）────────────────────────────────────
+   dir="rtl" を付けるだけでは、左右を決め打ちしている装飾が残ってしまう。
+   実際に崩れる箇所だけを個別に反転させる（全体を反転させると別の崩れを生む）。 */
+[dir="rtl"] .card::after,
+[dir="rtl"] .feature-card::after {
+  right: auto;
+  left: 7px;
+  border-left: 1px solid currentColor;
+  border-right: 0;
+}
+[dir="rtl"] ul, [dir="rtl"] ol {
+  padding-right: 1.25rem;
+  padding-left: 0;
+}

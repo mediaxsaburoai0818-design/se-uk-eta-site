@@ -7,10 +7,12 @@ import no from "./no";
 import cs from "./cs";
 import fi from "./fi";
 import hu from "./hu";
+import ko from "./ko";
+import he from "./he";
 
 // 追加言語のレジストリ。ここに1行足すだけで全ページが生成される。
 // ⚠️ 既存の /de/ /it/ /ro/ /el/ は別プロジェクトから配信しているのでここには入れない。
-export const LANGS: Record<string, LangContent> = { es, nl, pt, da, no, cs, fi, hu };
+export const LANGS: Record<string, LangContent> = { es, nl, pt, da, no, cs, fi, hu, ko, he };
 
 export const LANG_CODES = Object.keys(LANGS);
 
