@@ -27,7 +27,7 @@ export default function StickyCta() {
         <span className="cta-sticky-text">
           <span className="cta-sticky-title">Ska du resa till Storbritannien?</span>
           <span className="cta-sticky-sub">
-            Ansök senast 72 timmar före avresa
+            Ansök minst 3 arbetsdagar före avresa
           </span>
         </span>
         <a

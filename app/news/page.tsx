@@ -6,7 +6,7 @@ import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "./news-data";
 export const metadata: Metadata = {
   title: "Senaste nyheterna om UK ETA och resor till Storbritannien",
   description:
-    "Aktuella nyheter om UK ETA: avgift £20 från 8 april 2026, full tillämpning från februari 2026, inreseregler och ressäkerhet till Storbritannien.",
+    "Aktuella nyheter om UK ETA: avgift £20 från 8 april 2026, full tillämpning från februari 2026, inreseregler och säkerhet på resan till Storbritannien.",
   alternates: { canonical: "https://eta-se.com/news/" },
 };
 

@@ -110,7 +110,7 @@ export default function Transit() {
 
         <div className="bg-[#F5F5F5] border-l-4 border-[#022444] p-4 rounded-r text-sm">
           <strong>Tips:</strong> Om du planerar ett flyg med byte i London,
-          ansok om UK ETA minst 72 timmar fore avresa. Avsaknad av ETA kan
+          ansök om UK ETA minst 3 arbetsdagar före avresa. Avsaknad av ETA kan
           leda till att du nekas ombordstigning.
         </div>
       </div>

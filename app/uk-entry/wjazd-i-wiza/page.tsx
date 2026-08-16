@@ -30,7 +30,7 @@ export default function VisaEntry() {
           <div>
             <h2 className="heading-band mb-4">ETA eller visum? Vistelser upp till 6 månader</h2>
             <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-light)" }}>
-              För turism, affärer, släktbesök eller transit, vid vistelser upp till 6 månader, behöver EU-medborgare inget visum - det räcker med en <strong>UK ETA</strong> (Electronic Travel Authorisation). Ansökan görs online och handläggningen tar vanligtvis upp till 72 timmar, så det är klokt att ansöka några dagar före resan.
+              För turism, affärer, släktbesök eller transit, vid vistelser upp till 6 månader, behöver EU-medborgare inget visum - det räcker med en <strong>UK ETA</strong> (Electronic Travel Authorisation). Ansökan görs online och de flesta får ett automatiskt beslut inom några minuter, men ansök minst 3 arbetsdagar före resan eftersom vissa ansökningar kan kräva ytterligare granskning.
             </p>
             <p className="leading-relaxed" style={{ color: "var(--color-text-light)" }}>
               En ETA kostar £20, är giltig i 2 år och tillåter flera inresor. Läs mer i avsnittet{" "}
@@ -53,8 +53,11 @@ export default function VisaEntry() {
 
           <div>
             <h2 className="heading-band mb-4">Gränskontroll: eGate och manuell passkontroll</h2>
+            <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-light)" }}>
+              På brittiska flygplatser sker gränskontrollen via automatiska <strong>eGate</strong>-spärrar (baserat på biometriskt pass) eller vid en manuell disk med en gränspolis. eGate snabbar upp passkontrollen; vid frågor om resans syfte kan ett samtal med en tjänsteman bli aktuellt. Vem som får använda de automatiska spärrarna och hur passagen går till steg för steg läser du i guiden <Link href="/uk-entry/uk-border-egates/" className="content-link">Passkontroll och eGates</Link>.
+            </p>
             <p className="leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-              På brittiska flygplatser sker gränskontrollen via automatiska <strong>eGate</strong>-spärrar (baserat på biometriskt pass) eller vid en manuell disk med en gränspolis. eGate snabbar upp passkontrollen; vid frågor om resans syfte kan ett samtal med en tjänsteman bli aktuellt.
+              Efter passkontrollen följer tullen - vilka livsmedel och varor du får ta med läser du i guiden <Link href="/uk-entry/uk-customs-rules/" className="content-link">Tullregler och införselgränser</Link>.
             </p>
           </div>
 

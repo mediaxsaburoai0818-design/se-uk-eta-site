@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Kontrollera status på UK ETA-ansökan 2026 - vad statusarna betyder",
+  title: "Kontrollera ETA-status: så verifierar du din UK ETA (2026)",
   description:
     "Kontrollera status på din UK ETA: officiella verktyget gov.uk/check-eta, beslut via e-post inom 1 dag (max 3 arbetsdagar) och vad du gör om beskedet dröjer.",
 };
@@ -291,6 +291,7 @@ export default function StatusCheck() {
           </p>
         </div>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Hur kontrollerar jag min UK ETA?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Med det officiella och kostnadsfria verktyget gov.uk/check-eta: du beh\u00f6ver bara passet som du anv\u00e4nde vid ans\u00f6kan. Verktyget visar om du har en giltig ETA och n\u00e4r den g\u00e5r ut.\"}}, {\"@type\": \"Question\", \"name\": \"Hur l\u00e5ng tid tar beslutet om UK ETA?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"De flesta s\u00f6kande f\u00e5r ett automatiskt beslut inom n\u00e5gra minuter via UK ETA-appen. Vissa ans\u00f6kningar kr\u00e4ver ytterligare granskning \u2014 ans\u00f6k d\u00e4rf\u00f6r minst 3 arbetsdagar f\u00f6re resan.\"}}, {\"@type\": \"Question\", \"name\": \"Vad g\u00f6r jag om min UK ETA avsl\u00e5s?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Det g\u00e5r inte att \u00f6verklaga ett avslag. Alternativet \u00e4r att ans\u00f6ka om ett Standard Visitor-visum. Avgiften p\u00e5 \u00a320 \u00e5terbetalas inte.\"}}]}" }} />
       {/* breadcrumb-bottom */}
       <section className="bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6 pt-6 pb-2">

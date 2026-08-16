@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Integritetspolicy",
   description:
-    "Integritetspolicy för UK ETA Online - information om behandling av personuppgifter i enlighet med GDPR.",
+    "Integritetspolicy för UK ETA-guiden - information om behandling av personuppgifter i enlighet med GDPR.",
 };
 
 export default function PrivacyPolicy() {
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
           <h2 className="heading-band mb-6">1. Allmän information</h2>
           <p className="text-gray-600 leading-relaxed text-sm">
             Denna integritetspolicy fastställer reglerna för behandling och skydd
-            av personuppgifter för användare av webbplatsen UK ETA Online. Vi
+            av personuppgifter för användare av webbplatsen UK ETA-guiden. Vi
             respekterar användarnas integritet och värnar om datasäkerheten.
           </p>
         </div>

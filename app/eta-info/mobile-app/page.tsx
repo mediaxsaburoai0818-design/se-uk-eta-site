@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Officiell UK ETA-mobilapp 2026 - iOS och Android",
+  title: "Officiell UK ETA-app: ansök direkt från mobilen | iOS och Android 2026",
   description:
-    "Den officiella UK ETA-mobilappen för iOS och Android - hur du laddar ner den och ansöker direkt från telefonen steg för steg.",
+    "Med den officiella UK ETA-appen ansöker du direkt i mobilen – så laddar du ner den, vad du behöver (pass och foto) och hur ansökan går till.",
 };
 
 export default function MobileApp() {

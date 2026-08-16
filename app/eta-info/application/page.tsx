@@ -124,8 +124,8 @@ export default function Application() {
           <h2 className="heading-band mb-6">Steg 6: Vänta på godkännande</h2>
           <p className="text-gray-600 leading-relaxed">
             När du har skickat in ansökan får du en bekräftelse via e-post. De
-            flesta ansökningar handläggs inom några timmar, men det kan ta upp
-            till 72 timmar. Du får ett e-postmeddelande om beslutet.
+            flesta sökande får ett automatiskt beslut inom några minuter, men
+            vissa ansökningar kan kräva ytterligare granskning. Du får ett e-postmeddelande om beslutet.
           </p>
         </div>
       </section>

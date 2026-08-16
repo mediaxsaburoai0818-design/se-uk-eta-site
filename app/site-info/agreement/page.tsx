@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Användarvillkor",
   description:
-    "Användarvillkor för UK ETA Online - villkor för användning och webbplatsens ansvar.",
+    "Användarvillkor för UK ETA-guiden - villkor för användning och webbplatsens ansvar.",
 };
 
 export default function Agreement() {
@@ -33,7 +33,7 @@ export default function Agreement() {
           <h2 className="heading-band mb-6">1. Allmänna bestämmelser</h2>
           <p className="text-gray-600 leading-relaxed text-sm">
             Dessa användarvillkor fastställer reglerna för användning av
-            webbplatsen UK ETA Online. Genom att använda webbplatsen accepterar
+            webbplatsen UK ETA-guiden. Genom att använda webbplatsen accepterar
             användaren villkoren nedan.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Agreement() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <h2 className="heading-band mb-6">2. Webbplatsens karaktär</h2>
           <p className="text-gray-600 leading-relaxed text-sm">
-            UK ETA Online är en informationswebbplats. Den är inte den brittiska
+            UK ETA-guiden är en informationswebbplats. Den är inte den brittiska
             regeringens officiella webbplats eller någon myndighets webbplats.
             Informationen på webbplatsen är enbart av informativ karaktär och
             utgör inte juridisk rådgivning eller immigrationsrådgivning.

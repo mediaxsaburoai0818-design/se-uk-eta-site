@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Om oss",
   description:
-    "Om UK ETA Online - syftet med webbplatsen, vilka vi är och vilken information vi tillhandahåller om UK ETA 2026.",
+    "Om UK ETA-guiden - syftet med webbplatsen, vilka vi är och vilken information vi tillhandahåller om UK ETA 2026.",
 };
 
 export default function About() {
@@ -31,7 +31,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <h2 className="heading-band mb-6">Webbplatsens syfte</h2>
           <p className="text-gray-600 leading-relaxed">
-            UK ETA Online är en informationswebbplats som ägnas åt det
+            UK ETA-guiden är en informationswebbplats som ägnas åt det
             elektroniska resetillståndet (ETA) till Storbritannien. Vårt mål är
             att tillhandahålla tillförlitlig, aktuell och användbar information på
             svenska om det nya systemet för resetillstånd.
@@ -58,7 +58,7 @@ export default function About() {
           <h2 className="heading-band mb-6">Viktig friskrivning</h2>
           <div className="bg-white border-l-4 border-[#022444] p-4 rounded-r text-sm text-gray-700">
             <p>
-              UK ETA Online är inte den brittiska regeringens officiella webbplats.
+              UK ETA-guiden är inte den brittiska regeringens officiella webbplats.
               Vi är inte anslutna till Home Office, UK Visas and Immigration
               eller någon annan brittisk myndighet. Den officiella webbplatsen för
               att ansöka om UK ETA är{" "}
@@ -84,7 +84,7 @@ export default function About() {
               <tbody>
                 <tr>
                   <td className="py-2 pr-4 text-gray-500 font-medium">Webbplatsens namn:</td>
-                  <td className="py-2">UK ETA Online</td>
+                  <td className="py-2">UK ETA-guiden</td>
                 </tr>
                 <tr>
                   <td className="py-2 pr-4 text-gray-500 font-medium">Typ:</td>
@@ -105,6 +105,59 @@ export default function About() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Redaktionella riktlinjer</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Uppgifter om avgifter, handläggningstider och hur ETA-systemet
+            fungerar baseras uteslutande på den brittiska regeringens officiella
+            källor (gov.uk) som primär informationskälla. Vi publicerar endast
+            information som bygger på officiella tillkännagivanden och återger
+            inte andrahandsuppgifter eller spekulationer från tredje part.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Uppdateringsprocess</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Vi går regelbundet igenom de officiella tillkännagivandena. Viktiga
+            ändringar, till exempel avgiftsjusteringar, dokumenteras med datum i
+            vår nyhetssektion.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Vad vi inte gör</h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Vi hanterar inga ETA-ansökningar å andras vägnar</li>
+            <li>Vi tar inte emot några avgifter eller förmedlingsarvoden</li>
+            <li>Vi har inget partnerskap med och ingen anknytning till den brittiska regeringen</li>
+            <li>Vi samlar inte in personuppgifter för ansökningsändamål</li>
+          </ul>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            Ansökan om UK ETA görs alltid direkt och uteslutande via gov.uk.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white reveal">
+        <div className="max-w-4xl mx-auto px-6 py-10">
+          <h2 className="heading-band mb-6">Rapportera fel</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Om du upptäcker ett fel på webbplatsen är vi tacksamma om du hör av
+            dig via vårt{" "}
+            <Link href="/site-info/contact/" className="text-[#022444] underline">
+              kontaktformulär
+            </Link>
+            . Vi kontrollerar uppgiften och rättar innehållet efter granskning.
+          </p>
         </div>
       </section>
       {/* breadcrumb-bottom */}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Vad är UK ETA och vad används den till?",
-    a: "UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisation till Storbritannien. Sedan 2 april 2025 måste EU-medborgare, däribland svenska, ha en ETA före resa till UK i turist-, affärs- eller transitsyfte.",
+    a: "UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisering till Storbritannien. Sedan 2 april 2025 måste EU-medborgare, däribland svenska, ha en ETA före resa till UK i turist-, affärs- eller transitsyfte.",
   },
   {
     q: "Vad kostar en UK ETA-ans\u00f6kan?",
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Hur lång tid tar handläggningen av en UK ETA-ansökan?",
-    a: "De flesta ansökningar handläggs inom några timmar. I vissa fall kan handläggningen ta upp till 72 timmar. Det rekommenderas att du ansöker minst 72 timmar före den planerade resan.",
+    a: "De flesta sökande får ett automatiskt beslut inom några minuter via UK ETA-appen. Ett litet antal ansökningar kan kräva ytterligare granskning, så ansök minst 3 arbetsdagar före den planerade resan.",
   },
   {
     q: "Hur länge är en UK ETA giltig?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "Garanterar UK ETA inresa till Storbritannien?",
-    a: "Nej. UK ETA är endast en reseauktorisation. Det slutgiltiga beslutet om inresa fattas av en tjänsteman från UK Border Force vid ankomsten. Tjänstemannen kan neka inresa även med en godkänd ETA.",
+    a: "Nej. UK ETA är endast en reseauktorisering. Det slutgiltiga beslutet om inresa fattas av en tjänsteman från UK Border Force vid ankomsten. Tjänstemannen kan neka inresa även med en godkänd ETA.",
   },
   {
     q: "Kan jag arbeta i UK med en UK ETA?",

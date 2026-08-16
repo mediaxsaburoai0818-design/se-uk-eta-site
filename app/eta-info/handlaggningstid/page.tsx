@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-export const metadata: Metadata = { title: "Hur lång tid tar UK ETA? Handläggningstid och när du ansöker", description: "UK ETA avgörs oftast inom 1 dag, men planera för upp till 3 arbetsdagar. Ansök minst 3 arbetsdagar före avresa. Kostnad £20." };
+export const metadata: Metadata = { title: "Hur lång tid tar UK ETA? Oftast under 24 timmar (max 3 arbetsdagar)", description: "UK ETA avgörs oftast inom 1 dag, men planera för upp till 3 arbetsdagar. Ansök minst 3 arbetsdagar före avresa. Kostnad £20." };
 export default function Page() {
   return (<div>
       <section className="sub-hero relative overflow-hidden">

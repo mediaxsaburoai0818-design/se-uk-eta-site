@@ -120,7 +120,7 @@ export default function WhatIsEta() {
                 </tr>
                 <tr>
                   <td className="p-3 border-b border-gray-100">Handläggningstid</td>
-                  <td className="p-3 border-b border-gray-100">Några timmar &mdash; 72h</td>
+                  <td className="p-3 border-b border-gray-100">Oftast några minuter (automatiskt beslut)</td>
                   <td className="p-3 border-b border-gray-100">Veckor / månader</td>
                 </tr>
                 <tr>

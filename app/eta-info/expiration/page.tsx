@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "UK ETA giltighet 2026 - 2 år och flera inresor",
+  title: "ETA giltighetstid: hur länge gäller UK ETA? (2026)",
   description:
     "UK ETA är giltig i 2 år från godkännandet. Flera inresor till Storbritannien är möjliga. Se när tillståndet behöver förnyas.",
 };
@@ -96,7 +96,7 @@ export default function Expiration() {
           </p>
           <div className="bg-white border-l-4 border-[#022444] p-4 rounded-r text-sm text-gray-700">
             <strong>Tips:</strong> Det rekommenderas att lämna in UK ETA-ansökan
-            minst 72 timmar före den planerade resan, för att ha tid för
+            minst 3 arbetsdagar före den planerade resan, för att ha tid för
             handläggning av ansökan.
           </div>
         </div>

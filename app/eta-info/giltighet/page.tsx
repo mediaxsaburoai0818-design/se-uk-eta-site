@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-export const metadata: Metadata = { title: "UK ETA giltighet: hur länge och förnyelse av pass 2026", description: "UK ETA gäller 2 år eller tills passet går ut. Flera inresor, max 6 månader per vistelse. Nytt pass = nytt ETA." };
+export const metadata: Metadata = { title: "UK ETA giltighet 2026: 2 år eller tills passet går ut – så räknar du", description: "UK ETA gäller 2 år eller tills passet går ut. Flera inresor, max 6 månader per vistelse. Nytt pass = nytt ETA." };
 export default function Page() {
   return (<div>
       <section className="sub-hero relative overflow-hidden">

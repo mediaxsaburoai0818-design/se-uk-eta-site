@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Webbplatskarta",
   description:
-    "Fullständig lista över alla sidor på UK ETA Online - bläddra bland webbplatsens innehåll.",
+    "Fullständig lista över alla sidor på UK ETA-guiden - bläddra bland webbplatsens innehåll.",
 };
 
 const sections = [

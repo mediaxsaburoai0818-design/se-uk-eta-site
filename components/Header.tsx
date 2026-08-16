@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 no-underline">
             {/* Logo C — heraldic shield (crown + ETA) */}
-            <svg width="40" height="44" viewBox="0 0 90 100" role="img" aria-label="UK ETA Center" className="h-10 w-auto lg:h-11 shrink-0"><path d="M45 6 L82 18 V52 C82 76 64 90 45 96 C26 90 8 76 8 52 V18 Z" fill="#022444" stroke="#C5A24A" strokeWidth="3"/><g stroke="#C5A24A" strokeWidth="3"><line x1="30" y1="30" x2="30" y2="66"/><line x1="38" y1="30" x2="38" y2="68"/><line x1="45" y1="30" x2="45" y2="70"/><line x1="52" y1="30" x2="52" y2="68"/><line x1="60" y1="30" x2="60" y2="66"/><line x1="26" y1="38" x2="64" y2="38"/><line x1="26" y1="48" x2="64" y2="48"/><line x1="26" y1="58" x2="64" y2="58"/></g><circle cx="30" cy="30" r="3" fill="#C5A24A"/><circle cx="60" cy="30" r="3" fill="#C5A24A"/><text x="45" y="88" textAnchor="middle" fontFamily="Georgia, serif" fontSize="11" fontWeight="700" fill="#ffffff">ETA</text></svg>
+            <svg width="40" height="44" viewBox="0 0 90 100" role="img" aria-label="UK ETA-guiden" className="h-10 w-auto lg:h-11 shrink-0"><path d="M45 6 L82 18 V52 C82 76 64 90 45 96 C26 90 8 76 8 52 V18 Z" fill="#022444" stroke="#C5A24A" strokeWidth="3"/><g stroke="#C5A24A" strokeWidth="3"><line x1="30" y1="30" x2="30" y2="66"/><line x1="38" y1="30" x2="38" y2="68"/><line x1="45" y1="30" x2="45" y2="70"/><line x1="52" y1="30" x2="52" y2="68"/><line x1="60" y1="30" x2="60" y2="66"/><line x1="26" y1="38" x2="64" y2="38"/><line x1="26" y1="48" x2="64" y2="48"/><line x1="26" y1="58" x2="64" y2="58"/></g><circle cx="30" cy="30" r="3" fill="#C5A24A"/><circle cx="60" cy="30" r="3" fill="#C5A24A"/><text x="45" y="88" textAnchor="middle" fontFamily="Georgia, serif" fontSize="11" fontWeight="700" fill="#ffffff">ETA</text></svg>
             <div className="leading-tight">
               <span
                 className="block text-[16px] lg:text-[19px] font-bold tracking-tight"
@@ -35,7 +35,7 @@ export default function Header() {
                   color: "#ffffff",
                 }}
               >
-                UK ETA Center
+                UK ETA-guiden
               </span>
               <span className="block text-[10px] lg:text-[11px] tracking-wide text-white/70">
                 Reseauktorisering till Storbritannien

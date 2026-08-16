@@ -15,7 +15,7 @@ export default function Footer() {
                   fontFamily: "var(--font-noto-serif), serif",
                 }}
               >
-                UK ETA Online
+                UK ETA-guiden
               </p>
               <p className="text-sm leading-relaxed" style={{ color: "white" }}>
                 Den kompletta guiden till Electronic Travel Authorisation
@@ -210,7 +210,7 @@ export default function Footer() {
         <div className="border-t border-white/10 py-4">
           <div className="max-w-6xl mx-auto px-4">
             <p className="text-xs text-center" style={{ color: "white" }}>
-              &copy; {new Date().getFullYear()} UK ETA Online. Med ensamrätt.
+              &copy; {new Date().getFullYear()} UK ETA-guiden. Med ensamrätt.
               | Informationswebbplats &mdash; inte den brittiska regeringens
               officiella webbplats.
             </p>

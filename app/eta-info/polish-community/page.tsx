@@ -59,7 +59,7 @@ export default function PolishCommunity() {
               { city: "Pass krävs", desc: "Endast giltigt pass accepteras vid inresa" },
               { city: "Inget nationellt ID-kort", desc: "Svenskt ID-kort godtas inte sedan oktober 2021" },
               { city: "ETA per person", desc: "Varje resenär, även barn, behöver en egen UK ETA" },
-              { city: "Ansök i förväg", desc: "Lämna in ansökan minst 72 timmar före avresan" },
+              { city: "Ansök i förväg", desc: "Lämna in ansökan minst 3 arbetsdagar före avresan" },
               { city: "Avgift £20", desc: "Cirka 250 kr per ansökan" },
               { city: "Giltig i 2 år", desc: "Flera inresor under giltighetstiden" },
             ].map((item) => (
@@ -110,7 +110,7 @@ export default function PolishCommunity() {
             viktigaste att tänka på:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Lämna in UK ETA-ansökan minst 72 timmar före avresan</li>
+            <li>Lämna in UK ETA-ansökan minst 3 arbetsdagar före avresan</li>
             <li>Avgiften är &pound;20 (cirka 250 kr)</li>
             <li>Du får vistas i UK upp till 6 månader per inresa</li>
             <li>ETA är giltig i 2 år &mdash; flera inresor</li>

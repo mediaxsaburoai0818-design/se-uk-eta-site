@@ -54,7 +54,7 @@ export const newsItems: NewsItem[] = [
     body: [
       "Den 25 februari 2026 avslutades övergångsperioden för införandet av UK ETA. Från och med detta datum tillämpas kravet fullt ut.",
       "I praktiken innebär det att transportörer (flygbolag, färjor, Eurostar) inte tillåter resenärer som behöver ETA men saknar den att gå ombord. Transportörer riskerar böter för att frakta en passagerare utan giltig auktorisation.",
-      "Därför bör ETA skaffas före resan - helst några dagar i förväg, eftersom handläggningen av ansökan kan ta upp till 72 timmar.",
+      "Därför bör ETA skaffas före resan - minst 3 arbetsdagar i förväg, eftersom ett litet antal ansökningar kan kräva ytterligare granskning.",
     ],
     source: { label: "GOV.UK - Apply for an ETA", href: "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" },
   },
@@ -90,7 +90,7 @@ export const newsItems: NewsItem[] = [
     slug: "bezpieczenstwo-podrozy-wielka-brytania",
     date: "2026-03-01",
     category: "safety",
-    title: "Ressäkerhet till Storbritannien - vad du bör tänka på",
+    title: "Säkerhet på resan till Storbritannien - vad du bör tänka på",
     summary:
       "Inför avresan är det klokt att kontrollera aktuella säkerhetsmeddelanden samt försäkra sig om att passet och ETA är giltiga.",
     body: [

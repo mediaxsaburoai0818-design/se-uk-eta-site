@@ -5,7 +5,7 @@ const latestNews = [...newsItems].sort((a, b) => (a.date < b.date ? 1 : -1)).sli
 
 const facts = [
   { value: "£20", label: "Ansökningsavgift" },
-  { value: "72h", label: "Max. handläggningstid" },
+  { value: "Minuter", label: "Automatiskt beslut för de flesta" },
   { value: "2 år", label: "Giltighetstid" },
   { value: "6 mån.", label: "Max. vistelse i UK" },
 ];
@@ -50,7 +50,7 @@ const steps = [
   {
     icon: "check",
     title: "Vänta på godkännande",
-    desc: "De flesta ansökningar handläggs inom några timmar, men det kan ta upp till 72 timmar.",
+    desc: "De flesta sökande får ett automatiskt beslut inom några minuter via UK ETA-appen. Ett litet antal ansökningar kan kräva ytterligare granskning.",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function Home() {
               UK ETA
             </h1>
             <p className="mt-6 uppercase mx-auto" style={{ fontFamily: "var(--font-display)", color: "#E0C878", letterSpacing: "0.08em", fontSize: "clamp(.64rem, 2vw, 1rem)", lineHeight: 1.7, maxWidth: "26rem", textShadow: "0 2px 10px rgba(0,0,0,.5)" }}>
-              Elektronisk reseauktorisation till Storbritannien
+              Elektronisk reseauktorisering till Storbritannien
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-10 justify-center items-center">
               <a href={GOV} target="_blank" rel="noopener noreferrer" className="btn-red text-base">
@@ -153,7 +153,7 @@ export default function Home() {
             <div className="deco-head center"><span className="deco-line" /></div>
             <h2 className="sec-title text-3xl md:text-4xl mb-4">Vad är UK ETA?</h2>
             <p className="sec-lead">
-              UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisation som införts av Storbritanniens regering.
+              UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisering som införts av Storbritanniens regering.
               Sedan 2 april 2025 måste medborgare i EU-länder, däribland Sverige, ha ETA före resa till Förenade kungariket.
             </p>
           </div>
@@ -184,13 +184,13 @@ export default function Home() {
             <div className="card reveal">
               <h3 className="feature-title mb-2">Giltighetstid</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                ETA är giltig i <strong style={{ color: "var(--color-blue)" }}>2 år</strong> från utfärdandet och tillåter flera inresor till Storbritannien. Om ditt pass dock löper ut tidigare än om 2 år upphör ETA samtidigt som passet — förnya i så fall passet först och ansök sedan om ETA.
+                ETA är giltig i <strong style={{ color: "var(--color-blue)" }}>2 år</strong> från utfärdandet och tillåter flera inresor till Storbritannien. Om ditt pass går ut inom 2 år upphör ETA samtidigt som passet — förnya i så fall passet först och ansök sedan om ETA.
               </p>
             </div>
             <div className="card reveal reveal-delay-1">
               <h3 className="feature-title mb-2">När du ska ansöka</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                Du får oftast besked inom <strong style={{ color: "var(--color-blue)" }}>3 arbetsdagar</strong>, men i vissa fall (t.ex. begäran om ytterligare dokument) kan det ta upp till 30 dagar. Det är bäst att ansöka direkt efter att du planerat resan. När den godkänts får du ett bekräftelsemejl; vid inresan behöver du oftast inte visa upp ETA-numret, men det är bra att spara bekräftelsen (skärmdump eller utskrift).
+                De flesta sökande får ett automatiskt beslut inom <strong style={{ color: "var(--color-blue)" }}>några minuter</strong> via UK ETA-appen. Ansök minst 3 arbetsdagar före resan, eftersom ett litet antal ansökningar kan kräva ytterligare granskning. När den godkänts får du ett bekräftelsemejl; vid inresan behöver du oftast inte visa upp ETA-numret, men det är bra att spara bekräftelsen (skärmdump eller utskrift).
               </p>
             </div>
           </div>
@@ -334,7 +334,7 @@ export default function Home() {
             <div className="card reveal reveal-delay-1">
               <h3 className="feature-title mb-2">Vem måste ha ETA</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                Alla svenska medborgare som reser till UK på en kort vistelse, inklusive barn och spädbarn. Varje person gör en egen separat ansökan.
+                Alla svenska medborgare som reser till UK för en kort vistelse, inklusive barn och spädbarn. Varje person gör en egen separat ansökan.
               </p>
             </div>
             <div className="card reveal reveal-delay-2">
@@ -352,7 +352,7 @@ export default function Home() {
             <div className="card reveal reveal-delay-4">
               <h3 className="feature-title mb-2">När du ska ansöka</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                Helst några dagar före avresan. De flesta beslut fattas inom några timmar, men handläggningen kan ta upp till 72 timmar.
+                Minst 3 arbetsdagar före avresan. De flesta beslut fattas automatiskt inom några minuter, men ett litet antal ansökningar kan kräva ytterligare granskning.
               </p>
             </div>
           </div>
