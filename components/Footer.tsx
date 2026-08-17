@@ -1,6 +1,28 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import headerNav from "@/data/langs/header-nav.json";
 
 export default function Footer() {
+  // ⚠️ フッターの文言もスウェーデン語で固定されている。
+  //    追加言語のページでは、その言語で書ける最小限（社名と免責）だけを出す。
+  const pathname = usePathname() || "/";
+  const lang = pathname.split("/")[1];
+  const nav = (headerNav as Record<string, { siteName: string; tagline: string }>)[lang];
+  if (nav) {
+    return (
+      <footer style={{ backgroundColor: "var(--color-navy)" }} className="mt-16 py-8">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p className="text-white font-bold">{nav.siteName}</p>
+          <p className="text-white/70 text-xs mt-1">{nav.tagline}</p>
+          <p className="text-white/50 text-[11px] mt-4">
+            This site is not affiliated with the UK government. Apply on the official GOV.UK website.
+          </p>
+        </div>
+      </footer>
+    );
+  }
   return (
     <footer>
       {/* Main footer */}

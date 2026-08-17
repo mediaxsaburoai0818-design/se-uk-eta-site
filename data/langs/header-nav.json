@@ -1,0 +1,232 @@
+{
+ "es": {
+  "siteName": "Guía UK ETA",
+  "tagline": "La autorización de viaje para el Reino Unido, explicada paso a paso",
+  "cta": "Solicitar en la web oficial de GOV.UK",
+  "items": [
+   {
+    "label": "Sobre la ETA",
+    "href": "/es/que-es-la-eta/"
+   },
+   {
+    "label": "Cómo solicitar la UK ETA",
+    "href": "/es/como-solicitarla/"
+   },
+   {
+    "label": "Entrada al Reino Unido",
+    "href": "/es/duracion-de-la-estancia/"
+   },
+   {
+    "label": "Preguntas frecuentes",
+    "href": "/es/preguntas-frecuentes/"
+   }
+  ]
+ },
+ "nl": {
+  "siteName": "UK ETA Gids",
+  "tagline": "De reistoestemming voor het Verenigd Koninkrijk, stap voor stap",
+  "cta": "Aanvragen op de officiële site van GOV.UK",
+  "items": [
+   {
+    "label": "Over de ETA",
+    "href": "/nl/wat-is-de-eta/"
+   },
+   {
+    "label": "Hoe vraagt u de UK ETA aan",
+    "href": "/nl/hoe-aanvragen/"
+   },
+   {
+    "label": "Reizen naar het VK",
+    "href": "/nl/verblijfsduur/"
+   },
+   {
+    "label": "Veelgestelde vragen",
+    "href": "/nl/veelgestelde-vragen/"
+   }
+  ]
+ },
+ "pt": {
+  "siteName": "Guia UK ETA",
+  "tagline": "A autorização de viagem para o Reino Unido, passo a passo",
+  "cta": "Pedir no site oficial GOV.UK",
+  "items": [
+   {
+    "label": "Sobre a ETA",
+    "href": "/pt/o-que-e-a-eta/"
+   },
+   {
+    "label": "Como pedir a UK ETA",
+    "href": "/pt/como-pedir/"
+   },
+   {
+    "label": "Entrada no Reino Unido",
+    "href": "/pt/duracao-da-estadia/"
+   },
+   {
+    "label": "Perguntas frequentes",
+    "href": "/pt/perguntas-frequentes/"
+   }
+  ]
+ },
+ "da": {
+  "siteName": "UK ETA Guide",
+  "tagline": "Rejsetilladelsen til Storbritannien, trin for trin",
+  "cta": "Ansøg på GOV.UK's officielle side",
+  "items": [
+   {
+    "label": "Om ETA",
+    "href": "/da/hvad-er-eta/"
+   },
+   {
+    "label": "Sådan søger du om UK ETA",
+    "href": "/da/sadan-ansoger-du/"
+   },
+   {
+    "label": "Rejse til Storbritannien",
+    "href": "/da/opholdets-laengde/"
+   },
+   {
+    "label": "Ofte stillede spørgsmål",
+    "href": "/da/ofte-stillede-sporgsmal/"
+   }
+  ]
+ },
+ "no": {
+  "siteName": "UK ETA Guide",
+  "tagline": "Reisetillatelsen til Storbritannia, steg for steg",
+  "cta": "Søk på GOV.UK sine offisielle sider",
+  "items": [
+   {
+    "label": "Om ETA",
+    "href": "/no/hva-er-eta/"
+   },
+   {
+    "label": "Slik søker du om UK ETA",
+    "href": "/no/slik-soker-du/"
+   },
+   {
+    "label": "Reise til Storbritannia",
+    "href": "/no/oppholdets-lengde/"
+   },
+   {
+    "label": "Ofte stilte spørsmål",
+    "href": "/no/ofte-stilte-sporsmal/"
+   }
+  ]
+ },
+ "cs": {
+  "siteName": "Průvodce UK ETA",
+  "tagline": "Cestovní povolení do Spojeného království, krok za krokem",
+  "cta": "Požádat na oficiálních stránkách GOV.UK",
+  "items": [
+   {
+    "label": "O ETA",
+    "href": "/cs/co-je-eta/"
+   },
+   {
+    "label": "Jak požádat o UK ETA",
+    "href": "/cs/jak-zadat/"
+   },
+   {
+    "label": "Cesta do Spojeného království",
+    "href": "/cs/delka-pobytu/"
+   },
+   {
+    "label": "Časté dotazy",
+    "href": "/cs/caste-dotazy/"
+   }
+  ]
+ },
+ "fi": {
+  "siteName": "UK ETA -opas",
+  "tagline": "Matkustuslupa Yhdistyneeseen kuningaskuntaan, vaihe vaiheelta",
+  "cta": "Hae GOV.UK:n virallisilta sivuilta",
+  "items": [
+   {
+    "label": "Tietoa ETA:sta",
+    "href": "/fi/mika-on-eta/"
+   },
+   {
+    "label": "Näin haet UK ETA -luvan",
+    "href": "/fi/nain-haet/"
+   },
+   {
+    "label": "Matka Britanniaan",
+    "href": "/fi/oleskelun-kesto/"
+   },
+   {
+    "label": "Usein kysytyt kysymykset",
+    "href": "/fi/usein-kysytyt-kysymykset/"
+   }
+  ]
+ },
+ "hu": {
+  "siteName": "UK ETA útmutató",
+  "tagline": "Az Egyesült Királyságba szóló utazási engedély, lépésről lépésre",
+  "cta": "Igénylés a GOV.UK hivatalos oldalán",
+  "items": [
+   {
+    "label": "Az ETA-ról",
+    "href": "/hu/mi-az-eta/"
+   },
+   {
+    "label": "Hogyan igényelhető az UK ETA",
+    "href": "/hu/hogyan-igenyelheto/"
+   },
+   {
+    "label": "Utazás az Egyesült Királyságba",
+    "href": "/hu/tartozkodas-hossza/"
+   },
+   {
+    "label": "Gyakori kérdések",
+    "href": "/hu/gyakori-kerdesek/"
+   }
+  ]
+ },
+ "ko": {
+  "siteName": "UK ETA 가이드",
+  "tagline": "영국 여행 허가, 단계별 안내",
+  "cta": "GOV.UK 공식 사이트에서 신청하기",
+  "items": [
+   {
+    "label": "ETA 안내",
+    "href": "/ko/eta-ran/"
+   },
+   {
+    "label": "UK ETA 신청 방법",
+    "href": "/ko/sinceong-bangbeop/"
+   },
+   {
+    "label": "영국 입국",
+    "href": "/ko/cheryu-gigan/"
+   },
+   {
+    "label": "자주 묻는 질문",
+    "href": "/ko/jaju-mudneun-jilmun/"
+   }
+  ]
+ },
+ "he": {
+  "siteName": "מדריך UK ETA",
+  "tagline": "אישור הכניסה לבריטניה, שלב אחר שלב",
+  "cta": "להגשת בקשה באתר הרשמי GOV.UK",
+  "items": [
+   {
+    "label": "על ה‑ETA",
+    "href": "/he/ma-ze-eta/"
+   },
+   {
+    "label": "איך מגישים בקשה ל‑UK ETA",
+    "href": "/he/eich-magishim/"
+   },
+   {
+    "label": "נסיעה לבריטניה",
+    "href": "/he/meshech-shehiya/"
+   },
+   {
+    "label": "שאלות נפוצות",
+    "href": "/he/shealot-nefotzot/"
+   }
+  ]
+ }
+}

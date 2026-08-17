@@ -1,9 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import headerNav from "@/data/langs/header-nav.json";
 
 export default function StickyCta() {
   const [show, setShow] = useState(false);
+  // ⚠️ 文言がスウェーデン語で固定されているため、追加言語のページでは出さない。
+  //    各言語のページには本文中に自言語のCTAがあるので、無くても導線は途切れない。
+  const pathname = usePathname() || "/";
+  const isLang = Object.prototype.hasOwnProperty.call(headerNav, pathname.split("/")[1]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,6 +26,8 @@ export default function StickyCta() {
       window.removeEventListener("resize", onScroll);
     };
   }, []);
+
+  if (isLang) return null;
 
   return (
     <div className={`cta-sticky-bar ${show ? "is-visible" : ""}`} aria-hidden={!show}>

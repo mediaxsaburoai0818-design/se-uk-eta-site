@@ -14,7 +14,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const c = LANGS[lang];
   if (!c) return {};
   return {
-    title: c.homeTitle,
+    // ルートのスウェーデン語テンプレートが付くのを止め、その言語の社名を付ける
+    title: { absolute: `${c.homeTitle} | ${c.siteName}` },
+    // ⚠️ ルートのOG設定(sv_SE・スウェーデン語の社名/alt)が全言語に出ていた。言語ごとに上書きする。
+    openGraph: { title: c.homeTitle, description: c.homeDescription,
+                 siteName: c.siteName, locale: c.code.replace('-', '_'), type: 'website' },
+    twitter: { card: 'summary_large_image', title: c.homeTitle, description: c.homeDescription },
     description: c.homeDescription,
     // canonicalは機械的に組む（旧ドメインを指す事故を防ぐ）
     alternates: { canonical: `${SITE}/${lang}/` },

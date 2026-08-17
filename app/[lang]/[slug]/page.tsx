@@ -13,7 +13,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const hit = findPage(lang, slug);
   if (!hit) return {};
   return {
-    title: hit.page.title,
+    // 同上（ルートのテンプレートを適用させない）
+    title: { absolute: `${hit.page.title} | ${hit.content.siteName}` },
+    openGraph: { title: hit.page.title, description: hit.page.description,
+                 siteName: hit.content.siteName, locale: hit.content.code.replace('-', '_'), type: 'article' },
+    twitter: { card: 'summary_large_image', title: hit.page.title, description: hit.page.description },
     description: hit.page.description,
     // ⚠️ canonicalは必ず生成側で組む。言語ファイルに書かせない（旧ドメイン参照の再発防止）
     alternates: { canonical: `${SITE}/${lang}/${slug}/` },
