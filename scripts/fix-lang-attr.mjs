@@ -13,7 +13,7 @@ import path from "node:path";
 
 // data/langs/index.ts と重複させないため、out/ にあるディレクトリから判定する
 const MAP = { es: "es", nl: "nl", pt: "pt-PT", da: "da", no: "nb", cs: "cs",
-              fi: "fi", hu: "hu", he: "he", ko: "ko", en: "en" };
+              fi: "fi", hu: "hu", he: "he", ko: "ko", en: "en", fr: "fr" };
 const RTL = new Set(["he"]);
 const OUT = path.join(process.cwd(), "out");
 

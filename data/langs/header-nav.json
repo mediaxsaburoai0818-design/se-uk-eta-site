@@ -228,5 +228,51 @@
     "href": "/he/shealot-nefotzot/"
    }
   ]
+ },
+ "fr": {
+  "siteName": "Guide UK ETA",
+  "tagline": "L'autorisation de voyage pour le Royaume-Uni, étape par étape",
+  "cta": "Faire la demande sur le site officiel GOV.UK",
+  "items": [
+   {
+    "label": "À propos de l'ETA",
+    "href": "/fr/qu-est-ce-que-l-eta/"
+   },
+   {
+    "label": "Comment demander l'UK ETA",
+    "href": "/fr/comment-faire-la-demande/"
+   },
+   {
+    "label": "Voyager au Royaume-Uni",
+    "href": "/fr/duree-de-sejour/"
+   },
+   {
+    "label": "Questions fréquentes",
+    "href": "/fr/questions-frequentes/"
+   }
+  ]
+ },
+ "en": {
+  "siteName": "UK ETA Guide",
+  "tagline": "The UK travel authorisation, step by step",
+  "cta": "Apply on the official GOV.UK site",
+  "items": [
+   {
+    "label": "About the ETA",
+    "href": "/en/what-is-the-eta/"
+   },
+   {
+    "label": "How to apply for the UK ETA",
+    "href": "/en/how-to-apply/"
+   },
+   {
+    "label": "Travelling to the UK",
+    "href": "/en/how-long-you-can-stay/"
+   },
+   {
+    "label": "Frequently asked questions",
+    "href": "/en/faq/"
+   }
+  ]
  }
 }
