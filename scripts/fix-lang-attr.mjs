@@ -11,9 +11,19 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// data/langs/index.ts と重複させないため、out/ にあるディレクトリから判定する
-const MAP = { es: "es", nl: "nl", pt: "pt-PT", da: "da", no: "nb", cs: "cs",
-              fi: "fi", hu: "hu", he: "he", ko: "ko", en: "en", fr: "fr" };
+// ⚠️ 以前はここに MAP をベタ書きしていたため、言語を足したときに
+//    書き足し忘れて <html lang="sv"> のまま出る事故が起きた（zh-tw / zh-cn）。
+//    data/langs/*.ts の code を読んで自動で拾う形にして、書き忘れを構造的に防ぐ。
+const LANG_DIR = path.join(process.cwd(), "data", "langs");
+const MAP = Object.fromEntries(
+  fs.readdirSync(LANG_DIR)
+    .filter((f) => f.endsWith(".ts") && !f.startsWith("_") && f !== "index.ts")
+    .map((f) => {
+      const dir = f.replace(/\.ts$/, "");
+      const m = fs.readFileSync(path.join(LANG_DIR, f), "utf8").match(/code:\s*"([^"]+)"/);
+      return [dir, m ? m[1] : dir];
+    }),
+);
 const RTL = new Set(["he"]);
 const OUT = path.join(process.cwd(), "out");
 
