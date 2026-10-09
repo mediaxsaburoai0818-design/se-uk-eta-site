@@ -89,6 +89,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname() || "/";
+  // TOP（/）は新デザインが独自のヘッダー・フッターを持つので、共通のものは出さない（2026-10 リニューアル）
+  if (pathname === "/") return null;
   const seg = pathname.split("/")[1];
   const localized = NAV[seg];
   if (localized) return <LocalizedHeader lang={seg} data={localized} />;

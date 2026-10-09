@@ -27,7 +27,7 @@ export default function StickyCta() {
     };
   }, []);
 
-  if (isLang) return null;
+  if (isLang || pathname === "/") return null;
 
   return (
     <div className={`cta-sticky-bar ${show ? "is-visible" : ""}`} aria-hidden={!show}>

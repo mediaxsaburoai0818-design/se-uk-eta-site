@@ -8,6 +8,8 @@ export default function Footer() {
   // ⚠️ フッターの文言もスウェーデン語で固定されている。
   //    追加言語のページでは、その言語で書ける最小限（社名と免責）だけを出す。
   const pathname = usePathname() || "/";
+  // TOP（/）は新デザインが独自のヘッダー・フッターを持つので、共通のものは出さない（2026-10 リニューアル）
+  if (pathname === "/") return null;
   const lang = pathname.split("/")[1];
   const nav = (headerNav as Record<string, { siteName: string; tagline: string }>)[lang];
   if (nav) {

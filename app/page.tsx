@@ -1,4 +1,7 @@
+import "./home.css";
 import Link from "next/link";
+import { HOME_TOP, HOME_BOTTOM } from "./home-markup";
+import HomeChrome from "@/components/HomeChrome";
 import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "./news/news-data";
 const latestNews = [...newsItems].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
 
@@ -108,69 +111,19 @@ function Icon({ name }: { name: string }) {
   }
 }
 
+// ⚠️ 2026-10 デザインリニューアル（okina依頼）。
+//    上＝新デザイン（HOME_TOP：~/projects/eta-se-redesign/build から生成）、
+//    中＝旧TOPのうちデザインに無い本文（giltighetstid・inresa/transit・svenska medborgare・FAQ・nyheter・användbara sidor）を残す
+//       ＝検索で表示されている本文を消さないため、
+//    下＝新デザインの CTA とフッター（HOME_BOTTOM）。
 export default function Home() {
   return (
     <div>
-      {/* === Hero (案3 duotone landmark, frame-less chips below CTA) === */}
-      <section className="relative text-white min-h-[540px] md:min-h-[680px] flex items-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/hero-uk.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-[22%_center] md:object-center" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(1,16,40,0.62) 0%, rgba(1,16,40,0.42) 42%, rgba(1,10,28,0.84) 100%)" }} />
-        <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-32 w-full">
-          <div className="max-w-3xl mx-auto text-center reveal">
-            <h1 className="font-semibold leading-none tracking-wide drop-shadow" style={{ fontFamily: "var(--font-display)", color: "white", fontSize: "clamp(3rem, 12vw, 5.5rem)" }}>
-              UK ETA
-            </h1>
-            <p className="mt-6 uppercase mx-auto" style={{ fontFamily: "var(--font-display)", color: "#E0C878", letterSpacing: "0.08em", fontSize: "clamp(.64rem, 2vw, 1rem)", lineHeight: 1.7, maxWidth: "26rem", textShadow: "0 2px 10px rgba(0,0,0,.5)" }}>
-              Elektronisk reseauktorisering till Storbritannien
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 mt-10 justify-center items-center">
-              <a href={GOV} target="_blank" rel="noopener noreferrer" className="btn-red text-base">
-                Ansök om UK ETA
-              </a>
-              <Link href="/eta-info/what-is-eta/" className="btn-blue-outline text-sm">
-                Läs mer
-              </Link>
-            </div>
-            <div className="grid grid-cols-3 max-w-sm md:max-w-md mx-auto mt-10">
-              {facts.slice(0, 3).map((f, i) => (
-                <div key={f.label} className="flex flex-col items-center justify-center text-center px-2" style={{ borderLeft: i === 0 ? "none" : "1px solid rgba(224,200,120,0.3)" }}>
-                  <span className="font-bold leading-none" style={{ color: "#E0C878", fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem, 5.5vw, 1.5rem)" }}>{f.value}</span>
-                  <span className="mt-1.5 leading-tight text-[10.5px]" style={{ color: "rgba(255,255,255,0.88)" }}>{f.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* === What is UK ETA — feature cards === */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-12 reveal">
-            <p className="kicker">Om ETA-systemet</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">Vad är UK ETA?</h2>
-            <p className="sec-lead">
-              UK ETA (Electronic Travel Authorisation) är en elektronisk reseauktorisering som införts av Storbritanniens regering.
-              Sedan 2 april 2025 måste medborgare i EU-länder, däribland Sverige, ha ETA före resa till Förenade kungariket.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map((f, i) => (
-              <div key={f.title} className={`feature-card reveal reveal-delay-${i + 1}`}>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className={`icon-circle ${f.tone} shrink-0 !mb-0`}><Icon name={f.icon} /></span>
-                  <h3 className="feature-title !mb-0">{f.title}</h3>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <HomeChrome />
+      {/* 新デザインの書体（見出し Libre Baskerville／本文 Inter／Explore the UK の手書き Allura） */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="stylesheet" precedence="default" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Allura&family=Inter:wght@400;500;600;700&display=swap" />
+      <div className="etahome" dangerouslySetInnerHTML={{ __html: HOME_TOP }} />
       {/* === Okres waznosci i termin === */}
       <section className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
         <div className="max-w-5xl mx-auto px-6">
@@ -197,62 +150,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === Co jest potrzebne === */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-12 reveal">
-            <p className="kicker">Krav</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">Vad du behöver för att ansöka</h2>
-            <p className="sec-lead">Förbered dessa fyra saker innan du börjar fylla i ETA-ansökan.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-            {[
-              { label: "Giltigt pass", desc: "Foto eller skanning av sidan med foto." },
-              { label: "Ansiktsfoto", desc: "Krävs inte för barn 9 år och yngre." },
-              { label: "E-postadress", desc: "Till denna adress får du bekräftelsen på din ETA." },
-              { label: "Betalkort", desc: "Visa, Mastercard, JCB, American Express, Diners Club." },
-            ].map((item, i) => (
-              <div key={i} className="card flex gap-4 items-start reveal text-left">
-                <span className="flex-shrink-0 w-9 h-9 rounded-full inline-flex items-center justify-center font-semibold text-white" style={{ background: "var(--color-blue)", fontFamily: "var(--font-display)" }}>{i + 1}</span>
-                <div>
-                  <h3 className="feature-title !text-base !mb-1">{item.label}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === Application steps === */}
-      <section className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-14 reveal">
-            <p className="kicker">Procedur</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">Hur ansöker du om UK ETA?</h2>
-            <p className="sec-lead">Hela processen tar några minuter och görs online i fyra steg.</p>
-          </div>
-          <div className="max-w-2xl mx-auto flex flex-col gap-5">
-            {steps.map((s, i) => (
-              <div key={s.title} className="card flex items-start gap-5 text-left reveal">
-                <div className="flex-1">
-                  <p className="kicker !mb-1">{`Steg ${i + 1}`}</p>
-                  <h3 className="sec-title text-lg md:text-xl mb-2">{s.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>{s.desc}</p>
-                </div>
-                <span className="icon-circle icon-navy shrink-0 !mb-0"><Icon name={s.icon} /></span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link href="/eta-info/application/" className="content-link font-bold">
-              Detaljerad guide till ansökan
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* === Countries + who needs ETA / transit === */}
       <section className="py-16 md:py-20 bg-white">
@@ -319,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* === UK ETA för svenska medborgare (unik landsektion) === */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="svenska" className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-10 reveal text-center">
             <p className="kicker">För svenskar</p>
@@ -360,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* === FAQ === */}
-      <section className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
+      <section id="faq" className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <div className="mb-10 reveal text-center">
             <p className="kicker">FAQ</p>
@@ -385,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* === Senaste nyheterna (TOP) === */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="nyheter" className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-10 reveal text-center">
             <p className="kicker">Nyheter</p>
@@ -440,21 +337,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === Final CTA === */}
-      <section className="py-20 text-white text-center" style={{ background: "var(--color-blue)" }}>
-        <div className="max-w-3xl mx-auto px-6 reveal">
-          <p className="kicker" style={{ color: "rgba(255,255,255,0.8)" }}>Redo att börja?</p>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-4" style={{ fontFamily: "var(--font-display)", color: "white" }}>
-            Påbörja din UK ETA-ansökan
-          </h2>
-          <p className="mb-8 text-white/90 max-w-xl mx-auto">
-            Ta fram ditt biometriska pass och ansök via appen eller GOV.UK. Hela processen tar några minuter.
-          </p>
-          <a href={GOV} target="_blank" rel="noopener noreferrer" className="btn-red text-base">
-            Ansök om UK ETA
-          </a>
-        </div>
-      </section>
+      <div className="etahome" dangerouslySetInnerHTML={{ __html: HOME_BOTTOM }} />
     </div>
   );
 }
