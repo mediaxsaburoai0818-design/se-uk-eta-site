@@ -497,3 +497,21 @@
                        right:max(var(--page-padding), calc((100% - var(--container))/2 + var(--page-padding)))}
   .etahome .hero-card{right:calc(max(var(--page-padding), calc((100% - var(--container))/2 + var(--page-padding))) + 16px)}
 }
+
+/* ===== 2026-10-09 モバイルのキービジュアル（okina指示）：
+   写真を背景にして、その上に「UK ETA」の文字と薄い白の背景を重ねる（デザイン モバイル版どおり） ===== */
+@media (max-width:767px){
+  .etahome .hero{position:relative}
+  .etahome .hero-media{position:absolute;inset:0;height:auto;margin:0;z-index:0}
+  .etahome .hero-media img{object-position:78% 40%}
+  .etahome .hero-media::after{background:linear-gradient(90deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.82) 52%,rgba(255,255,255,.35) 78%,rgba(255,255,255,.1) 100%)}
+  .etahome .hero .container{position:relative;z-index:1;padding-top:26px;padding-bottom:26px;min-height:0}
+  .etahome .hero-pill{display:none}
+  .etahome .hero h1{font-size:46px;line-height:1}
+  .etahome .hero h1 .sub{font-size:25px;line-height:1.12;margin-top:6px}
+  .etahome .hero p.lead{margin-top:12px;font-size:15px;line-height:1.5;max-width:300px}
+  .etahome .hero-actions{margin-top:16px;gap:12px}
+  .etahome .hero-card{display:none}
+  .etahome .brand .sub{display:block;font-size:9.5px;max-width:130px}
+  .etahome .header .tools a.iconbtn{display:none}
+}
