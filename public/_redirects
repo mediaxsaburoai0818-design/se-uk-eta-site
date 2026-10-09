@@ -1,0 +1,3 @@
+# ESTA統合(2026-09-22): 間借りしていたドイツ語ESTAを esta-hr.com/de/ へ移設。
+# URL構造は同一なのでパスを保持して301（旧URLの評価を引き継ぐため）。
+/de/esta/*  https://esta-hr.com/de/:splat  301

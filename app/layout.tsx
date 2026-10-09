@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import "./eta-design.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -81,6 +82,9 @@ export default function RootLayout({
         />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
+        {/* 新デザイン（ヘッダー・フッター・TOP）の書体 */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Allura&family=Inter:wght@400;500;600;700&display=swap" />
       </head>
       <body
         className={`${notoSans.variable} ${notoSerif.variable} ${fraunces.variable} antialiased`}

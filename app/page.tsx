@@ -1,7 +1,5 @@
-import "./home.css";
 import Link from "next/link";
-import { HOME_TOP, HOME_BOTTOM } from "./home-markup";
-import HomeChrome from "@/components/HomeChrome";
+import { HOME_MAIN, HOME_CTA } from "@/lib/eta-design";
 import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "./news/news-data";
 const latestNews = [...newsItems].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
 
@@ -112,232 +110,128 @@ function Icon({ name }: { name: string }) {
 }
 
 // ⚠️ 2026-10 デザインリニューアル（okina依頼）。
-//    上＝新デザイン（HOME_TOP：~/projects/eta-se-redesign/build から生成）、
-//    中＝旧TOPのうちデザインに無い本文（giltighetstid・inresa/transit・svenska medborgare・FAQ・nyheter・användbara sidor）を残す
-//       ＝検索で表示されている本文を消さないため、
-//    下＝新デザインの CTA とフッター（HOME_BOTTOM）。
+//    ヘッダー・フッターは layout（components/Header.tsx・Footer.tsx）が全ページ共通で出す。
+//    上＝新デザイン（HOME_MAIN）、中＝旧TOPの本文のうちデザインに無いもの（新デザインの見た目で組み直し）、下＝CTA（HOME_CTA）。
+//    「Krävs vid inresa till Storbritannien」はデザインの「Vem behöver UK ETA?」と重複するため 10/9 okina指示で削除。
 export default function Home() {
   return (
-    <div>
-      <HomeChrome />
-      {/* 新デザインの書体（見出し Libre Baskerville／本文 Inter／Explore the UK の手書き Allura） */}
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="stylesheet" precedence="default" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Allura&family=Inter:wght@400;500;600;700&display=swap" />
-      <div className="etahome" dangerouslySetInnerHTML={{ __html: HOME_TOP }} />
-      {/* === Okres waznosci i termin === */}
-      <section className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-12 reveal">
-            <p className="kicker">Giltighet och tidsfrist</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">ETA:ns giltighetstid och när du ska ansöka</h2>
-            <p className="sec-lead">När du ska ansöka och hur länge din ETA förblir giltig.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-            <div className="card reveal">
-              <h3 className="feature-title mb-2">Giltighetstid</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                ETA är giltig i <strong style={{ color: "var(--color-blue)" }}>2 år</strong> från utfärdandet och tillåter flera inresor till Storbritannien. Om ditt pass går ut inom 2 år upphör ETA samtidigt som passet — förnya i så fall passet först och ansök sedan om ETA.
-              </p>
+    <div className="etahome">
+      <div dangerouslySetInnerHTML={{ __html: HOME_MAIN }} />
+
+      {/* Giltighet och när du ska ansöka */}
+      <section className="band xsec">
+        <div className="container">
+          <span className="eyebrow">Giltighet och tidsfrist</span>
+          <h2>ETA:ns giltighetstid och när du ska ansöka</h2>
+          <p className="xlead">När du ska ansöka och hur länge din ETA förblir giltig.</p>
+          <div className="xcards x2">
+            <div className="xcard">
+              <h3>Giltighetstid</h3>
+              <p>ETA är giltig i <strong>2 år</strong> från utfärdandet och tillåter flera inresor till Storbritannien. Om ditt pass går ut inom 2 år upphör ETA samtidigt som passet — förnya i så fall passet först och ansök sedan om ETA.</p>
             </div>
-            <div className="card reveal reveal-delay-1">
-              <h3 className="feature-title mb-2">När du ska ansöka</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                De flesta sökande får ett automatiskt beslut inom <strong style={{ color: "var(--color-blue)" }}>några minuter</strong> via UK ETA-appen. Ansök minst 3 arbetsdagar före resan, eftersom ett litet antal ansökningar kan kräva ytterligare granskning. När den godkänts får du ett bekräftelsemejl; vid inresan behöver du oftast inte visa upp ETA-numret, men det är bra att spara bekräftelsen (skärmdump eller utskrift).
-              </p>
+            <div className="xcard">
+              <h3>När du ska ansöka</h3>
+              <p>De flesta sökande får ett automatiskt beslut inom <strong>några minuter</strong> via UK ETA-appen. Ansök minst 3 arbetsdagar före resan, eftersom ett litet antal ansökningar kan kräva ytterligare granskning. När den godkänts får du ett bekräftelsemejl; vid inresan behöver du oftast inte visa upp ETA-numret, men det är bra att spara bekräftelsen (skärmdump eller utskrift).</p>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* === Countries + who needs ETA / transit === */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-12 reveal">
-            <p className="kicker">Vem behöver ETA</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">Krävs vid inresa till Storbritannien</h2>
-            <p className="sec-lead">
-              UK ETA gäller medborgare i Sverige och andra EU-länder samt dussintals andra länder som reser in i Storbritannien
-              i turist-, affärs- eller transitsyfte. Auktorisationen tillåter vistelse upp till 6 månader.
-            </p>
-          </div>
-
-          {/* Karta över området som omfattas av ETA */}
-          <div className="max-w-sm mx-auto mb-16 reveal reveal-delay-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/uk-eta-map.webp"
-              alt="Karta över Storbritannien med det ETA-täckta området markerat: England, Skottland, Wales och Nordirland"
-              width={560}
-              height={951}
-              className="w-full max-w-[320px] h-auto mx-auto block"
-            />
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
-              <span className="inline-flex items-center gap-2" style={{ color: "var(--color-text)" }}>
-                <span className="inline-block w-4 h-4 rounded-sm" style={{ background: "#022444" }} />
-                Omfattas av ETA (Storbritannien)
-              </span>
-              <span className="inline-flex items-center gap-2" style={{ color: "var(--color-text-light)" }}>
-                <span className="inline-block w-4 h-4 rounded-sm border" style={{ background: "#d3d8de", borderColor: "var(--color-border)" }} />
-                Utanför ETA (Irland)
-              </span>
+      {/* Transit */}
+      <section className="section xsec">
+        <div className="container">
+          <span className="eyebrow">Transit</span>
+          <h2>Transit genom Storbritannien</h2>
+          <p className="xlead">Om ETA krävs vid byte beror på vilken typ av transit det gäller.</p>
+          <div className="xcards x2">
+            <div className="xcard">
+              <span className="eyebrow">Flygtransit (airside)</span>
+              <h3>I regel utan ETA</h3>
+              <p>Om du inte passerar den brittiska gränskontrollen och stannar i flygplatsens transitzon krävs oftast ingen ETA. Om du dock lämnar transitzonen (t.ex. övernattning eller byte på en annan flygplats) behövs en ETA.</p>
             </div>
-            <p className="text-center mt-4 text-sm" style={{ color: "var(--color-text-light)" }}>
-              ETA omfattar <strong style={{ color: "var(--color-blue)" }}>hela Storbritannien</strong>: England, Skottland, Wales och Nordirland. Republiken Irland omfattas inte av ETA-systemet.
-            </p>
-          </div>
-
-          {/* Tranzyt */}
-          <div className="max-w-3xl mx-auto reveal reveal-delay-2">
-            <div className="text-center mb-8">
-              <h3 className="sec-title text-2xl md:text-3xl mb-3">Transit genom Storbritannien</h3>
-              <p className="sec-lead">Om ETA krävs vid byte beror på vilken typ av transit det gäller.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div className="card">
-                <span className="inline-block text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: "var(--color-blue)" }}>Flygtransit (airside)</span>
-                <p className="feature-title !text-lg mb-2">I regel utan ETA</p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                  Om du inte passerar den brittiska gränskontrollen och stannar i flygplatsens transitzon krävs oftast ingen ETA. Om du dock lämnar transitzonen (t.ex. övernattning eller byte på en annan flygplats) behövs en ETA.
-                </p>
-              </div>
-              <div className="card">
-                <span className="inline-block text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: "var(--color-blue)" }}>Landtransit (landside)</span>
-                <p className="feature-title !text-lg mb-2">Kräver i regel ETA</p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                  Vid passage genom den brittiska gränskontrollen — t.ex. med Eurostar (tåg genom Engelska kanalen) eller färja — och passage av gränskontrollen krävs i regel en ETA.
-                </p>
-              </div>
+            <div className="xcard">
+              <span className="eyebrow">Landtransit (landside)</span>
+              <h3>Kräver i regel ETA</h3>
+              <p>Vid passage genom den brittiska gränskontrollen — t.ex. med Eurostar (tåg genom Engelska kanalen) eller färja — och passage av gränskontrollen krävs i regel en ETA.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* === UK ETA för svenska medborgare (unik landsektion) === */}
-      <section id="svenska" className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-10 reveal text-center">
-            <p className="kicker">För svenskar</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">UK ETA för svenska medborgare</h2>
-            <p className="max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-              Sverige är medlem i Europeiska unionen och svenska medborgare kan resa till Storbritannien utan visum för vistelser upp till 6 månader.
-              Sedan 2 april 2025 måste du dock ha en UK ETA före varje resa — det gäller semester, tjänsteresor, släktbesök och transit.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="card reveal reveal-delay-1">
-              <h3 className="feature-title mb-2">Vem måste ha ETA</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                Alla svenska medborgare som reser till UK för en kort vistelse, inklusive barn och spädbarn. Varje person gör en egen separat ansökan.
-              </p>
-            </div>
-            <div className="card reveal reveal-delay-2">
-              <h3 className="feature-title mb-2">Pass, inte nationellt id-kort</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                För inresa till Storbritannien krävs ett giltigt pass — nationellt id-kort accepteras inte längre (sedan oktober 2021). ETA är kopplad till detta pass.
-              </p>
-            </div>
-            <div className="card reveal reveal-delay-3">
-              <h3 className="feature-title mb-2">Populära destinationer från Sverige</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                London, Manchester, Edinburgh, Birmingham och andra städer. En enda ETA omfattar England, Skottland, Wales och Nordirland.
-              </p>
-            </div>
-            <div className="card reveal reveal-delay-4">
-              <h3 className="feature-title mb-2">När du ska ansöka</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-                Minst 3 arbetsdagar före avresan. De flesta beslut fattas automatiskt inom några minuter, men ett litet antal ansökningar kan kräva ytterligare granskning.
-              </p>
-            </div>
+      {/* UK ETA för svenska medborgare（詳細） */}
+      <section id="svenska" className="band xsec">
+        <div className="container">
+          <span className="eyebrow">För svenskar</span>
+          <h2>UK ETA för svenska medborgare</h2>
+          <p className="xlead">Sverige är medlem i Europeiska unionen och svenska medborgare kan resa till Storbritannien utan visum för vistelser upp till 6 månader. Sedan 2 april 2025 måste du dock ha en UK ETA före varje resa — det gäller semester, tjänsteresor, släktbesök och transit.</p>
+          <div className="xcards x4">
+            <div className="xcard"><h3>Vem måste ha ETA</h3><p>Alla svenska medborgare som reser till UK för en kort vistelse, inklusive barn och spädbarn. Varje person gör en egen separat ansökan.</p></div>
+            <div className="xcard"><h3>Pass, inte nationellt id-kort</h3><p>För inresa till Storbritannien krävs ett giltigt pass — nationellt id-kort accepteras inte längre (sedan oktober 2021). ETA är kopplad till detta pass.</p></div>
+            <div className="xcard"><h3>Populära destinationer från Sverige</h3><p>London, Manchester, Edinburgh, Birmingham och andra städer. En enda ETA omfattar England, Skottland, Wales och Nordirland.</p></div>
+            <div className="xcard"><h3>När du ska ansöka</h3><p>Minst 3 arbetsdagar före avresan. De flesta beslut fattas automatiskt inom några minuter, men ett litet antal ansökningar kan kräva ytterligare granskning.</p></div>
           </div>
         </div>
       </section>
 
-      {/* === FAQ === */}
-      <section id="faq" className="py-16 md:py-20" style={{ background: "var(--color-bg-soft)" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="mb-10 reveal text-center">
-            <p className="kicker">FAQ</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl">Vanliga frågor</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((f, i) => (
-              <details key={f.q} className={`card group reveal reveal-delay-${(i % 4) + 1}`}>
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-bold" style={{ color: "var(--color-blue)" }}>
-                  <span>{f.q}</span>
-                  <span aria-hidden className="text-xl group-open:rotate-45 transition-transform" style={{ color: "var(--color-red-vivid)" }}>+</span>
-                </summary>
-                <p className="text-sm leading-relaxed mt-3" style={{ color: "var(--color-text-light)" }}>{f.a}</p>
+      {/* FAQ */}
+      <section id="faq" className="section xsec">
+        <div className="container xnarrow">
+          <span className="eyebrow">FAQ</span>
+          <h2>Vanliga frågor</h2>
+          <div className="xfaq">
+            {faqs.map((f) => (
+              <details key={f.q}>
+                <summary><span>{f.q}</span><span className="xplus" aria-hidden="true">+</span></summary>
+                <p>{f.a}</p>
               </details>
             ))}
           </div>
-          <div className="mt-8">
-            <Link href="/faq/" className="content-link font-bold">Se alla vanliga frågor</Link>
-          </div>
+          <Link href="/faq/" className="textlink xmore">Se alla vanliga frågor <span className="arrow" aria-hidden="true">→</span></Link>
         </div>
       </section>
 
-      {/* === Senaste nyheterna (TOP) === */}
-      <section id="nyheter" className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-10 reveal text-center">
-            <p className="kicker">Nyheter</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl mb-4">Senaste nyheterna</h2>
-            <p className="max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-              De viktigaste nyheterna om UK ETA, avgifter och inreseregler till Storbritannien.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {latestNews.map((n, i) => {
+      {/* Nyheter */}
+      <section id="nyheter" className="band xsec">
+        <div className="container">
+          <span className="eyebrow">Nyheter</span>
+          <h2>Senaste nyheterna</h2>
+          <p className="xlead">De viktigaste nyheterna om UK ETA, avgifter och inreseregler till Storbritannien.</p>
+          <div className="xcards x3">
+            {latestNews.map((n) => {
               const c = CATEGORY_STYLE[n.category];
               return (
-                <Link key={n.slug} href={`/news/${n.slug}/`} className={`card block hover:shadow-lg transition-shadow no-underline reveal reveal-delay-${(i % 3) + 1}`}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ backgroundColor: c.bg, color: c.fg }}>{CATEGORY_LABEL[n.category]}</span>
-                    <time className="text-xs text-gray-500">{n.date}</time>
+                <Link key={n.slug} href={`/news/${n.slug}/`} className="xcard xlink">
+                  <div className="xmeta">
+                    <span className="xtag" style={{ backgroundColor: c.bg, color: c.fg }}>{CATEGORY_LABEL[n.category]}</span>
+                    <time>{n.date}</time>
                   </div>
-                  <h3 className="feature-title mb-2">{n.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-light)" }}>{n.summary}</p>
+                  <h3>{n.title}</h3>
+                  <p>{n.summary}</p>
                 </Link>
               );
             })}
           </div>
-          <div className="mt-8 text-center">
-            <Link href="/news/" className="content-link font-bold">Se alla nyheter &rarr;</Link>
-          </div>
+          <Link href="/news/" className="textlink xmore">Se alla nyheter <span className="arrow" aria-hidden="true">→</span></Link>
         </div>
       </section>
 
-      {/* === Related pages === */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-10 reveal text-center">
-            <p className="kicker">Guide</p>
-            <div className="deco-head center"><span className="deco-line" /></div>
-            <h2 className="sec-title text-3xl md:text-4xl">Användbara sidor</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {links.map((item, i) => (
-              <Link key={item.href} href={item.href} className={`card no-underline group reveal reveal-delay-${(i % 4) + 1}`} style={{ textDecoration: "none" }}>
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="feature-title text-base mb-1">{item.title}</h3>
-                    <p className="text-xs" style={{ color: "var(--color-text-light)" }}>{item.desc}</p>
-                  </div>
-                  <span className="shrink-0 mt-1" style={{ color: "var(--color-red-vivid)" }}><Icon name="arrow" /></span>
-                </div>
+      {/* Användbara sidor */}
+      <section className="section xsec">
+        <div className="container">
+          <span className="eyebrow">Guide</span>
+          <h2>Användbara sidor</h2>
+          <div className="xcards x3">
+            {links.map((item) => (
+              <Link key={item.href} href={item.href} className="xcard xlink xrow">
+                <span><h3>{item.title}</h3><p>{item.desc}</p></span>
+                <span className="xgo" aria-hidden="true">→</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <div className="etahome" dangerouslySetInnerHTML={{ __html: HOME_BOTTOM }} />
+      <div dangerouslySetInnerHTML={{ __html: HOME_CTA }} />
     </div>
   );
 }

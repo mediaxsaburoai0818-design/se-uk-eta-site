@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SITE_FOOTER } from "@/lib/eta-design";
 import headerNav from "@/data/langs/header-nav.json";
 
 export default function Footer() {
   // ⚠️ フッターの文言もスウェーデン語で固定されている。
   //    追加言語のページでは、その言語で書ける最小限（社名と免責）だけを出す。
   const pathname = usePathname() || "/";
-  // TOP（/）は新デザインが独自のヘッダー・フッターを持つので、共通のものは出さない（2026-10 リニューアル）
-  if (pathname === "/") return null;
   const lang = pathname.split("/")[1];
   const nav = (headerNav as Record<string, { siteName: string; tagline: string }>)[lang];
   if (nav) {
@@ -25,6 +24,8 @@ export default function Footer() {
       </footer>
     );
   }
+  // 2026-10 デザインリニューアル：スウェーデン語の全ページを新フッターに（旧フッターは下に残置・未使用）
+  return <div className="etahome" dangerouslySetInnerHTML={{ __html: SITE_FOOTER }} />;
   return (
     <footer>
       {/* Main footer */}

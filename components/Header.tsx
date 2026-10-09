@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import headerNav from "@/data/langs/header-nav.json";
+import { SITE_HEADER } from "@/lib/eta-design";
+import HomeChrome from "@/components/HomeChrome";
 
 const subnav = [
   { label: "Vad är UK ETA?", href: "/eta-info/what-is-eta/" },
@@ -89,11 +91,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname() || "/";
-  // TOP（/）は新デザインが独自のヘッダー・フッターを持つので、共通のものは出さない（2026-10 リニューアル）
-  if (pathname === "/") return null;
   const seg = pathname.split("/")[1];
   const localized = NAV[seg];
   if (localized) return <LocalizedHeader lang={seg} data={localized} />;
+
+  // 2026-10 デザインリニューアル（okina依頼）：スウェーデン語の全ページを新ヘッダーに。
+  //   旧ヘッダー（下の return）は残してあるが使っていない。戻すときはこの return を外す。
+  return (
+    <>
+      <HomeChrome />
+      <div className="etahome" dangerouslySetInnerHTML={{ __html: SITE_HEADER }} />
+    </>
+  );
 
   return (
     <header className="sticky top-0 z-50" style={{ backgroundColor: "var(--color-navy)", borderBottom: "3px solid var(--color-gold)" }}>
