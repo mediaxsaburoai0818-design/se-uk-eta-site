@@ -515,3 +515,8 @@
   .etahome .brand .sub{display:block;font-size:9.5px;max-width:130px}
   .etahome .header .tools a.iconbtn{display:none}
 }
+/* モバイル：地図を中央に（10/9 okina指示。以前の margin-left:40px で左寄りになっていた） */
+@media (max-width:1023px){
+  .etahome .block .visual.map{display:flex;justify-content:center}
+  .etahome .map-wrap{margin-left:0;margin-right:0}
+}
