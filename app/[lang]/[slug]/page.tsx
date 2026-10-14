@@ -16,8 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     // 同上（ルートのテンプレートを適用させない）
     title: { absolute: `${hit.page.title} | ${hit.content.siteName}` },
     openGraph: { title: hit.page.title, description: hit.page.description,
-                 siteName: hit.content.siteName, locale: hit.content.code.replace('-', '_'), type: 'article' },
-    twitter: { card: 'summary_large_image', title: hit.page.title, description: hit.page.description },
+                 siteName: hit.content.siteName,
+                 images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: hit.content.siteName }], locale: hit.content.code.replace('-', '_'), type: 'article' },
+    twitter: { card: 'summary_large_image', images: ['/og-image.jpg'], title: hit.page.title, description: hit.page.description },
     description: hit.page.description,
     // ⚠️ canonicalは必ず生成側で組む。言語ファイルに書かせない（旧ドメイン参照の再発防止）
     alternates: { canonical: `${SITE}/${lang}/${slug}/` },
