@@ -36,6 +36,40 @@ const en: LangContent = {
           "Children and infants each need their own ETA." ] },
       ],
     },
+    // 2026-10-14 新設。事実は gov.uk/guidance/using-the-uk-eta-app・gov.uk/eta/apply・App Store/Google Play 掲載（同日確認）
+    "mobile-app": {
+      slug: "uk-eta-app",
+      title: "UK ETA App: Download, Passport Chip Scan & Fixes (2026)",
+      description: `How to use the official UK ETA app: phone requirements, the ${F.fee} fee, scanning your passport chip, applying for children, and what to do if it fails.`,
+      h1: "UK ETA App: How to Apply on Your Phone",
+      lead: `The UK ETA app is the official, free app for applying for an Electronic Travel Authorisation. It takes about 10 minutes: you photograph your passport, scan its chip, scan your face and pay the ${F.fee} fee. Last checked against GOV.UK and the app stores on 14 October 2026.`,
+      sections: [
+        { h: "Is the UK ETA app official and free?", p: [
+          "Yes. The app is called \"UK ETA\". On the Apple App Store the developer is listed as the Home Office; on Google Play it is UK Visas and Immigration. Downloading it is free — you only pay the ETA fee during the application.",
+          "Other apps and websites use similar names and charge extra for \"help\". GOV.UK warns that other websites may charge more and advises avoiding sites that imitate government services. Download the app only from the links on GOV.UK." ] },
+        { h: "Phone requirements", p: [
+          "iPhone: iOS 16 or later and at least 179MB of free space. Android: Android 12 or later, at least 165MB of free space, and NFC so the app can read your passport chip.",
+          "If your phone can make contactless payments, it has NFC. The app also needs camera access and an internet connection (mobile data or Wi-Fi). It is only available in English." ] },
+        { h: "What you need before you start", p: [
+          "Your physical passport — the same one you will travel with. Photocopies and digital passports are not accepted. You also need an email address and a credit or debit card, Apple Pay or Google Pay (Amex, JCB, Mastercard and Visa are accepted).",
+          "You do not need to enter travel dates or flight details." ] },
+        { h: "How to apply in the app, step by step", p: [
+          `1) Photograph the photo page of your passport. 2) Scan the passport chip. 3) Check the details the app has read. 4) Scan your face (anyone aged 10 or over). 5) Take a photo of yourself. 6) Answer the questions about your address, job, other nationalities and any criminal convictions. 7) Pay ${F.fee} — the price can be shown in your local currency.`,
+          `Most decisions arrive by email within a day, but allow up to ${F.decisionDays} working days. The email contains a 16-digit ETA reference number. Do not travel until you have it.` ] },
+        { h: "Passport chip won't scan? Try this", p: [
+          "Look for the ePassport symbol on the cover. Take your phone out of its case, remove any passport cover, and place the top of the phone on the middle of the passport. A beep means the chip has been read. If nothing happens, slowly move the phone around the passport. For US passports, try the inside of the back cover.",
+          "If the chip still cannot be read, the app takes your details from the photo page instead. Check every field carefully against your passport — mismatches can lead to delays or a refusal." ] },
+        { h: "Applying for children and other family members", p: [
+          "Every traveller needs their own ETA, including babies and children. You can apply for someone in the app only if they are with you, because the app photographs them and, if they are 10 or over, scans their face. If they are not with you, apply online with a photo of their passport and a photo of their face.",
+          "For under-18s you must give contact details for someone with parental responsibility. Decisions for each person may arrive at different times." ] },
+        { h: "No NFC, or the app isn't working?", p: [
+          "If you cannot download or use the app, apply on GOV.UK instead: you upload a passport photo and a face photo. The fee and the decision time are the same.",
+          `If the app does not ask for camera access, turn it on in your phone's settings. For other problems, use the UKVI ETA webchat linked from GOV.UK. No decision after ${F.decisionDays} working days? Check your spam folder first, then contact UKVI.` ] },
+        { h: "Fee, validity and how long you can stay", p: [
+          `The fee is ${F.fee} (it went up from £16 on 8 April 2026) and it is not refunded, even if your application is refused. An ETA is valid for ${F.validYears} years or until your passport expires, whichever is sooner.`,
+          `You can make multiple trips of up to ${F.staySixMonths} months each to the UK, Jersey, Guernsey and the Isle of Man. The ETA is linked digitally to your passport, so you only need to travel with that passport — you can delete the app after you apply.` ] },
+      ],
+    },
     application: {
       slug: "how-to-apply",
       title: "How to apply for the UK ETA: online, in a few minutes | Guide 2026",

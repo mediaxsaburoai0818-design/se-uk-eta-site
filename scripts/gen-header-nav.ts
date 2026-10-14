@@ -15,7 +15,7 @@ type Item = { label: string; href: string };
 const out: Record<string, { siteName: string; tagline: string; items: Item[]; cta: string }> = {};
 
 for (const [lang, c] of Object.entries(LANGS)) {
-  const p = (key: keyof typeof c.pages) => `/${lang}/${c.pages[key].slug}/`;
+  const p = (key: keyof typeof c.pages) => `/${lang}/${c.pages[key]!.slug}/`;
   out[lang] = {
     siteName: c.siteName,
     tagline: c.tagline,

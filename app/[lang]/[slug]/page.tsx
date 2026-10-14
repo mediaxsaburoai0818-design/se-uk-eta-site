@@ -66,6 +66,17 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
             {c.officialLinkLabel}
           </a>
         </div>
+        {/* 同じ言語のほかのページ（各ページが言語TOPからの1本しか張られていなかった・2026-10-14） */}
+        <nav className="mt-10 border-t border-stone-200 pt-6">
+          <p className="text-sm font-semibold text-stone-900 mb-3">{c.nav.info}</p>
+          <ul className="grid gap-2 sm:grid-cols-2 text-sm">
+            {(Object.entries(c.pages) as [string, { slug: string; h1: string }][])
+              .filter(([k, pg]) => pg.slug !== page.slug && !["about", "privacy", "terms"].includes(k))
+              .map(([k, pg]) => (
+                <li key={k}><Link href={`/${lang}/${pg.slug}/`} className="underline text-stone-700">{pg.h1}</Link></li>
+              ))}
+          </ul>
+        </nav>
       </article>
     </div>
   );

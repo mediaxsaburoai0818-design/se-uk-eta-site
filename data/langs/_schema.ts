@@ -30,6 +30,8 @@ export type PageKey =
   | "validity" | "processing-time" | "required-documents"
   | "stay-duration" | "faq" | "about" | "privacy" | "terms";
 
+export type OptionalPageKey = "mobile-app";
+
 export type PageContent = {
   slug: string;        // その言語のURLスラッグ（必須・言語に合わせる）
   title: string;       // 答えを先頭に出す（CTR改善で実証済みの型）
@@ -51,5 +53,6 @@ export type LangContent = {
   nav: { info: string; entry: string; faq: string };
   officialLinkLabel: string;
   updatedLabel: string;
-  pages: Record<PageKey, PageContent>;
+  // mobile-app は任意（2026-10-14 en のみ。「uk eta app」表示2,346 が /de/ に着地していたため）
+  pages: Record<PageKey, PageContent> & Partial<Record<OptionalPageKey, PageContent>>;
 };

@@ -36,6 +36,11 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
     "what-is-eta", "application", "fee", "processing-time",
     "status-check", "validity", "required-documents", "stay-duration", "faq",
   ];
+  // 任意ページ（mobile-app 等）はある言語だけ並べる
+  const cards: { slug: string; h1: string; lead: string }[] = [
+    ...order.map((k) => p[k]!),
+    ...(p["mobile-app"] ? [p["mobile-app"]] : []),
+  ];
   return (
     <div lang={c.code} dir={c.dir}>
       <section className="sub-hero relative overflow-hidden">
@@ -53,11 +58,11 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
 
       <div className="max-w-4xl mx-auto px-6 py-10">
         <div className="grid gap-4 sm:grid-cols-2">
-          {order.map((k) => (
-            <Link key={k} href={`/${lang}/${p[k].slug}/`}
+          {cards.map((pg) => (
+            <Link key={pg.slug} href={`/${lang}/${pg.slug}/`}
                   className="block border border-stone-200 rounded-lg p-5 hover:shadow-md transition">
-              <p className="font-semibold text-stone-900 mb-1">{p[k].h1}</p>
-              <p className="text-sm text-stone-600 leading-relaxed">{p[k].lead.slice(0, 96)}…</p>
+              <p className="font-semibold text-stone-900 mb-1">{pg.h1}</p>
+              <p className="text-sm text-stone-600 leading-relaxed">{pg.lead.slice(0, 96)}…</p>
             </Link>
           ))}
         </div>
