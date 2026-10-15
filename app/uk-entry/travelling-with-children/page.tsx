@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Resa med barn till Storbritannien: ETA och pass (2026)",
   description:
-    "Alla resenärer, även spädbarn, behöver en egen ETA och ett eget pass till Storbritannien. Border Force kan begära bevis på släktskap - så förbereder du resan med barn.",
+    "Alla, även spädbarn, behöver egen ETA och eget pass till Storbritannien. Border Force kan begära bevis på släktskap - så förbereder du resan med barn.",
   alternates: { canonical: "https://eta-se.com/uk-entry/travelling-with-children/" },
 };
 

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Sjukvård, NHS och GHIC för besökare i Storbritannien (2026)",
   description:
-    "Akutvård (A&E) och besök hos allmänläkare (GP) är kostnadsfritt inom NHS. Så fungerar EHIC/GHIC, varför reseförsäkring rekommenderas starkt och nödnummer 999 och NHS 111.",
+    "Akutvård (A&E) och allmänläkare (GP) är gratis inom NHS. Om EHIC/GHIC, varför reseförsäkring rekommenderas starkt, nödnummer 999 och NHS 111.",
   alternates: { canonical: "https://eta-se.com/uk-entry/healthcare-nhs/" },
 };
 

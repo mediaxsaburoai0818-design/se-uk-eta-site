@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Officiell UK ETA-app: ansök direkt från mobilen | iOS och Android 2026",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function MobileApp() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/eta-info/mobile-app/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/mobile-app.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

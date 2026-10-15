@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { allRoutes, findPage } from "@/data/langs";
+import { JsonLd, pageLd, faqLd } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return allRoutes();
@@ -29,9 +30,16 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params;
   const hit = findPage(lang, slug);
   if (!hit) return null;
-  const { content: c, page } = hit;
+  const { content: c, page, key } = hit;
+  // 構造化データ: FAQ は表示中の Q&A（見出し＝質問・本文＝回答）をそのまま／about・privacy・terms は WebPage／他は Article（日付は画面に無いので入れない）
+  const ld = key === "faq"
+    ? faqLd(page.sections.map((s) => ({ q: s.h, a: s.p.join(" ") })))
+    : pageLd({ path: `/${lang}/${slug}/`, headline: page.h1, description: page.description, lang: c.code,
+               siteName: c.siteName,
+               type: key === "about" ? "AboutPage" : key === "privacy" || key === "terms" ? "WebPage" : "Article" });
   return (
     <div lang={c.code} dir={c.dir}>
+      <JsonLd data={ld} />
       <section className="sub-hero relative overflow-hidden">
         <div className="absolute inset-0 sub-hero-scrim" />
         <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">

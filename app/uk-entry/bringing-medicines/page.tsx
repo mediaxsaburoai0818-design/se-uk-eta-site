@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Ta med mediciner till Storbritannien: regler och intyg (2026)",
   description:
-    "Du får ta med upp till tre månaders förbrukning av dina egna mediciner till Storbritannien. Ha med bevis på att de är utskrivna till dig. Vissa läkemedel innehåller narkotikaklassade ämnen och kan kräva särskilt tillstånd. Här är reglerna.",
+    "Ta med upp till tre månaders förbrukning av egna mediciner till UK och bevis på att de är utskrivna till dig. Narkotikaklassade läkemedel kan kräva tillstånd.",
   alternates: { canonical: "https://eta-se.com/uk-entry/bringing-medicines/" },
 };
 

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Kontanter, valuta och dricks i Storbritannien (2026)",
   description:
-    "Valutan är brittiskt pund (GBP). Har du med dig £10 000 eller mer måste du deklarera det. Kort accepteras nästan överallt - så fungerar växling och dricks i Storbritannien.",
+    "Valutan är brittiskt pund (GBP). £10 000 eller mer måste deklareras. Kort accepteras nästan överallt - så fungerar växling och dricks i UK.",
   alternates: { canonical: "https://eta-se.com/uk-entry/money-currency/" },
 };
 

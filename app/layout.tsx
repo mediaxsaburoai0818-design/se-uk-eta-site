@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s ‐ UK ETA-guiden",
   },
   description:
-    "Komplett guide till UK ETA 2026 på svenska. Vid resa till Storbritannien krävs ETA sedan 2 april 2025 — ansök minst 3 dagar före avresan. Kom ihåg att ansöka i god tid.",
+    "Komplett guide till UK ETA 2026 på svenska. ETA krävs vid resa till Storbritannien sedan 2 april 2025 — ansök minst 3 dagar före avresan.",
   keywords:
     "UK ETA, UK ETA 2026, Storbritannien, reseauktorisering, Electronic Travel Authorisation, ETA-ansökan, Sverige, avgift £20",
   robots: { index: true, follow: true },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UK ETA 2026: £20, ansök på 10 minuter – komplett guide på svenska",
     description:
-      "Komplett guide till UK ETA 2026 på svenska. Vid resa till Storbritannien krävs ETA sedan 2 april 2025 — ansök minst 3 dagar före avresan. Kom ihåg att ansöka i god tid.",
+      "Komplett guide till UK ETA 2026 på svenska. ETA krävs vid resa till Storbritannien sedan 2 april 2025 — ansök minst 3 dagar före avresan.",
     locale: "sv_SE",
     type: "website",
     siteName: "UK ETA-guiden",

@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 export const metadata: Metadata = { title: "Hur lång tid tar UK ETA? Oftast under 24 timmar (max 3 arbetsdagar)", description: "UK ETA avgörs oftast inom 1 dag, men planera för upp till 3 arbetsdagar. Ansök minst 3 arbetsdagar före avresa. Kostnad £20." };
 export default function Page() {
   return (<div>
+      <JsonLd data={pageLd({ path: "/eta-info/handlaggningstid/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/status-check.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

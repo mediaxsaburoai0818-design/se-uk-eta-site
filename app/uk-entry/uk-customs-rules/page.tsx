@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Vad får man ta med till England? Tullregler (2026)",
   description:
-    "Från EU får du inte ta med kött och mejeriprodukter till Storbritannien - undantag: modersmjölksersättning (upp till 2 kg). Se tullfria kvoter för alkohol och tobak samt regeln om kontanter på £10 000.",
+    "Kött och mejeriprodukter från EU får inte tas in i UK (undantag: modersmjölksersättning, max 2 kg). Tullfria kvoter för alkohol och tobak samt £10 000-regeln.",
   alternates: { canonical: "https://eta-se.com/uk-entry/uk-customs-rules/" },
 };
 

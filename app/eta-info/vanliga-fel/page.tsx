@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 export const metadata: Metadata = { title: "Vanliga fel vid UK ETA-ansökan och den officiella appen 2026", description: "Vanliga fel vid UK ETA-ansökan: passuppgifter som inte stämmer, fotokrav, betalning och falska webbplatser. Använd den officiella UK ETA-appen." };
 export default function Page() {
   return (<div>
+      <JsonLd data={pageLd({ path: "/eta-info/vanliga-fel/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/mobile-app.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

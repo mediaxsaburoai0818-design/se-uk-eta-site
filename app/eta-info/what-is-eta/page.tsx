@@ -1,16 +1,18 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Vad är UK ETA? Komplett guide 2026",
   description:
-    "UK ETA (Electronic Travel Authorisation) är ett elektroniskt resetillstånd som gäller från 2 april 2025. Procedur, avgift £20, giltighet 2 år, beslut vanligtvis inom 3 dagar.",
+    "UK ETA (Electronic Travel Authorisation) är ett elektroniskt resetillstånd sedan 2 april 2025: avgift £20, giltighet 2 år, beslut oftast inom 3 dagar.",
 };
 
 export default function WhatIsEta() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/eta-info/what-is-eta/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       {/* Header */}
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}

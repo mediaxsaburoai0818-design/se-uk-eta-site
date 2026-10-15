@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HOME_MAIN, HOME_CTA } from "@/lib/eta-design";
 import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "./news/news-data";
+import { JsonLd, homeLd } from "@/lib/jsonld";
 const latestNews = [...newsItems].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
 
 
@@ -116,6 +117,7 @@ function Icon({ name }: { name: string }) {
 export default function Home() {
   return (
     <div className="etahome">
+      <JsonLd data={homeLd({ name: "UK ETA-guiden", path: "/", lang: "sv" })} />
       <div dangerouslySetInnerHTML={{ __html: HOME_MAIN }} />
 
       {/* Giltighet och när du ska ansöka */}

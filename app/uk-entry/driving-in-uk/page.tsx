@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Får man köra bil i Storbritannien med utländskt körkort? Regler för besökare (2026)",
   description:
-    "Besökare bosatta utanför Storbritannien får köra på ett giltigt hemlandskörkort i upp till 12 månader från inresedagen. Lägsta ålder för personbil är 17 år, man kör på vänster sida och giltig bilförsäkring krävs.",
+    "Besökare bosatta utomlands får köra på giltigt hemlandskörkort upp till 12 månader från inresan. Lägsta ålder för bil 17 år, vänstertrafik, försäkring krävs.",
   alternates: { canonical: "https://eta-se.com/uk-entry/driving-in-uk/" },
 };
 

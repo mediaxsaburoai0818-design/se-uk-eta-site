@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 export const metadata: Metadata = { title: "UK ETA giltighet 2026: 2 år eller tills passet går ut – så räknar du", description: "UK ETA gäller 2 år eller tills passet går ut. Flera inresor, max 6 månader per vistelse. Nytt pass = nytt ETA." };
 export default function Page() {
   return (<div>
+      <JsonLd data={pageLd({ path: "/eta-info/giltighet/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/expiration.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

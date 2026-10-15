@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, LANG_CODES } from "@/data/langs";
 import { FACTS } from "@/data/langs/_schema";
+import { JsonLd, homeLd } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return LANG_CODES.map((lang) => ({ lang }));
@@ -43,6 +44,7 @@ export default async function LangHome({ params }: { params: Promise<{ lang: str
   ];
   return (
     <div lang={c.code} dir={c.dir}>
+      <JsonLd data={homeLd({ name: c.siteName, path: `/${lang}/`, lang: c.code, description: c.homeDescription })} />
       <section className="sub-hero relative overflow-hidden">
         <div className="absolute inset-0 sub-hero-scrim" />
         <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">

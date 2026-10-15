@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Vätskor i handbagaget: säkerhetskontroll på brittiska flygplatser (2026)",
   description:
-    "På många brittiska flygplatser gäller ofta högst 100 ml per behållare i handbagaget, i en genomskinlig påse på högst 1 liter. Vissa flygplatser tillåter upp till 2 liter tack vare nya CT-skannrar - reglerna varierar, så kontrollera din avreseflygplats.",
+    "Många brittiska flygplatser tillåter högst 100 ml per behållare i handbagaget (påse max 1 liter); vissa 2 liter tack vare CT-skannrar. Kolla din flygplats.",
   alternates: { canonical: "https://eta-se.com/uk-entry/airport-security-liquids/" },
 };
 

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Officiell GOV.UK-sida för UK ETA - hur du känner igen falska sidor",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function OfficialGovUK() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/eta-info/official-gov-uk/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/official-gov-uk.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

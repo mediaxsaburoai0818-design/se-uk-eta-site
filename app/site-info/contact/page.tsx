@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { JsonLd, pageLd } from "@/lib/jsonld";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -60,6 +61,7 @@ export default function Contact() {
 
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/site-info/contact/", headline: "Kontakt", lang: "sv", type: "ContactPage" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/contact.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

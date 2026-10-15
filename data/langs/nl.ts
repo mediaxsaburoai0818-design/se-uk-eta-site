@@ -9,7 +9,7 @@ const nl: LangContent = {
   tagline: "De reistoestemming voor het Verenigd Koninkrijk, stap voor stap",
   homeTitle: `UK ETA: ${F.fee} en meestal binnen 1 dag antwoord | Gids in het Nederlands 2026`,
   homeDescription:
-    `Nederlandstalige gids over de UK ETA: het kost ${F.fee}, is ${F.validYears} jaar geldig en geeft recht op verblijven van maximaal ${F.staySixMonths} maanden per reis. Zo vraagt u hem aan op de officiële website van GOV.UK.`,
+    `Nederlandstalige gids over de UK ETA: het kost ${F.fee}, is ${F.validYears} jaar geldig en geeft recht op verblijf van maximaal ${F.staySixMonths} maanden per reis. Aanvragen via GOV.UK.`,
   homeLead:
     `Reist u naar het Verenigd Koninkrijk, dan heeft u een UK ETA nodig. De aanvraag kost ${F.fee} op de officiële site, het antwoord komt meestal binnen 1 dag en de toestemming geldt ${F.validYears} jaar voor meerdere reizen.`,
   nav: { info: "Over de ETA", entry: "Reizen naar het VK", faq: "Veelgestelde vragen" },
@@ -19,7 +19,7 @@ const nl: LangContent = {
     "what-is-eta": {
       slug: "wat-is-de-eta",
       title: "Wat is de UK ETA: een verplichte toestemming vooraf, geen visum | 2026",
-      description: `De UK ETA is een elektronische reistoestemming die u vóór vertrek aanvraagt. Het is geen visum: u regelt het online, het kost ${F.fee} en het wordt aan uw paspoort gekoppeld.`,
+      description: `De UK ETA is een elektronische reistoestemming die u vóór vertrek aanvraagt. Geen visum: online regelen, kost ${F.fee}, gekoppeld aan uw paspoort.`,
       h1: "Wat is de UK ETA",
       lead: "De UK ETA (Electronic Travel Authorisation) vraagt u aan vóór uw reis. Het vervangt uw paspoort niet en is geen visum.",
       sections: [

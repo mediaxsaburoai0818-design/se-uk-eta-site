@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 export const metadata: Metadata = { title: "Vem behöver ett UK ETA? Nationaliteter och undantag 2026", description: "Vem behöver ett UK ETA och vem är undantagen: brittiska och irländska medborgare, personer med uppehållstillstånd, airside-transit. Guide per nationalitet." };
 export default function Page() {
   return (<div>
+      <JsonLd data={pageLd({ path: "/eta-info/vem-behover/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/what-is-eta.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Betala för resor i London: Oyster och kontaktlöst (2026)",
   description:
-    "I Londons tunnelbana, bussar och tåg betalar du med kontaktlöst kort, mobil eller Oyster-kort. Kontaktlöst och Oyster har samma pris och det finns dagliga och veckovisa pristak - kontrollera aktuella belopp hos TfL.",
+    "I Londons tunnelbana, bussar och tåg betalar du kontaktlöst, med mobil eller Oyster-kort - samma pris, dagliga och veckovisa pristak. Se belopp hos TfL.",
   alternates: { canonical: "https://eta-se.com/uk-entry/transport-oyster/" },
 };
 

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Eluttag och spänning i Storbritannien: Type G (2026)",
   description:
-    "I Storbritannien används eluttag av typ G (fyrkantig trestift) och spänningen är 230 V, 50 Hz. Har din laddare INPUT 100-240 V räcker en reseadapter - kontrollera alltid apparatens märkning.",
+    "Storbritannien har eluttag typ G (fyrkantig trestift), 230 V, 50 Hz. Med INPUT 100-240 V räcker en reseadapter - kontrollera alltid märkningen.",
   alternates: { canonical: "https://eta-se.com/uk-entry/power-plug/" },
 };
 

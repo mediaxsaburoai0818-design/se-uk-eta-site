@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "SIM-kort, eSIM och mobilt internet i Storbritannien (2026)",
   description:
-    "De största mobiloperatörerna i Storbritannien är EE, O2, Vodafone och Three. Kontantkort och eSIM för besökare, olåst telefon och roaming efter brexit - så håller du dig uppkopplad.",
+    "Största mobiloperatörerna i UK är EE, O2, Vodafone och Three. Kontantkort, eSIM, olåst telefon och roaming efter brexit - så håller du dig uppkopplad.",
   alternates: { canonical: "https://eta-se.com/uk-entry/sim-mobile/" },
 };
 

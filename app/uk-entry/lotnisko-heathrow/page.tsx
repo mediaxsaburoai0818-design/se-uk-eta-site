@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Heathrow flygplats (LHR) - terminaler, kontroll och resa till London",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function Heathrow() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/uk-entry/lotnisko-heathrow/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="relative overflow-hidden" style={{ background: "var(--color-navy)" }}>
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-12 md:pt-16 md:pb-14">
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>INRESA TILL UK</p>

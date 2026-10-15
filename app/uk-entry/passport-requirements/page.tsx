@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Passkrav för resa till Storbritannien: giltighet och ETA (2026)",
   description:
-    "För att besöka Storbritannien behöver du ett giltigt pass som i regel ska gälla under hela vistelsen. ETA är kopplad till passet, och alla resenärer - även spädbarn - behöver ett eget pass. Kontrollera ditt lands krav på gov.uk före resan.",
+    "Du behöver ett giltigt pass som i regel gäller hela vistelsen i UK. ETA kopplas till passet och alla, även spädbarn, behöver eget pass. Se kraven på gov.uk.",
   alternates: { canonical: "https://eta-se.com/uk-entry/passport-requirements/" },
 };
 

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/site-info/privacy-policy/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "WebPage" })} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/privacy-policy.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

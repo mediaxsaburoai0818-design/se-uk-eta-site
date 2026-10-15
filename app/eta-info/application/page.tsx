@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Så ansöker du om UK ETA 2026 - steg för steg-guide",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Application() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/eta-info/application/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       {/* Header */}
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}

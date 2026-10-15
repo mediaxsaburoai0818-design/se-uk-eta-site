@@ -9,7 +9,7 @@ const hu: LangContent = {
   tagline: "Az Egyesült Királyságba szóló utazási engedély, lépésről lépésre",
   homeTitle: `UK ETA: ${F.fee} és a válasz általában 1 napon belül | Magyar útmutató 2026`,
   homeDescription:
-    `Magyar nyelvű útmutató az UK ETA-hoz: ${F.fee}-ba kerül, ${F.validYears} évig érvényes, és utazásonként legfeljebb ${F.staySixMonths} hónap tartózkodásra jogosít. Így igényelheti a GOV.UK hivatalos oldalán.`,
+    `Magyar nyelvű útmutató az UK ETA-hoz: ${F.fee}-ba kerül, ${F.validYears} évig érvényes, és utazásonként legfeljebb ${F.staySixMonths} hónap tartózkodásra jogosít. Igénylés a GOV.UK oldalán.`,
   homeLead:
     `Ha az Egyesült Királyságba utazik, UK ETA-ra van szüksége. A hivatalos oldalon ${F.fee}-ba kerül, a válasz általában 1 napon belül megérkezik, az engedély pedig ${F.validYears} évig érvényes, több utazásra.`,
   nav: { info: "Az ETA-ról", entry: "Utazás az Egyesült Királyságba", faq: "Gyakori kérdések" },

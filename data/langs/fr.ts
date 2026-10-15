@@ -10,7 +10,7 @@ const fr: LangContent = {
   tagline: "L'autorisation de voyage pour le Royaume-Uni, étape par étape",
   homeTitle: `UK ETA : ${F.fee} et une réponse en général sous 1 jour | Guide en français 2026`,
   homeDescription:
-    `Guide en français sur l'UK ETA : elle coûte ${F.fee}, reste valable ${F.validYears} ans et permet des séjours de ${F.staySixMonths} mois maximum par voyage. Comment en faire la demande sur le site officiel GOV.UK.`,
+    `Guide en français sur l'UK ETA : elle coûte ${F.fee}, reste valable ${F.validYears} ans et permet des séjours de ${F.staySixMonths} mois maximum par voyage. Comment la demander sur GOV.UK.`,
   homeLead:
     `Pour voyager au Royaume-Uni, il vous faut une UK ETA. Elle coûte ${F.fee} sur le site officiel, la réponse arrive en général sous 1 jour, et l'autorisation reste valable ${F.validYears} ans pour plusieurs voyages.`,
   nav: { info: "À propos de l'ETA", entry: "Voyager au Royaume-Uni", faq: "Questions fréquentes" },
@@ -20,7 +20,7 @@ const fr: LangContent = {
     "what-is-eta": {
       slug: "qu-est-ce-que-l-eta",
       title: "Qu'est-ce que l'UK ETA : une autorisation préalable obligatoire, pas un visa | 2026",
-      description: `L'UK ETA est une autorisation de voyage électronique à demander avant le départ. Ce n'est pas un visa : tout se fait en ligne, elle coûte ${F.fee} et elle est rattachée à votre passeport.`,
+      description: `L'UK ETA est une autorisation de voyage électronique à obtenir avant le départ. Pas un visa : demande en ligne, coût ${F.fee}, liée au passeport.`,
       h1: "Qu'est-ce que l'UK ETA",
       lead: "L'UK ETA (Electronic Travel Authorisation) se demande avant le voyage. Elle ne remplace pas votre passeport et ce n'est pas un visa.",
       sections: [

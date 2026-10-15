@@ -1,17 +1,19 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Inresa till Storbritannien och visum - guide 2026",
   description:
-    "Regler för inresa till Storbritannien: UK ETA för vistelser upp till 6 månader, när du behöver visum, gränskontroll (eGate), nödvändiga dokument och resor med barn.",
+    "Regler för inresa till Storbritannien: UK ETA för vistelser upp till 6 månader, när visum krävs, gränskontroll (eGate), dokument och resor med barn.",
   alternates: { canonical: "https://eta-se.com/uk-entry/wjazd-i-wiza/" },
 };
 
 export default function VisaEntry() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/uk-entry/wjazd-i-wiza/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <section className="relative overflow-hidden" style={{ background: "var(--color-navy)" }}>
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-12 md:pt-16 md:pb-14">
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>INRESA TILL UK</p>

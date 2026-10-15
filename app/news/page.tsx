@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "./news-data";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Senaste nyheterna om UK ETA och resor till Storbritannien",
@@ -15,6 +16,7 @@ const sorted = [...newsItems].sort((a, b) => (a.date < b.date ? 1 : -1));
 export default function NewsIndex() {
   return (
     <div>
+      <JsonLd data={pageLd({ path: "/news/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "CollectionPage" })} />
       <section className="relative overflow-hidden" style={{ background: "var(--color-navy)" }}>
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-12 md:pt-16 md:pb-14">
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>NYHETER</p>

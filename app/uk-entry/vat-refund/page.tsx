@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Momsåterbäring i Storbritannien (VAT refund): vad som gäller (2026)",
   description:
-    "Sedan 1 januari 2021 återbetalas i Storbritannien (England, Skottland, Wales) i regel inte momsen på varor som resenärer tar med sig hem i handbagaget. Om butiken skickar varan direkt utomlands kan köp ibland ske utan moms - och Nordirland hanteras separat.",
+    "Sedan 1 jan 2021 återbetalas i regel ingen moms på varor resenärer tar med hem från England, Skottland och Wales. Skickas varan utomlands kan den bli momsfri.",
   alternates: { canonical: "https://eta-se.com/uk-entry/vat-refund/" },
 };
 

@@ -10,7 +10,7 @@ const es: LangContent = {
   tagline: "La autorización de viaje para el Reino Unido, explicada paso a paso",
   homeTitle: `UK ETA: ${F.fee} y respuesta normalmente en 1 día | Guía en español 2026`,
   homeDescription:
-    `Guía en español de la UK ETA: cuesta ${F.fee}, es válida ${F.validYears} años y permite estancias de hasta ${F.staySixMonths} meses por entrada. Cómo solicitarla en la web oficial de GOV.UK y qué necesitas tener a mano.`,
+    `Guía en español de la UK ETA: cuesta ${F.fee}, es válida ${F.validYears} años y permite estancias de hasta ${F.staySixMonths} meses por entrada. Cómo solicitarla en la web oficial de GOV.UK.`,
   homeLead:
     `Si viajas al Reino Unido desde España necesitas una UK ETA (autorización electrónica de viaje). Cuesta ${F.fee} en la web oficial, la decisión llega normalmente en 1 día y sirve para varias entradas durante ${F.validYears} años.`,
   nav: { info: "Sobre la ETA", entry: "Entrada al Reino Unido", faq: "Preguntas frecuentes" },
@@ -21,7 +21,7 @@ const es: LangContent = {
       slug: "que-es-la-eta",
       title: "Qué es la UK ETA: autorización previa obligatoria, no un visado | 2026",
       description:
-        "La UK ETA es una autorización electrónica que debes obtener antes de viajar al Reino Unido. No es un visado: se solicita en línea, cuesta " + F.fee + " y se vincula a tu pasaporte.",
+        "La UK ETA es una autorización electrónica que debes obtener antes de viajar al Reino Unido. No es un visado: se pide online, cuesta " + F.fee + ", ligada al pasaporte.",
       h1: "Qué es la UK ETA",
       lead: "La UK ETA (Electronic Travel Authorisation) es una autorización que se pide antes de viajar. No sustituye al pasaporte ni equivale a un visado.",
       sections: [
@@ -78,7 +78,7 @@ const es: LangContent = {
       slug: "consultar-estado",
       title: "Consultar el estado de la UK ETA: dónde y qué necesitas | 2026",
       description:
-        "Cómo comprobar si tu UK ETA está aprobada: el aviso llega por correo electrónico y el estado se consulta con el número de pasaporte. Qué hacer si no recibes respuesta.",
+        "Cómo saber si tu UK ETA está aprobada: el aviso llega por correo y el estado se consulta con el número de pasaporte. Qué hacer si no recibes respuesta.",
       h1: "Cómo consultar el estado de tu UK ETA",
       lead: "La decisión se comunica por correo electrónico. Si no te ha llegado, puedes comprobar el estado con los datos del pasaporte con el que solicitaste la autorización.",
       sections: [

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import { newsItems, CATEGORY_STYLE, CATEGORY_LABEL } from "../news-data";
+import { JsonLd, pageLd } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return newsItems.map((n) => ({ slug: n.slug }));
@@ -27,6 +28,7 @@ export default async function NewsArticle({ params }: { params: Promise<{ slug: 
 
   return (
     <div>
+      <JsonLd data={pageLd({ path: `/news/${n.slug}/`, headline: n.title, description: n.summary, lang: "sv", type: "NewsArticle", datePublished: n.date })} />
       <section className="relative overflow-hidden" style={{ background: "var(--color-navy)" }}>
         <div className="relative max-w-3xl mx-auto px-6 pt-14 pb-12 md:pt-16 md:pb-14">
           <div className="flex items-center gap-3 mb-4">

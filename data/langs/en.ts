@@ -21,7 +21,7 @@ const en: LangContent = {
     "what-is-eta": {
       slug: "what-is-the-eta",
       title: "What is the UK ETA: a required pre-authorisation, not a visa | 2026",
-      description: `The UK ETA is an electronic travel authorisation you apply for before departure. It is not a visa: you do it online, it costs ${F.fee} and it is linked to your passport.`,
+      description: `The UK ETA is an electronic travel authorisation you get before departure. Not a visa: apply online, it costs ${F.fee} and is linked to your passport.`,
       h1: "What is the UK ETA",
       lead: "You apply for the UK ETA (Electronic Travel Authorisation) before you travel. It does not replace your passport, and it is not a visa.",
       sections: [

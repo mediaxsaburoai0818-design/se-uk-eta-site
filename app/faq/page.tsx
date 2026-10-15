@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, faqLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "FAQ UK ETA 2026 - vanliga frågor om ansökan och avgifter",
@@ -74,6 +75,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <div>
+      <JsonLd data={faqLd(faqs)} />
       <section className="sub-hero relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/sub-hero/faq.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />

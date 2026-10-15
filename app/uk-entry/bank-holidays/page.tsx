@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Bank holidays i Storbritannien 2026: helgdagar (2026)",
   description:
-    "Officiella bank holidays i England och Wales 2026 enligt GOV.UK. Bankerna håller stängt, många butiker har kortare öppettider och kollektivtrafiken kan ha reducerad turtäthet - på juldagen är nästan allt stängt.",
+    "Bank holidays 2026 i England och Wales enligt GOV.UK: bankerna stänger, butiker har kortare öppettider, glesare trafik - på juldagen är nästan allt stängt.",
   alternates: { canonical: "https://eta-se.com/uk-entry/bank-holidays/" },
 };
 

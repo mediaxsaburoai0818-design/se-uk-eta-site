@@ -9,7 +9,7 @@ const fi: LangContent = {
   tagline: "Matkustuslupa Yhdistyneeseen kuningaskuntaan, vaihe vaiheelta",
   homeTitle: `UK ETA: ${F.fee} ja vastaus yleensä vuorokaudessa | Opas suomeksi 2026`,
   homeDescription:
-    `Suomenkielinen opas UK ETA -lupaan: se maksaa ${F.fee}, on voimassa ${F.validYears} vuotta ja oikeuttaa enintään ${F.staySixMonths} kuukauden oleskeluun matkaa kohden. Näin haet sen GOV.UK:n virallisilta sivuilta.`,
+    `Suomenkielinen opas UK ETA -lupaan: se maksaa ${F.fee}, on voimassa ${F.validYears} vuotta ja sallii enintään ${F.staySixMonths} kuukauden oleskelun matkaa kohden. Näin haet sen GOV.UK:sta.`,
   homeLead:
     `Yhdistyneeseen kuningaskuntaan matkustaessasi tarvitset UK ETA -luvan. Se maksaa virallisilla sivuilla ${F.fee}, vastaus tulee yleensä vuorokaudessa ja lupa on voimassa ${F.validYears} vuotta useita matkoja varten.`,
   nav: { info: "Tietoa ETA:sta", entry: "Matka Britanniaan", faq: "Usein kysytyt kysymykset" },

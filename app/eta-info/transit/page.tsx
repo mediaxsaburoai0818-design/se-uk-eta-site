@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
+import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Transit genom Storbritannien — behöver du UK ETA 2026?",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Transit() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd data={pageLd({ path: "/eta-info/transit/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <Breadcrumb
         items={[
           { label: "Information om UK ETA", href: "/eta-info/what-is-eta/" },

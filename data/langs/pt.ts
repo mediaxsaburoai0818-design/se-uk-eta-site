@@ -20,7 +20,7 @@ const pt: LangContent = {
     "what-is-eta": {
       slug: "o-que-e-a-eta",
       title: "O que é a UK ETA: autorização prévia obrigatória, não é visto | 2026",
-      description: `A UK ETA é uma autorização eletrónica que tem de obter antes de viajar para o Reino Unido. Não é um visto: pede-se online, custa ${F.fee} e fica associada ao passaporte.`,
+      description: `A UK ETA é uma autorização eletrónica a obter antes de viajar para o Reino Unido. Não é visto: pede-se online, custa ${F.fee} e fica ligada ao passaporte.`,
       h1: "O que é a UK ETA",
       lead: "A UK ETA (Electronic Travel Authorisation) é uma autorização pedida antes da viagem. Não substitui o passaporte nem equivale a um visto.",
       sections: [
