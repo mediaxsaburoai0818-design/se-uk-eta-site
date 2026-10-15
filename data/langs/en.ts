@@ -70,19 +70,32 @@ const en: LangContent = {
           `You can make multiple trips of up to ${F.staySixMonths} months each to the UK, Jersey, Guernsey and the Isle of Man. The ETA is linked digitally to your passport, so you only need to travel with that passport — you can delete the app after you apply.` ] },
       ],
     },
+    // 2026-10-15 強化（「apply for uk eta」「uk eta application online」11〜12位）。事実は gov.uk/eta/apply・gov.uk/eta（同日確認）
     application: {
       slug: "how-to-apply",
-      title: "How to apply for the UK ETA: online, in a few minutes | Guide 2026",
-      description: `The steps to apply for the UK ETA on the official GOV.UK site or app: passport, a photo of your face, contact details and a ${F.fee} payment.`,
-      h1: "How to apply for the UK ETA",
-      lead: "The application is entirely online, either on the official GOV.UK site or in the official app. You do not need to attend anywhere in person.",
+      title: `Apply for a UK ETA Online: Step-by-Step Guide (${F.fee}, 2026)`,
+      description: `How to apply for a UK ETA online or in the official app: what you need, each step, applying for children, the ${F.fee} fee and when the decision arrives.`,
+      h1: "How to apply for a UK ETA online",
+      lead: `You apply for a UK ETA on the official GOV.UK website or in the official UK ETA app — there is no appointment and nothing to post. It costs ${F.fee}, and most decisions arrive by email within a day. Last checked against GOV.UK on 15 October 2026.`,
       sections: [
         { h: "What to have ready", p: [
-          "The passport you will travel on, a photo of your face (you can take it with your phone), an email address and a payment card.",
-          "The details must match the passport exactly. A name spelled differently is the most common reason for refusal." ] },
+          "The passport you will travel on, an email address, and a credit or debit card, Apple Pay or Google Pay. You also need a photo of the applicant's face — you can upload one or take it during the application.",
+          "If you apply on the website, you also upload a photo of the passport. The details must match the passport exactly: a name spelled differently or a mistyped passport number can delay your application or lead to a refusal." ] },
+        { h: "Online or in the app: which to choose", p: [
+          "In the UK ETA app you scan your passport and your face with your phone's camera. On the website you upload a photo of the passport and a photo of the applicant's face instead. The fee and the decision time are the same either way.",
+          "If you cannot download or use the app — for example, your phone has no NFC to read the passport chip — apply on the website." ] },
         { h: "The steps", p: [
-          `Go to the official GOV.UK site or download the official app, scan the photo page of your passport, take the picture, answer the suitability questions and pay ${F.fee}.`,
-          `Then you wait for the decision. It usually arrives within 1 day, but allow up to ${F.decisionDays} working days.` ] },
+          `1) Open the official GOV.UK ETA page or the UK ETA app. 2) Enter or scan the details from the photo page of your passport. 3) Add the photo of your face. 4) Answer the questions about your address, job, other nationalities and any criminal convictions. 5) Pay ${F.fee}. The fee cannot be refunded after you apply.`,
+          `Then you wait for the decision. It usually arrives by email within a day, but allow up to ${F.decisionDays} working days (Monday to Friday).` ] },
+        { h: "Applying for children and other people", p: [
+          "Every traveller needs their own ETA, including babies and children. You can apply on behalf of other people.",
+          "In the app you can apply for someone only if they are with you. If they are not with you, apply on the website with a photo of their passport and a photo of their face. People who apply together may get their decisions at different times." ] },
+        { h: "After you apply", p: [
+          "The decision email contains a 16-digit ETA reference number. Do not travel until you have the email confirming your ETA. There is nothing to print: the ETA is linked to your passport, and you only show that passport when you travel.",
+          `No email after ${F.decisionDays} working days? Check your spam or junk folder first, then contact UKVI through the ETA webchat on GOV.UK (UKVI does not handle ETA questions by phone). If your application is refused, or you get a new passport, you need to apply again.` ] },
+        { h: "Faster or cheaper elsewhere? No", p: [
+          `GOV.UK states that you cannot get a faster decision by applying through another website or app, and that other websites may charge more than ${F.fee}. Avoid sites that imitate government services.`,
+          "Note that an ETA does not guarantee entry to the UK, Jersey, Guernsey or the Isle of Man." ] },
         { h: "Check before you submit", p: [
           "That the passport number and expiry date are copied correctly, that your face is clearly visible in the photo, and that the email address is right — that is where the decision goes.",
           "Apply well ahead of time, not on the day of departure." ] },
