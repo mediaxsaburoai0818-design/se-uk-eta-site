@@ -84,6 +84,14 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
                 <li key={k}><Link href={`/${lang}/${pg.slug}/`} className="underline text-stone-700">{pg.h1}</Link></li>
               ))}
           </ul>
+          {/* about・privacy・terms は言語TOPからの1本しか張られていなかった（2026-10-16）→ ページ末尾に並べる */}
+          <p className="mt-6 flex flex-wrap gap-4 text-xs text-stone-500">
+            {(["about", "privacy", "terms"] as const)
+              .filter((k) => c.pages[k].slug !== page.slug)
+              .map((k) => (
+                <Link key={k} href={`/${lang}/${c.pages[k].slug}/`} className="underline">{c.pages[k].h1}</Link>
+              ))}
+          </p>
         </nav>
       </article>
     </div>

@@ -65,6 +65,19 @@ export default async function NewsArticle({ params }: { params: Promise<{ slug: 
             </p>
           )}
 
+          {/* ほかのニュース（各記事が /news/ 一覧からの1本しか張られていなかった・2026-10-16） */}
+          <nav className="mt-10" aria-label="Fler nyheter">
+            <h2 className="heading-band mb-4">Fler nyheter om UK ETA</h2>
+            <ul className="space-y-2 text-sm">
+              {newsItems.filter((x) => x.slug !== n.slug).map((x) => (
+                <li key={x.slug}>
+                  <Link href={`/news/${x.slug}/`} className="content-link">{x.title}</Link>
+                  <span className="text-gray-500"> ({x.date})</span>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="mt-10">
             <Link href="/news/" className="content-link font-bold">&larr; Alla nyheter</Link>
           </div>
