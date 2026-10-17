@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path.home()/"projects/se-uk-eta-site-deploy"
 # 旧方式（各言語が同じURLパスを持つ）。ここは従来どおりパス一致で相手を探す。
-LANGS = [("sv",""),("de","/de"),("it","/it"),("ro","/ro"),("el","/el")]
+LANGS = [("sv",""),("de","/de"),("it","/it"),("ro","/ro"),("el","/el"),("fr","/fr"),("hr","/hr"),("pl","/pl")]  # fr/hr/pl＝2026-10-17 eta-fr/eta-hr/eta-pl を統合
 
 # 新方式（言語ごとにスラッグが違う）。パス一致では結び付かないので、
 # ビルド時に出した pageKey ベースの対応表 out/hreflang-map.json を使う。
@@ -21,7 +21,7 @@ for _k, _langs in HMAP.items():
 for _l, _path in HMAP.get("_home", {}).items():
     PATH2KEY[_path] = "_home"
 ORIGIN = "https://eta-se.com"
-REWRITE = {"/de":"https://eta-de.com","/it":"https://eta-italia.com","/ro":"https://eta-ro.com","/el":"https://eta-gr.com"}
+REWRITE = {"/de":"https://eta-de.com","/it":"https://eta-italia.com","/ro":"https://eta-ro.com","/el":"https://eta-gr.com","/fr":"https://eta-fr.com","/hr":"https://eta-hr.com","/pl":"https://eta-pl.com"}
 
 def pages(base: Path, skipdirs):
     for p in base.rglob("index.html"):
@@ -41,7 +41,7 @@ NEW_LANGS = list(HCODES.keys())
 for lang, prefix in LANGS:
     base = ROOT / prefix.lstrip("/") if prefix else ROOT
     # ルート（sv）を走るときは、他プロジェクト言語も新方式言語も配下に含めない
-    skip = ({"de","it","ro","el","_next","_not-found"} | set(NEW_LANGS)) if not prefix else {"_next","_not-found"}
+    skip = ({"de","it","ro","el","fr","hr","pl","_next","_not-found"} | set(NEW_LANGS)) if not prefix else {"_next","_not-found"}
     for f, P in pages(base, skip):
         html = f.read_text(encoding="utf-8")
         # 1) 言語ディレクトリ: スタンドアロンドメインの絶対URLをポータルへ書換

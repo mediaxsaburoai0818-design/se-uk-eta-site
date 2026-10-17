@@ -9,7 +9,7 @@ import fi from "./fi";
 import hu from "./hu";
 import ko from "./ko";
 import he from "./he";
-import fr from "./fr";
+// 2026-10-17 フランス語は eta-fr.com を統合し /fr/ を別ソース（uk-eta-site-fr・ETA_BASE=/fr）から配信するため、ここから外した（旧 [lang] の12ページは _redirects で新ページへ301）
 import en from "./en";
 import zhTw from "./zh-tw";
 import zhCn from "./zh-cn";
@@ -19,7 +19,7 @@ import zhCn from "./zh-cn";
 // ⚠️ 中国語2種は結論が逆。取り違えると読者を誤った申請に誘導する。
 //    zh-tw … 台湾旅券はETAの対象（旅券に国民身分証番号の記載があるものに限る）
 //    zh-cn … 🚨 中国本土旅券はETAの対象外＝ビザが必要
-export const LANGS: Record<string, LangContent> = { es, nl, pt, da, no, cs, fi, hu, ko, he, fr, en, "zh-tw": zhTw, "zh-cn": zhCn };
+export const LANGS: Record<string, LangContent> = { es, nl, pt, da, no, cs, fi, hu, ko, he, en, "zh-tw": zhTw, "zh-cn": zhCn };
 
 export const LANG_CODES = Object.keys(LANGS);
 

@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 // ⚠️ 2026-10-17 okina「他言語TOPもルートと同じデザインで、言語だけ変える」。
 //    HTML は ~/projects/top-l10n/etase/<lang>.html（ルートTOPの翻訳）から integrate.py が生成する（手で直さない）。旧TOPは ~/projects/top-l10n/backup/。
 //    layout の Header/Footer/StickyCta は言語TOPでは出さない。翻訳が無い言語は出さない（generateStaticParams は従来どおり）。
+// ⚠️ 2026-10-17 okina「他言語TOPもルートと同じデザインで、言語だけ変える」。
+//    HTML は ~/projects/top-l10n/etase/<lang>.html（ルートTOPの翻訳）から integrate.py が生成する（手で直さない）。旧TOPは ~/projects/top-l10n/backup/。
+//    layout の Header/Footer/StickyCta は言語TOPでは出さない。翻訳が無い言語は出さない（generateStaticParams は従来どおり）。
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const c = LANGS[lang];
