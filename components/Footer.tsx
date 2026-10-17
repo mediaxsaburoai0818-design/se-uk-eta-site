@@ -11,6 +11,8 @@ export default function Footer() {
   const pathname = usePathname() || "/";
   const lang = pathname.split("/")[1];
   const nav = (headerNav as Record<string, { siteName: string; tagline: string }>)[lang];
+  // 2026-10-17 他言語TOP（/fr/ 等）はフッターをページ側の HTML に持つ
+  if (nav && /^\/[^/]+\/?$/.test(pathname)) return null;
   if (nav) {
     return (
       <footer style={{ backgroundColor: "var(--color-navy)" }} className="mt-16 py-8">

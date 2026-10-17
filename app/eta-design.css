@@ -520,3 +520,11 @@
   .etahome .block .visual.map{display:flex;justify-content:center}
   .etahome .map-wrap{margin-left:0;margin-right:0}
 }
+
+/* 2026-10-17 他言語TOP（ルートと同じデザイン・言語だけ変更）：ナビの語が長い言語でCTAが画面外に出ないよう詰める／右→左（he）はヒーローの配置をLTRのままにして文字だけ右寄せ */
+div[lang] .etahome .nav,html:not([lang="sv"]) .etahome .nav{gap:16px}
+div[lang] .etahome .nav a,html:not([lang="sv"]) .etahome .nav a{font-size:13px}
+div[lang] .etahome .header .container,html:not([lang="sv"]) .etahome .header .container{gap:18px}
+div[lang] .etahome .brand .sub,html:not([lang="sv"]) .etahome .brand .sub{display:none}
+[dir="rtl"] .etahome .hero{direction:ltr}
+[dir="rtl"] .etahome .hero .hero-inner{direction:rtl;text-align:right}

@@ -93,6 +93,8 @@ export default function Header() {
   const pathname = usePathname() || "/";
   const seg = pathname.split("/")[1];
   const localized = NAV[seg];
+  // 2026-10-17 他言語TOP（/fr/ 等）はルートと同じデザインで、ヘッダーをページ側の HTML に持つ
+  if (localized && /^\/[^/]+\/?$/.test(pathname)) return null;
   if (localized) return <LocalizedHeader lang={seg} data={localized} />;
 
   // 2026-10 デザインリニューアル（okina依頼）：スウェーデン語の全ページを新ヘッダーに。

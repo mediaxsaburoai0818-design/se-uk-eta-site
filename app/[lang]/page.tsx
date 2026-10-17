@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HOME_L10N } from "@/lib/home-l10n";
+import HomeChrome from "@/components/HomeChrome";
+import "../eta-design.css";
 import { LANGS, LANG_CODES } from "@/data/langs";
 import { FACTS } from "@/data/langs/_schema";
 import { JsonLd, homeLd } from "@/lib/jsonld";
@@ -28,62 +31,27 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
+// ⚠️ 2026-10-17 okina「他言語TOPもルートと同じデザインで、言語だけ変える」。
+//    HTML は ~/projects/top-l10n/etase/<lang>.html（ルートTOPの翻訳）から integrate.py が生成する（手で直さない）。旧TOPは ~/projects/top-l10n/backup/。
+//    layout の Header/Footer/StickyCta は言語TOPでは出さない。翻訳が無い言語は出さない（generateStaticParams は従来どおり）。
+// ⚠️ 2026-10-17 okina「他言語TOPもルートと同じデザインで、言語だけ変える」。
+//    HTML は ~/projects/top-l10n/etase/<lang>.html（ルートTOPの翻訳）から integrate.py が生成する（手で直さない）。旧TOPは ~/projects/top-l10n/backup/。
+//    layout の Header/Footer/StickyCta は言語TOPでは出さない。翻訳が無い言語は出さない（generateStaticParams は従来どおり）。
 export default async function LangHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const c = LANGS[lang];
   if (!c) return null;
-  const p = c.pages;
-  const order: (keyof typeof p)[] = [
-    "what-is-eta", "application", "fee", "processing-time",
-    "status-check", "validity", "required-documents", "stay-duration", "faq",
-  ];
-  // 任意ページ（mobile-app 等）はある言語だけ並べる
-  const cards: { slug: string; h1: string; lead: string }[] = [
-    ...order.map((k) => p[k]!),
-    ...(p["mobile-app"] ? [p["mobile-app"]] : []),
-  ];
+  const html = HOME_L10N[lang];
+  if (!html) return null;
   return (
     <div lang={c.code} dir={c.dir}>
       <JsonLd data={homeLd({ name: c.siteName, path: `/${lang}/`, lang: c.code, description: c.homeDescription })} />
-      <section className="sub-hero relative overflow-hidden">
-        <div className="absolute inset-0 sub-hero-scrim" />
-        <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">
-          <p className="kicker mb-3 mt-4">{c.label}</p>
-          <h1 className="deco-head text-3xl md:text-4xl font-bold text-white mb-6"
-              style={{ fontFamily: "var(--font-noto-serif), serif" }}>
-            <span className="deco-line" />
-            {c.tagline}
-          </h1>
-          <p className="text-white/90 leading-relaxed">{c.homeLead}</p>
-        </div>
-      </section>
-
-      <div className="max-w-4xl mx-auto px-6 py-10">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {cards.map((pg) => (
-            <Link key={pg.slug} href={`/${lang}/${pg.slug}/`}
-                  className="block border border-stone-200 rounded-lg p-5 hover:shadow-md transition">
-              <p className="font-semibold text-stone-900 mb-1">{pg.h1}</p>
-              <p className="text-sm text-stone-600 leading-relaxed">{pg.lead.slice(0, 96)}…</p>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-10 p-5 bg-stone-50 border border-stone-200 rounded-lg">
-          <p className="text-sm text-stone-700 mb-3">{`${FACTS.fee} · ${FACTS.validYears} · ${FACTS.staySixMonths}`}</p>
-          <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-             target="_blank" rel="noopener noreferrer"
-             className="inline-block bg-stone-900 text-white px-6 py-2.5 rounded-full text-sm font-medium">
-            {c.officialLinkLabel}
-          </a>
-        </div>
-
-        <nav className="mt-10 flex flex-wrap gap-4 text-sm text-stone-600">
-          <Link href={`/${lang}/${p.about.slug}/`} className="underline">{p.about.h1}</Link>
-          <Link href={`/${lang}/${p.privacy.slug}/`} className="underline">{p.privacy.h1}</Link>
-          <Link href={`/${lang}/${p.terms.slug}/`} className="underline">{p.terms.h1}</Link>
-        </nav>
-      </div>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Allura&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" precedence="default" />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <HomeChrome />
     </div>
   );
 }
