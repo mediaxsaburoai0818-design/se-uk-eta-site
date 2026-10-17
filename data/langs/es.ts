@@ -95,7 +95,7 @@ const es: LangContent = {
     },
     validity: {
       slug: "validez",
-      title: `UK ETA: válida ${F.validYears} años o hasta que caduque el pasaporte | 2026`,
+      title: `¿Cuánto dura la ETA UK? Válida ${F.validYears} años o hasta que caduque el pasaporte`,
       description:
         `La UK ETA es válida ${F.validYears} años desde su aprobación y permite varias entradas. Si renuevas el pasaporte necesitas solicitarla de nuevo.`,
       h1: "Cuánto dura la UK ETA",

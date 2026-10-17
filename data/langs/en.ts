@@ -121,7 +121,7 @@ const en: LangContent = {
     },
     "status-check": {
       slug: "check-status",
-      title: "Checking your UK ETA status: where and what you need | 2026",
+      title: "Check your UK ETA status: where to check and what you need | 2026",
       description: "How to check whether your UK ETA has been approved: the decision comes by email, and the status can be looked up with your passport number.",
       h1: "Checking your UK ETA status",
       lead: "The decision is sent by email. If it has not arrived, you can look up the status using the details of the passport you applied with.",
