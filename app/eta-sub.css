@@ -26,7 +26,7 @@
 .xsub .sec a{color:var(--color-cta)}
 .xsub .req{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
 .xsub .req .c{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:18px 14px;text-align:center;box-shadow:var(--shadow-card)}
-.xsub .req .c img{width:34px;height:34px}
+.xsub .req .c img{width:34px;height:34px;display:block;margin:0 auto}
 .xsub .req .c b{display:block;font:700 14.5px var(--font-sans);color:var(--color-heading);margin:10px 0 4px}
 .xsub .req .c span{font:400 12.5px/1.5 var(--font-sans);color:var(--color-muted)}
 .xsub .tl{position:relative;margin-top:20px}
