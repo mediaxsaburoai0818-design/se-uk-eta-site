@@ -56,6 +56,26 @@ const UK_ENTRY: P[] = [
 
 const PER_PAGE = 4;
 
+// 関連ガイドの写真カードの画像。ページ固有の写真が無いものは、テーマの近い共通写真を使う
+const IMG: Record<string, string> = {
+  "/eta-info/what-is-eta/": "/sub-hero/what-is-eta.jpg",
+  "/eta-info/application/": "/sub-hero/application.jpg",
+  "/eta-info/required-documents/": "/sub-hero/required-documents.jpg",
+  "/eta-info/fee/": "/sub/card-fee.jpg",
+  "/eta-info/handlaggningstid/": "/sub-hero/mobile-app.jpg",
+  "/eta-info/status-check/": "/sub-hero/status-check.jpg",
+  "/eta-info/mobile-app/": "/sub-hero/mobile-app.jpg",
+  "/eta-info/official-gov-uk/": "/sub-hero/official-gov-uk.jpg",
+  "/eta-info/expiration/": "/sub-hero/expiration.jpg",
+  "/eta-info/transit/": "/sub-hero/transit.jpg",
+  "/eta-info/transit-detaljer/": "/home/airside.jpg",
+  "/eta-info/polish-community/": "/sub-hero/polish-community.jpg",
+  "/uk-entry/lotniska-londynu/": "/home/city-airport.jpg",
+  "/uk-entry/lotnisko-heathrow/": "/home/airside.jpg",
+  "/uk-entry/uk-border-egates/": "/home/landside.jpg",
+};
+const imgFor = (href: string) => IMG[href] || (href.startsWith("/uk-entry/") ? "/home/hero-westminster.jpg" : "/home/union-jack.jpg");
+
 // 新デザイン（.xsub）のページは、本文の下に写真カードで同じ「次の4ページ」を出しているので、ここでは出さない
 const OWN_RELATED = new Set(["/eta-info/application/"]);
 
@@ -69,16 +89,19 @@ export default function RelatedPages() {
   const items = Array.from({ length: Math.min(PER_PAGE, list.length - 1) }, (_, k) => list[(i + 1 + k) % list.length]);
   const heading = list === ETA_INFO ? "Fler guider om UK ETA" : "Fler guider om resan till Storbritannien";
   return (
-    <section className="pb-12 md:pb-16 bg-white">
-      <nav className="max-w-4xl mx-auto px-6" aria-label={heading}>
-        <h2 className="heading-band mb-4">{heading}</h2>
-        <ul className="grid gap-2 sm:grid-cols-2 text-sm">
+    <section className="xrelated">
+      <nav className="container" aria-label={heading}>
+        <h2>{heading}</h2>
+        <div className="xrgrid">
           {items.map((p) => (
-            <li key={p.href}>
-              <Link href={p.href} className="content-link">{p.label}</Link>
-            </li>
+            <Link key={p.href} href={p.href} className="xrcard">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={imgFor(p.href)} alt="" loading="lazy" />
+              <span>{p.label}</span>
+              <i aria-hidden="true">→</i>
+            </Link>
           ))}
-        </ul>
+        </div>
       </nav>
     </section>
   );
