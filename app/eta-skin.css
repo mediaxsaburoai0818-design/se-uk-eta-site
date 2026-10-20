@@ -88,7 +88,7 @@
 .xskin .xgrid ol.list-decimal{list-style:decimal;padding-left:1.3em}
 .xskin .xgrid ul.list-disc li,.xskin .xgrid ol.list-decimal li{margin:4px 0}
 /* 本文末尾の旧デザインの申請ボタン列は、右カラムと下の帯に同じ導線があるので出さない */
-.xskin .xgrid > div > section:has(a[href*="gov.uk/guidance/apply"][class*="rounded-xl"]):not(:has(h2)){display:none}
+.xskin .xgrid > div > section:has(a[class*="rounded-xl"][target="_blank"]):not(:has(h2)):not(:first-of-type){display:none}
 @media (min-width:901px){
   .xskin .xgrid > div > section:first-of-type{grid-template-rows:1fr auto 1fr}
   .xskin .xgrid > div > section:first-of-type .kicker{grid-row:1}
@@ -103,3 +103,5 @@
 .xskin .xgrid h2{scroll-margin-top:90px}
 /* 目次の開始行：パンくずの行があれば3行目、無ければ2行目 */
 .xskin .xgrid:not(:has(> div > section > div > nav[aria-label="Breadcrumb"]:only-child)) > aside.xside{grid-row:2/span 60}
+
+@media (max-width:900px){.xskin .xgrid h2{font-size:24px !important}}
