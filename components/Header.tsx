@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import headerNav from "@/data/langs/header-nav.json";
 import { SITE_HEADER } from "@/lib/eta-design";
 import HomeChrome from "@/components/HomeChrome";
+import { L10N_CHROME } from "@/lib/l10n-chrome";
 
 const subnav = [
   { label: "Vad är UK ETA?", href: "/eta-info/what-is-eta/" },
@@ -95,6 +96,14 @@ export default function Header() {
   const localized = NAV[seg];
   // 2026-10-17 他言語TOP（/fr/ 等）はルートと同じデザインで、ヘッダーをページ側の HTML に持つ
   if (localized && /^\/[^/]+\/?$/.test(pathname)) return null;
+  // 2026-10-21 okina「全言語のヘッダー・フッターも新デザインに」：言語TOPと同じ（翻訳済みの）ヘッダーを下層ページにも
+  const chrome = L10N_CHROME[seg];
+  if (chrome) return (
+    <>
+      <HomeChrome />
+      <div className="etahome" dir={RTL_LANGS.has(seg) ? "rtl" : undefined} dangerouslySetInnerHTML={{ __html: chrome.header }} />
+    </>
+  );
   if (localized) return <LocalizedHeader lang={seg} data={localized} />;
 
   // 2026-10 デザインリニューアル（okina依頼）：スウェーデン語の全ページを新ヘッダーに。

@@ -53,7 +53,7 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-6 py-10">
+      <section><div className="max-w-3xl mx-auto px-6 py-10">
         <p className="text-sm text-stone-500 mb-8">
           <Link href={`/${lang}/`} className="underline">{c.siteName}</Link>
         </p>
@@ -67,11 +67,10 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
           </section>
         ))}
 
-        <div className="mt-10 p-5 bg-stone-50 border border-stone-200 rounded-lg">
+        <div className="mt-10">
           <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-             target="_blank" rel="noopener noreferrer"
-             className="inline-block bg-stone-900 text-white px-6 py-2.5 rounded-full text-sm font-medium">
-            {c.officialLinkLabel}
+             target="_blank" rel="noopener noreferrer" className="btn">
+            {c.officialLinkLabel} <span className="arrow" aria-hidden="true">→</span>
           </a>
         </div>
         {/* 同じ言語のほかのページ（各ページが言語TOPからの1本しか張られていなかった・2026-10-14） */}
@@ -93,7 +92,7 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
               ))}
           </p>
         </nav>
-      </article>
+      </div></section>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SITE_FOOTER } from "@/lib/eta-design";
 import headerNav from "@/data/langs/header-nav.json";
+import { L10N_CHROME } from "@/lib/l10n-chrome";
 
 export default function Footer() {
   // ⚠️ フッターの文言もスウェーデン語で固定されている。
@@ -13,6 +14,9 @@ export default function Footer() {
   const nav = (headerNav as Record<string, { siteName: string; tagline: string }>)[lang];
   // 2026-10-17 他言語TOP（/fr/ 等）はフッターをページ側の HTML に持つ
   if (nav && /^\/[^/]+\/?$/.test(pathname)) return null;
+  // 2026-10-21 言語TOPと同じ（翻訳済みの）フッターを下層ページにも
+  const chrome = L10N_CHROME[lang];
+  if (chrome) return <div className="etahome" dir={lang === "he" ? "rtl" : undefined} dangerouslySetInnerHTML={{ __html: chrome.footer }} />;
   if (nav) {
     return (
       <footer style={{ backgroundColor: "var(--color-navy)" }} className="mt-16 py-8">
