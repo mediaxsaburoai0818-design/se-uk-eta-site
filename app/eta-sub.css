@@ -1,0 +1,72 @@
+/* 下層ページの新デザイン（A案・okina 2026-10-20）。TOP の .etahome 変数を使い、.xsub の中だけに効かせる。
+   最初は /eta-info/application/ だけに適用（他のページに広げるときは .xsub で包んで同じ部品を使う） */
+.etahome.xsub{background:#fff}
+.xsub .crumbs{font:500 13px/1.4 var(--font-sans);color:var(--color-muted);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.xsub .crumbs a{color:var(--color-cta);text-decoration:none}
+.xsub .crumbs span[aria-hidden]{opacity:.5}
+.xsub .eyebrow{display:inline-block;font:600 12px/1 var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--color-eyebrow);margin-bottom:10px}
+.xsub .sh1{font-family:var(--font-serif);color:var(--color-heading);font-size:44px;line-height:1.15;margin:0 0 14px}
+.xsub .slead{font:400 17px/1.65 var(--font-sans);color:var(--color-text);margin:0 0 22px;max-width:560px}
+.xsub .meta{display:flex;gap:18px;flex-wrap:wrap;font:500 13px var(--font-sans);color:var(--color-muted)}
+.xsub .meta b{color:var(--color-heading)}
+
+/* キービジュアル A：TOP と同じ左右分割 */
+.xsub .kvA{position:relative;padding:34px 0 0}
+.xsub .kvA .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.xsub .kvA .photo{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 18px 40px rgba(6,47,85,.16)}
+.xsub .kvA .photo img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08)}
+.xsub .kvA .photo .tag{position:absolute;right:16px;bottom:16px;background:rgba(3,40,70,.78);color:#fff;border-radius:10px;padding:10px 14px;font:600 13px/1.35 var(--font-sans)}
+
+/* 本文 */
+.xsub .body{padding:46px 0 60px}
+.xsub .body .cols{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;align-items:start}
+.xsub .sec{margin-bottom:44px;scroll-margin-top:90px}
+.xsub .sec h2{font-family:var(--font-serif);color:var(--color-heading);font-size:28px;line-height:1.25;margin:0 0 12px}
+.xsub .sec p{font:400 16px/1.75 var(--font-sans);color:var(--color-text);margin:0 0 12px}
+.xsub .sec a{color:var(--color-cta)}
+.xsub .req{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.xsub .req .c{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:18px 14px;text-align:center;box-shadow:var(--shadow-card)}
+.xsub .req .c img{width:34px;height:34px}
+.xsub .req .c b{display:block;font:700 14.5px var(--font-sans);color:var(--color-heading);margin:10px 0 4px}
+.xsub .req .c span{font:400 12.5px/1.5 var(--font-sans);color:var(--color-muted)}
+.xsub .tl{position:relative;margin-top:20px}
+.xsub .tl:before{content:"";position:absolute;left:21px;top:10px;bottom:10px;width:2px;background:var(--color-border)}
+.xsub .tstep{position:relative;display:grid;grid-template-columns:44px 1fr;gap:18px;margin-bottom:16px}
+.xsub .tstep .n{width:44px;height:44px;border-radius:50%;background:var(--color-primary);color:#fff;font:700 15px/44px var(--font-sans);text-align:center;position:relative;z-index:1}
+.xsub .tstep .b{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:16px 20px;box-shadow:var(--shadow-card)}
+.xsub .tstep .b h3{margin:0 0 6px;font:700 17px var(--font-sans);color:var(--color-heading)}
+.xsub .tstep .b p{margin:0;font-size:15px;line-height:1.7}
+.xsub .tstep .b .callout{margin-top:12px}
+.xsub .callout{background:var(--color-bg-lighter);border-left:3px solid var(--color-cta);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:14px 18px;font:400 14.5px/1.7 var(--font-sans);color:var(--color-text)}
+.xsub .callout--warn{background:#FDF3F2;border-left-color:#8d1812}
+.xsub aside.side{position:sticky;top:20px;display:flex;flex-direction:column;gap:16px}
+.xsub .box{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:18px 20px;box-shadow:var(--shadow-card)}
+.xsub .box .eyebrow{margin-bottom:12px}
+.xsub .toc a{display:block;padding:7px 0;font:500 14px var(--font-sans);color:var(--color-text);text-decoration:none;border-bottom:1px solid #EEF3F6}
+.xsub .toc a:hover{color:var(--color-cta)}
+.xsub .cta-box{background:var(--color-primary);color:#fff;border:0}
+.xsub .cta-box p{margin:0 0 12px;font:400 14px/1.6 var(--font-sans);color:#DCE9F3}
+.xsub .cta-box b{font:700 18px var(--font-serif);display:block;margin-bottom:6px}
+.xsub .cta-box .sub-link{display:block;margin-top:12px;font:600 13.5px var(--font-sans);color:#fff}
+.xsub .related{background:var(--color-bg-light);padding:44px 0}
+.xsub .related h2{font-family:var(--font-serif);color:var(--color-heading);font-size:28px;margin:0 0 18px}
+.xsub .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.xsub .rcard{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;display:block;color:#fff;text-decoration:none;box-shadow:var(--shadow-card)}
+.xsub .rcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.xsub .rcard:hover img{transform:scale(1.05)}
+.xsub .rcard:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,40,70,.85),rgba(3,40,70,0) 65%)}
+.xsub .rcard span{position:absolute;left:14px;right:52px;bottom:14px;z-index:1;font:700 15px/1.35 var(--font-sans)}
+.xsub .rcard i{position:absolute;right:14px;bottom:14px;z-index:1;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--color-primary);font:700 15px/30px var(--font-sans);text-align:center;font-style:normal}
+
+/* スクロールで出てくる演出（TOP と同じ動き）。JS が無いときは最初から表示 */
+.xsub.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.xsub.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .xsub .kvA .grid,.xsub .body .cols{grid-template-columns:1fr}
+  .xsub .kvA .grid{gap:22px}
+  .xsub .sh1{font-size:32px}
+  .xsub .req{grid-template-columns:repeat(2,1fr)}
+  .xsub .rgrid{grid-template-columns:repeat(2,1fr)}
+  .xsub aside.side{position:static}
+}

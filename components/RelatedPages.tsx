@@ -56,8 +56,12 @@ const UK_ENTRY: P[] = [
 
 const PER_PAGE = 4;
 
+// 新デザイン（.xsub）のページは、本文の下に写真カードで同じ「次の4ページ」を出しているので、ここでは出さない
+const OWN_RELATED = new Set(["/eta-info/application/"]);
+
 export default function RelatedPages() {
   const pathname = (usePathname() || "/").replace(/\/?$/, "/");
+  if (OWN_RELATED.has(pathname)) return null;
   const list = pathname.startsWith("/eta-info/") ? ETA_INFO : pathname.startsWith("/uk-entry/") ? UK_ENTRY : null;
   if (!list) return null;
   const i = list.findIndex((p) => p.href === pathname);

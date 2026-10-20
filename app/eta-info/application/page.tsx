@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Breadcrumb from "@/components/Breadcrumb";
 import { JsonLd, pageLd, str } from "@/lib/jsonld";
+import { HOME_CTA } from "@/lib/eta-design";
+import SubReveal from "@/components/SubReveal";
+import "../../eta-sub.css";
 
 export const metadata: Metadata = {
   title: "Så ansöker du om UK ETA 2026 - steg för steg-guide",
@@ -9,188 +11,217 @@ export const metadata: Metadata = {
     "Så ansöker du om UK ETA steg för steg — från att samla ihop dokument till godkännande. Beslut vanligtvis inom 3 dagar, ofta på några minuter.",
 };
 
+// 下層ページの新デザイン A案（キービジュアルは TOP と同じ左右分割・下の帯なし）okina 2026-10-20
+const GOV = "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta";
+
+const REQ = [
+  { icon: "req-passport", t: "Giltigt pass", d: "Biometriskt pass (e-pass)" },
+  { icon: "req-photo", t: "Smartphone", d: "Med kamera för att skanna passet och ta en selfie" },
+  { icon: "req-email", t: "E-postadress", d: "För bekräftelse och beslut" },
+  { icon: "req-card", t: "Betalkort", d: "Visa, Mastercard, Apple Pay, Google Pay" },
+];
+
+// 関連ガイド（layout の RelatedPages と同じ「次の4ページ」）
+const RELATED = [
+  { href: "/eta-info/required-documents/", img: "/sub-hero/required-documents.jpg", t: "Dokument som krävs för ansökan" },
+  { href: "/eta-info/fee/", img: "/sub/card-fee.jpg", t: "Avgifter för UK ETA" },
+  { href: "/eta-info/handlaggningstid/", img: "/sub-hero/mobile-app.jpg", t: "Hur lång tid tar UK ETA?" },
+  { href: "/eta-info/status-check/", img: "/sub-hero/status-check.jpg", t: "Kontrollera status på ansökan" },
+];
+
+const TOC = [
+  { id: "forbered", t: "Innan du börjar" },
+  { id: "steg", t: "Ansökan i 6 steg" },
+  { id: "efter", t: "Efter godkännandet" },
+  { id: "fler", t: "Fler guider" },
+];
+
 export default function Application() {
+  const steps: { h: string; body: React.ReactNode }[] = [
+    {
+      h: "Ladda ner appen eller gå till webbplatsen",
+      body: (
+        <p>
+          Ladda ner appen &quot;UK ETA&quot; från App Store (iOS) eller Google Play (Android). Du kan också använda
+          webbplatsen{" "}
+          <a href={GOV} target="_blank" rel="noopener noreferrer">GOV.UK</a>.
+        </p>
+      ),
+    },
+    {
+      h: "Skanna passet",
+      body: (
+        <>
+          <p>
+            Använd kameran i telefonen för att skanna sidan med fotot i passet. Appen läser automatiskt av uppgifterna
+            från det biometriska chippet (NFC). Om telefonen inte har stöd för NFC kan du ange uppgifterna manuellt.
+          </p>
+          <div className="callout">
+            <strong>Tips:</strong> Håll passet mot baksidan av telefonen och håll det stilla i några sekunder tills
+            uppgifterna har lästs av.
+          </div>
+        </>
+      ),
+    },
+    {
+      h: "Ta ett ansiktsfoto (selfie)",
+      body: (
+        <p>
+          Appen ber dig ta ett ansiktsfoto för att verifiera din identitet. Fotot bör tas i god belysning, mot en
+          neutral bakgrund, utan glasögon och huvudbonad.
+        </p>
+      ),
+    },
+    {
+      h: "Fyll i formuläret",
+      body: (
+        <p>
+          Besvara frågor om resans syfte, vistelseadress i Storbritannien, resehistorik och säkerhetsfrågor. Formuläret
+          är kort och tar cirka 10 minuter.
+        </p>
+      ),
+    },
+    {
+      h: "Betala (£20)",
+      body: <p>Betala £20 med kreditkort, betalkort eller via Apple Pay / Google Pay. Betalningen behandlas omedelbart.</p>,
+    },
+    {
+      h: "Vänta på godkännande",
+      body: (
+        <p>
+          När du har skickat in ansökan får du en bekräftelse via e-post. De flesta sökande får ett automatiskt beslut
+          inom några minuter, men vissa ansökningar kan kräva ytterligare granskning. Du får ett e-postmeddelande om
+          beslutet.
+        </p>
+      ),
+    },
+  ];
+
   return (
-    <div>
+    <div className="etahome xsub">
       <JsonLd data={pageLd({ path: "/eta-info/application/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
-      {/* Header */}
-      <section className="sub-hero relative overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/sub-hero/application.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 sub-hero-scrim" />
-        <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-12 md:pt-14 md:pb-16">
-          <p className="kicker mb-3 mt-4">INFORMATION OM UK ETA</p>
-          <h1
-            className="deco-head text-3xl md:text-4xl font-bold text-white mb-6"
-            style={{ fontFamily: "var(--font-noto-serif), serif" }}
-          >
-            <span className="deco-line" />
-            Så ansöker du om UK ETA
-          </h1>
-          <p className="text-white/85 mb-6 leading-relaxed">
-            Ansökan om UK ETA kan göras via den officiella mobilappen
-            &quot;UK ETA&quot; eller via webbplatsen GOV.UK. Nedan presenterar vi
-            en detaljerad guide till hela proceduren.
-          </p>
-        </div>
-      </section>
+      <SubReveal />
 
-      {/* Section 1 */}
-      <section className="bg-gray-50 reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Innan du börjar &mdash; vad du behöver förbereda</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Biometriskt pass (e-pass) &mdash; giltigt</li>
-            <li>Smartphone med kamera (för att skanna passet och ta en selfie)</li>
-            <li>E-postadress</li>
-            <li>Betalkort (Visa, Mastercard, Apple Pay, Google Pay)</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Section 2 */}
-      <section className="bg-white reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 1: Ladda ner appen eller gå till webbplatsen</h2>
-          <p className="text-gray-600 leading-relaxed">
-            Ladda ner appen &quot;UK ETA&quot; från App Store (iOS) eller Google Play
-            (Android). Du kan också använda webbplatsen{" "}
-            <a
-              href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#022444] underline"
-            >
-              GOV.UK
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-
-      {/* Section 3 */}
-      <section className="bg-gray-50 reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 2: Skanna passet</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Använd kameran i telefonen för att skanna sidan med fotot i
-            passet. Appen läser automatiskt av uppgifterna från det
-            biometriska chippet (NFC). Om telefonen inte har stöd för NFC kan du
-            ange uppgifterna manuellt.
-          </p>
-          <div className="bg-white border-l-4 border-[#022444] p-4 rounded-r text-sm text-gray-600">
-            <strong>Tips:</strong> Håll passet mot baksidan av telefonen och
-            håll det stilla i några sekunder tills uppgifterna har lästs av.
+      <section className="kvA">
+        <div className="container">
+          <div className="grid">
+            <div className="rv">
+              <nav className="crumbs" aria-label="Breadcrumb">
+                <Link href="/">Hem</Link>
+                <span aria-hidden="true">/</span>
+                <Link href="/eta-info/what-is-eta/">Information om UK ETA</Link>
+                <span aria-hidden="true">/</span>
+                <span>Så ansöker du</span>
+              </nav>
+              <span className="eyebrow">Ansökan</span>
+              <h1 className="sh1">Så ansöker du om UK ETA</h1>
+              <p className="slead">
+                Ansökan om UK ETA kan göras via den officiella mobilappen &quot;UK ETA&quot; eller via webbplatsen
+                GOV.UK. Nedan presenterar vi en detaljerad guide till hela proceduren.
+              </p>
+              <div className="meta">
+                <span>Källa: <b>GOV.UK</b></span>
+                <span><b>6 steg</b> från nedladdning till beslut</span>
+              </div>
+            </div>
+            <div className="photo rv">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/sub-hero/application.jpg" alt="Ansökan om UK ETA i mobilen" width={1344} height={768} />
+              <div className="tag">6 steg · formuläret tar ca 10 minuter</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4 */}
-      <section className="bg-white reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 3: Ta ett ansiktsfoto (selfie)</h2>
-          <p className="text-gray-600 leading-relaxed">
-            Appen ber dig ta ett ansiktsfoto för att verifiera din identitet.
-            Fotot bör tas i god belysning, mot en neutral bakgrund, utan
-            glasögon och huvudbonad.
-          </p>
-        </div>
-      </section>
+      <section className="body">
+        <div className="container">
+          <div className="cols">
+            <div>
+              <div className="sec rv" id="forbered">
+                <span className="eyebrow">Förbered</span>
+                <h2>Innan du börjar — vad du behöver förbereda</h2>
+                <p>Ha det här till hands innan du öppnar appen.</p>
+                <div className="req">
+                  {REQ.map((r) => (
+                    <div className="c" key={r.icon}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={`/home/${r.icon}.png`} alt="" width={34} height={34} />
+                      <b>{r.t}</b>
+                      <span>{r.d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-      {/* Section 5 */}
-      <section className="bg-gray-50 reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 4: Fyll i formuläret</h2>
-          <p className="text-gray-600 leading-relaxed">
-            Besvara frågor om resans syfte, vistelseadress i Storbritannien,
-            resehistorik och säkerhetsfrågor. Formuläret är kort och tar
-            cirka 10 minuter.
-          </p>
-        </div>
-      </section>
+              <div className="sec rv" id="steg">
+                <span className="eyebrow">Steg för steg</span>
+                <h2>Ansökan i 6 steg</h2>
+                <div className="tl">
+                  {steps.map((s, i) => (
+                    <div className="tstep rv" key={s.h}>
+                      <span className="n">0{i + 1}</span>
+                      <div className="b">
+                        <h3>Steg {i + 1}: {s.h}</h3>
+                        {s.body}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-      {/* Section 6 */}
-      <section className="bg-white reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 5: Betala (&pound;20)</h2>
-          <p className="text-gray-600 leading-relaxed">
-            Betala &pound;20 med kreditkort, betalkort eller via Apple Pay /
-            Google Pay. Betalningen behandlas omedelbart.
-          </p>
-        </div>
-      </section>
+              <div className="sec rv" id="efter">
+                <span className="eyebrow">Efter godkännandet</span>
+                <h2>Efter godkännandet</h2>
+                <p>
+                  ETA är elektroniskt kopplad till ditt pass — du behöver inte skriva ut några dokument. Flygbolag och
+                  gränsmyndigheter verifierar automatiskt din ETA vid incheckningen.
+                </p>
+                <div className="callout callout--warn">
+                  <strong>Observera:</strong> Ansök endast på den officiella webbplatsen{" "}
+                  <a href={GOV} target="_blank" rel="noopener noreferrer">GOV.UK</a>{" "}eller via den officiella appen
+                  &quot;UK ETA&quot;. Se upp för falska webbplatser som tar ut överdrivna avgifter.
+                </div>
+              </div>
+            </div>
 
-      {/* Section 7 */}
-      <section className="bg-gray-50 reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Steg 6: Vänta på godkännande</h2>
-          <p className="text-gray-600 leading-relaxed">
-            När du har skickat in ansökan får du en bekräftelse via e-post. De
-            flesta sökande får ett automatiskt beslut inom några minuter, men
-            vissa ansökningar kan kräva ytterligare granskning. Du får ett e-postmeddelande om beslutet.
-          </p>
-        </div>
-      </section>
-
-      {/* Section 8 */}
-      <section className="bg-white reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Efter godkännandet</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            ETA är elektroniskt kopplad till ditt pass &mdash; du behöver inte
-            skriva ut några dokument. Flygbolag och gränsmyndigheter
-            verifierar automatiskt din ETA vid incheckningen.
-          </p>
-          <div className="bg-red-50 border-l-4 border-[#8d1812] p-4 rounded-r text-sm text-gray-600">
-            <strong>Observera:</strong> Ansök endast på den officiella
-            webbplatsen{" "}
-            <a
-              href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-              className="text-[#022444] underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GOV.UK
-            </a>{" "}
-            eller via den officiella appen &quot;UK ETA&quot;. Se upp för falska
-            webbplatser som tar ut överdrivna avgifter.
+            <aside className="side">
+              <div className="box toc">
+                <span className="eyebrow">På denna sida</span>
+                {TOC.map((t) => (
+                  <a key={t.id} href={`#${t.id}`}>{t.t}</a>
+                ))}
+              </div>
+              <div className="box cta-box">
+                <b>Redo att ansöka?</b>
+                <p>Ansökan görs i appen UK ETA eller på GOV.UK. Avgiften är £20.</p>
+                <a className="btn btn--ghost" href={GOV} target="_blank" rel="noopener noreferrer">
+                  Ansök om UK ETA <span className="arrow" aria-hidden="true">→</span>
+                </a>
+                <Link href="/eta-info/fee/" className="sub-link">Se avgifterna →</Link>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-gray-50 reveal">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/eta-info/fee/"
-              className="bg-[#022444] hover:bg-[#0a3a6b] text-white px-6 py-3 rounded font-bold text-sm transition text-center"
-            >
-              Se avgifterna &rarr;
-            </Link>
-            <a
-              href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full max-w-md mx-auto bg-[#8d1812] hover:bg-[#6d120e] rounded-xl border-2 border-white py-5 px-6 text-center transition shadow-lg"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              <span className="text-white text-lg font-bold" style={{ color: "white" }}>Ansök om UK ETA</span>
-            </a>
+      <section className="related" id="fler">
+        <div className="container">
+          <span className="eyebrow">Läs vidare</span>
+          <h2>Fler guider om UK ETA</h2>
+          <div className="rgrid">
+            {RELATED.map((r) => (
+              <Link key={r.href} href={r.href} className="rcard rv">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={r.img} alt="" loading="lazy" />
+                <span>{r.t}</span>
+                <i aria-hidden="true">→</i>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
-      {/* breadcrumb-bottom */}
-      <section className="bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 pt-6 pb-2">
-          <Breadcrumb
-            items={[
-              { label: "Information om UK ETA", href: "/eta-info/what-is-eta/" },
-              { label: "Så ansöker du" },
-            ]}
-          />
-        </div>
-      </section>
+
+      <div dangerouslySetInnerHTML={{ __html: HOME_CTA }} />
     </div>
   );
 }
