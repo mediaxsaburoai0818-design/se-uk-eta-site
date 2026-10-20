@@ -105,7 +105,7 @@ export default function Application() {
       <section className="kvA">
         <div className="container">
           <div className="grid">
-            <div className="rv">
+            <div className="head rv">
               <nav className="crumbs" aria-label="Breadcrumb">
                 <Link href="/">Hem</Link>
                 <span aria-hidden="true">/</span>
@@ -115,6 +115,13 @@ export default function Application() {
               </nav>
               <span className="eyebrow">Ansökan</span>
               <h1 className="sh1">Så ansöker du om UK ETA</h1>
+            </div>
+            <div className="photo rv">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/sub-hero/application.jpg" alt="Ansökan om UK ETA i mobilen" width={1344} height={768} />
+              <div className="tag">6 steg · formuläret tar ca 10 minuter</div>
+            </div>
+            <div className="lead rv">
               <p className="slead">
                 Ansökan om UK ETA kan göras via den officiella mobilappen &quot;UK ETA&quot; eller via webbplatsen
                 GOV.UK. Nedan presenterar vi en detaljerad guide till hela proceduren.
@@ -123,11 +130,6 @@ export default function Application() {
                 <span>Källa: <b>GOV.UK</b></span>
                 <span><b>6 steg</b> från nedladdning till beslut</span>
               </div>
-            </div>
-            <div className="photo rv">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/sub-hero/application.jpg" alt="Ansökan om UK ETA i mobilen" width={1344} height={768} />
-              <div className="tag">6 steg · formuläret tar ca 10 minuter</div>
             </div>
           </div>
         </div>
