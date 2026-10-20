@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
@@ -12,6 +11,7 @@ export const metadata: Metadata = {
 export default function Transit() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <section><div>
       <JsonLd data={pageLd({ path: "/eta-info/transit/", headline: str(metadata.title), description: str(metadata.description), lang: "sv", type: "Article" })} />
       <Breadcrumb
         items={[
@@ -31,8 +31,9 @@ export default function Transit() {
         Ja, UK ETA kravs ocksa vid transit genom Storbritannien, aven om du
         inte lamnar transitzonen pa flygplatsen.
       </p>
+      </div></section>
 
-      <div className="space-y-6 text-gray-600 leading-relaxed">
+      <section><div className="space-y-6 text-gray-600 leading-relaxed">
         <h2 className="heading-band">
           Transitregler
         </h2>
@@ -115,25 +116,7 @@ export default function Transit() {
           ansök om UK ETA minst 3 arbetsdagar före avresa. Avsaknad av ETA kan
           leda till att du nekas ombordstigning.
         </div>
-      </div>
-
-      <div className="mt-10 flex flex-col sm:flex-row gap-3">
-        <Link
-          href="/eta-info/application/"
-          className="bg-[#022444] hover:bg-[#0a3a6b] text-white px-6 py-3 rounded font-bold text-sm transition text-center"
-        >
-          Hur ansoker man &rarr;
-        </Link>
-        <a
-          href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full max-w-md mx-auto bg-[#8d1812] hover:bg-[#6d120e] rounded-lg py-5 px-6 text-center transition shadow-lg"
-          style={{ color: "white", textDecoration: "none" }}
-        >
-          <span className="text-white text-lg font-bold" style={{ color: "white" }}>Ansok om UK ETA</span>
-        </a>
-      </div>
+      </div></section>
     </div>
   );
 }
