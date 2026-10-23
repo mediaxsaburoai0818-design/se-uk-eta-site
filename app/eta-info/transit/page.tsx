@@ -28,8 +28,7 @@ export default function Transit() {
       </h1>
 
       <p className="text-gray-600 mb-8 leading-relaxed">
-        Ja, UK ETA kravs ocksa vid transit genom Storbritannien, aven om du
-        inte lamnar transitzonen pa flygplatsen.
+        Du behöver UK ETA för transit bara om du passerar gränskontrollen på en flygplats i Storbritannien innan du reser vidare (landside). Om du byter flyg utan att passera gränskontrollen (airside) behöver du ingen ETA. Om du är osäker, fråga ditt flygbolag.
       </p>
       </div></section>
 
@@ -38,10 +37,7 @@ export default function Transit() {
           Transitregler
         </h2>
         <p>
-          Fran den 2 april 2025 behover EU-medborgare (inklusive svenska
-          medborgare) UK ETA for transit genom Storbritannien. Detta galler
-          bade flygtransit (airside transit) och landtransit (landside
-          transit).
+          Sedan den 2 april 2025 behöver EU-medborgare (inklusive svenska medborgare) UK ETA för transit genom Storbritannien om de passerar gränskontrollen på flygplatsen (landside transit). För transit utan att passera gränskontrollen (airside transit) behövs ingen ETA. Om du är osäker, fråga ditt flygbolag.
         </p>
 
         <h2 className="heading-band">
@@ -54,9 +50,7 @@ export default function Transit() {
               Flygtransit (Airside Transit)
             </h3>
             <p className="text-sm">
-              Byte pa flygplatsen utan att lamna den internationella zonen.
-              UK ETA kravs. Detta galler t.ex. byte pa Heathrow pa vag till
-              USA eller Kanada.
+              Byte på flygplatsen utan att passera gränskontrollen. UK ETA krävs inte. Om du är osäker på om du kommer att passera gränskontrollen, fråga ditt flygbolag.
             </p>
           </div>
 
@@ -65,9 +59,7 @@ export default function Transit() {
               Landtransit (Landside Transit)
             </h3>
             <p className="text-sm">
-              Att lamna transitzonen, t.ex. for att byta terminal, hamta
-              bagage eller overnatta pa hotell. UK ETA kravs. Du reser
-              formellt in i Storbritannien.
+              Att passera gränskontrollen innan du reser vidare, t.ex. för att hämta bagage eller övernatta på hotell. UK ETA krävs. Du reser formellt in i Storbritannien.
             </p>
           </div>
         </div>
@@ -82,8 +74,7 @@ export default function Transit() {
           <li>Stockholm &rarr; London (Heathrow) &rarr; Los Angeles</li>
         </ul>
         <p>
-          Pa alla dessa rutter kravs UK ETA, aven om vistelsen pa
-          flygplatsen bara ar nagra timmar.
+          På dessa rutter behöver du UK ETA om du passerar gränskontrollen på flygplatsen i Storbritannien, oavsett hur kort bytet är. Om du byter utan att passera gränskontrollen (airside) behövs ingen ETA.
         </p>
 
         <h2 className="heading-band">
