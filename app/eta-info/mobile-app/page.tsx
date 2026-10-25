@@ -52,11 +52,11 @@ export default function MobileApp() {
           <ul className="list-disc list-inside space-y-2 text-gray-600">
             <li>
               <strong>iOS (App Store)</strong> &mdash; för Apple-enheter
-              (iPhone). Kräver iOS 15.6 eller senare.
+              (iPhone). Kräver iOS 16 eller senare.
             </li>
             <li>
               <strong>Android (Google Play)</strong> &mdash; för enheter med
-              Android. Kräver Android 9.0 eller senare.
+              Android. Kräver Android 12 eller senare och NFC.
             </li>
           </ul>
           <p className="text-sm text-gray-600 mt-4">
