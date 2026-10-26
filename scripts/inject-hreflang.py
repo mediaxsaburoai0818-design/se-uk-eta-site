@@ -1,7 +1,7 @@
 import re, os
 from pathlib import Path
 
-ROOT = Path.home()/"projects/se-uk-eta-site-deploy"
+ROOT = Path(os.environ.get("ETASE_DEPLOY_ROOT", str(Path.home()/"projects/se-uk-eta-site-deploy")))
 # 旧方式（各言語が同じURLパスを持つ）。ここは従来どおりパス一致で相手を探す。
 LANGS = [("sv",""),("de","/de"),("it","/it"),("ro","/ro"),("el","/el"),("fr","/fr"),("hr","/hr"),("pl","/pl")]  # fr/hr/pl＝2026-10-17 eta-fr/eta-hr/eta-pl を統合
 
@@ -21,6 +21,10 @@ for _k, _langs in HMAP.items():
 for _l, _path in HMAP.get("_home", {}).items():
     PATH2KEY[_path] = "_home"
 ORIGIN = "https://eta-se.com"
+# 旧方式と新方式で「同じ内容」と確認済みのページだけ、両方式をまたいで1組の hreflang に結ぶ。
+# pageKey（新方式）→ 旧方式の共通パス。2026-10-26: 「ETA とは」13言語組と8言語組を1組に（okina 10/25 既定案）。
+BRIDGE = {"what-is-eta": "/eta-info/what-is-eta/"}
+BRIDGE_REV = {v: k for k, v in BRIDGE.items()}
 REWRITE = {"/de":"https://eta-de.com","/it":"https://eta-italia.com","/ro":"https://eta-ro.com","/el":"https://eta-gr.com","/fr":"https://eta-fr.com","/hr":"https://eta-hr.com","/pl":"https://eta-pl.com"}
 
 def pages(base: Path, skipdirs):
@@ -59,6 +63,11 @@ for lang, prefix in LANGS:
                 tags.append(f'<link rel="alternate" hreflang="{l2}" href="{ORIGIN}{pre2}{P}"/>')
         if exists("", P):
             tags.append(f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}{P}"/>')
+        # BRIDGE のページは新方式言語の同じページとも結ぶ
+        if P in BRIDGE_REV and BRIDGE_REV[P] in HMAP:
+            for l2, path2 in HMAP[BRIDGE_REV[P]].items():
+                if (ROOT / path2.strip("/") / "index.html").exists():
+                    tags.append(f'<link rel="alternate" hreflang="{HCODES.get(l2, l2)}" href="{ORIGIN}{path2}"/>')
         # トップ同士は新方式言語(es/nl/pt/da/no/cs/fi/hu)とも相互に結ぶ
         if P == "/":
             for l2, path2 in HMAP.get("_home", {}).items():
@@ -93,6 +102,14 @@ for lang in NEW_LANGS:
             for l2, pre2 in LANGS:
                 tags.append(f'<link rel="alternate" hreflang="{l2}" href="{ORIGIN}{pre2}/"/>')
             tags.append(f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}/"/>')
+        # BRIDGE のページは旧方式言語の同じページとも結ぶ（x-default は旧方式 sv と同じ）
+        if key in BRIDGE:
+            bp = BRIDGE[key]
+            for l2, pre2 in LANGS:
+                if exists(pre2, bp):
+                    tags.append(f'<link rel="alternate" hreflang="{l2}" href="{ORIGIN}{pre2}{bp}"/>')
+            if exists("", bp):
+                tags.append(f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}{bp}"/>')
         if "</head>" in html:
             html = html.replace("</head>", "".join(tags) + "</head>", 1)
             f.write_text(html, encoding="utf-8")
