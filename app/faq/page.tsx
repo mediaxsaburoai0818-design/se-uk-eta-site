@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "Behöver jag UK ETA för transit genom Storbritannien?",
-    a: "Ja, UK ETA krävs även vid transit genom Storbritannien, även om du inte lämnar transitzonen på flygplatsen. Det gäller t.ex. byten på Heathrow.",
+    a: "Du behöver UK ETA för transit bara om du passerar gränskontrollen på en flygplats i Storbritannien innan du reser vidare (landside). Om du byter flyg utan att passera gränskontrollen (airside) behöver du ingen ETA. Om du är osäker, fråga ditt flygbolag.",
   },
   {
     q: "Vilka dokument behövs för en UK ETA-ansökan?",
