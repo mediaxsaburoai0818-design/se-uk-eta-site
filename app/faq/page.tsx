@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Vad h\u00e4nder om min UK ETA-ans\u00f6kan avsl\u00e5s?",
-    a: "Om din UK ETA-ans\u00f6kan avsl\u00e5s f\u00e5r du ett mejl med information om sk\u00e4len till avslaget. Du kan beg\u00e4ra ompr\u00f6vning (administrative review) eller ans\u00f6ka om ett turistvisum, Standard Visitor visa. Avgiften p\u00e5 \u00a320 \u00e5terbetalas inte.",
+    a: "Om din UK ETA-ans\u00f6kan avsl\u00e5s f\u00e5r du ett mejl med information om sk\u00e4len till avslaget. Det g\u00e5r inte att \u00f6verklaga eller beg\u00e4ra ompr\u00f6vning (administrative review) \u2013 enligt GOV.UK m\u00e5ste du ans\u00f6ka p\u00e5 nytt; du kan ocks\u00e5 ans\u00f6ka om ett turistvisum, Standard Visitor visa. Avgiften p\u00e5 \u00a320 \u00e5terbetalas inte.",
   },
   {
     q: "Behöver jag UK ETA för transit genom Storbritannien?",
