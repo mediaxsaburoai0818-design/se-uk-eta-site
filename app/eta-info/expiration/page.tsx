@@ -4,9 +4,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "ETA giltighetstid: hur länge gäller UK ETA? (2026)",
+  title: "Hur länge gäller ETA till England? 2 år eller tills passet går ut (2026)",
   description:
-    "UK ETA är giltig i 2 år från godkännandet. Flera inresor till Storbritannien är möjliga. Se när tillståndet behöver förnyas.",
+    "Hur länge gäller ETA till England? I 2 år eller tills passet går ut (det som kommer först). Flera resor, högst 6 månader per besök. Nytt pass = ny ETA.",
 };
 
 export default function Expiration() {
@@ -24,19 +24,18 @@ export default function Expiration() {
             style={{ fontFamily: "var(--font-noto-serif), serif" }}
           >
             <span className="deco-line" />
-            UK ETA:s giltighetstid
+            Hur länge gäller ETA till England? UK ETA:s giltighetstid
           </h1>
           <p className="text-white/85 leading-relaxed">
             UK ETA-tillståndet är giltigt i <strong>2 år</strong> från
-            utfärdandedatumet eller tills passet löper ut &mdash; beroende på
-            vilket som inträffar först.
+            utfärdandedatumet eller tills passet löper ut &mdash; beroende på vilket som inträffar först. Under den tiden kan du resa till England och resten av Storbritannien hur många gånger du vill, högst 6 månader per besök (GOV.UK).
           </p>
         </div>
       </section>
 
       <section className="bg-gray-50 reveal">
         <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Giltighetsregler</h2>
+          <h2 className="heading-band mb-6">Hur länge gäller ETA? Regler för giltighetstiden</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-600">
             <li>Giltig i 2 år från utfärdandedatumet</li>
             <li>Upphör att gälla tillsammans med passet (om passet löper ut tidigare)</li>
@@ -80,9 +79,7 @@ export default function Expiration() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <h2 className="heading-band mb-6">Hur kontrollerar jag giltighetsdatumet?</h2>
           <p className="text-gray-600 leading-relaxed">
-            Giltighetsdatumet för UK ETA kan kontrolleras i mobilappen &quot;UK
-            ETA&quot; eller på webbplatsen GOV.UK genom att logga in på det konto
-            som skapades vid ansökan.
+            Enligt GOV.UK kan du kontrollera det online via gov.uk/eta (Check your ETA): där ser du om du har en ETA och när den upphör att gälla.
           </p>
         </div>
       </section>
