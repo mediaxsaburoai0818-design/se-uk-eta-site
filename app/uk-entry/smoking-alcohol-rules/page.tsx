@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Alkohol i Storbritannien: 18-årsgräns – rökregler och vad du får ta in | 2026",
+  title: "Åldersgräns för alkohol i England: 18 år – rökregler och vad du får ta in | 2026",
   description:
-    "I Storbritannien är åldersgränsen 18 år för att köpa alkohol och tobak. Rökning är förbjuden inomhus på offentliga platser. Vad du får ta in i landet.",
+    "Åldersgränsen för alkohol i England är 18 år för att köpa eller dricka på pub. Är du 16–17 år och med en vuxen får du dricka öl, vin eller cider till maten.",
   alternates: { canonical: "https://eta-se.com/uk-entry/smoking-alcohol-rules/" },
 };
 
@@ -14,6 +14,14 @@ export default function SmokingAlcoholRules() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
+      {
+        "@type": "Question",
+        name: "Vilken är åldersgränsen för alkohol i England?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I England måste du vara 18 år för att köpa alkohol eller dricka alkohol på pub eller restaurang. Är du 16 eller 17 år och i sällskap med en vuxen får du dricka (men inte köpa) öl, vin eller cider till en måltid (GOV.UK).",
+        },
+      },
       {
         "@type": "Question",
         name: "Vilken åldersgräns gäller för att köpa alkohol och tobak i Storbritannien?",
@@ -49,10 +57,10 @@ export default function SmokingAlcoholRules() {
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>INRESA TILL UK</p>
           <h1 className="deco-head text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-noto-serif), serif" }}>
             <span className="deco-line" />
-            Rökning, alkohol och åldersgränser
+            Åldersgräns för alkohol i England – rökning och regler
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            I Storbritannien gäller åldersgränsen 18 år för att köpa alkohol och tobak, och rökning är förbjuden inomhus på allmänna platser. Här går vi igenom åldersreglerna, rökförbudet, hur vaping hanteras samt vad som gäller för rattfylleri och alkohol på allmän plats.
+            I England måste du vara 18 år för att köpa alkohol eller dricka alkohol på pub eller restaurang. Är du 16 eller 17 år och i sällskap med en vuxen får du dricka (men inte köpa) öl, vin eller cider till en måltid (GOV.UK). I Storbritannien gäller åldersgränsen 18 år för att köpa alkohol och tobak, och rökning är förbjuden inomhus på allmänna platser. Här går vi igenom åldersreglerna, rökförbudet, hur vaping hanteras samt vad som gäller för rattfylleri och alkohol på allmän plats.
           </p>
         </div>
       </section>
@@ -60,7 +68,7 @@ export default function SmokingAlcoholRules() {
       <section className="py-12 md:py-16 bg-white">
         <article className="max-w-4xl mx-auto px-6 space-y-10">
           <div>
-            <h2 className="heading-band mb-4">Åldersgräns 18 år för alkohol och tobak</h2>
+            <h2 className="heading-band mb-4">Vilken är åldersgränsen för alkohol i England? 18 år för alkohol och tobak</h2>
             <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-light)" }}>
               I Storbritannien måste du vara <strong>minst 18 år</strong> för att köpa <strong>alkohol och tobak</strong>. Åldersgränsen gäller i butiker, barer, restauranger och andra försäljningsställen.
             </p>
@@ -113,7 +121,7 @@ export default function SmokingAlcoholRules() {
             <a href="https://www.gov.uk/" target="_blank" rel="noopener noreferrer" className="content-link">GOV.UK</a>
           </p>
 
-          <Breadcrumb items={[{ label: "Inresa till Storbritannien och visum", href: "/uk-entry/wjazd-i-wiza/" }, { label: "Rökning, alkohol och åldersgränser" }]} />
+          <Breadcrumb items={[{ label: "Inresa till Storbritannien och visum", href: "/uk-entry/wjazd-i-wiza/" }, { label: "Åldersgräns för alkohol i England – rökning och regler" }]} />
         </article>
       </section>
     </div>
