@@ -74,6 +74,7 @@ export default function WhatIsEta() {
               "Belgien", "Österrike", "Tjeckien", "Portugal", "Polen", "Danmark",
               "Finland", "Grekland", "Kroatien", "Rumänien", "Bulgarien", "Ungern",
               "Slovakien", "Litauen", "Lettland", "Estland",
+              "Cypern", "Luxemburg", "Malta", "Slovenien",
             ].map((country) => (
               <span
                 key={country}

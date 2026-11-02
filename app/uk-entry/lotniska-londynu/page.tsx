@@ -4,15 +4,15 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Londons 5 största flygplatser - Heathrow, Gatwick, Stansted, Luton, City",
+  title: "Englands näst största flygplats är Gatwick – Londons 5 största flygplatser",
   description:
-    "Guide till Londons fem flygplatser: Heathrow, Gatwick, Stansted, Luton och London City. Läge, kännetecken och resa till stadens centrum.",
+    "Englands och Storbritanniens näst största flygplats är London Gatwick (42,8 milj. passagerare 2025 enligt CAA), efter Heathrow. Londons 5 flygplatser i korthet.",
   alternates: { canonical: "https://eta-se.com/uk-entry/lotniska-londynu/" },
 };
 
 const airports = [
   { code: "LHR", name: "Heathrow", loc: "västra London", desc: "Storbritanniens största flygplats och viktigaste internationella nav (terminal 2-5).", access: "Heathrow Express ~15 min, Elizabeth Line ~30 min, tunnelbana ~50 min." },
-  { code: "LGW", name: "Gatwick", loc: "södra London", desc: "Londons näst största flygplats; både traditionella och lågprisbolag (norra och södra terminalen).", access: "Gatwick Express ~30 min, Thameslink ~30-45 min." },
+  { code: "LGW", name: "Gatwick", loc: "södra London", desc: "Englands och Storbritanniens näst största flygplats (efter Heathrow); både traditionella och lågprisbolag (norra och södra terminalen).", access: "Gatwick Express ~30 min, Thameslink ~30-45 min." },
   { code: "STN", name: "Stansted", loc: "nordöstra London", desc: "Ryanairs bas, många europeiska förbindelser; en terminal, lätt att orientera sig.", access: "Stansted Express ~50 min, buss ~60-90 min." },
   { code: "LTN", name: "Luton", loc: "norr om London", desc: "Bas för easyJet och Wizz Air; en terminal, anslutning till stationen med shuttle.", access: "Luton Airport Express ~30 min, Thameslink ~30 min." },
   { code: "LCY", name: "London City", loc: "centrala London (närmast)", desc: "Närmast centrum; populär bland affärsresenärer.", access: "DLR ~15-25 min till centrum." },
@@ -30,7 +30,7 @@ export default function LondonAirports() {
             Londons 5 största flygplatser
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            London betjänas av fem stora flygplatser. Valet påverkar resväg, tid och kostnad för att ta sig in till centrum. Nedan följer en kort beskrivning av var och en.
+            Englands – och Storbritanniens – näst största flygplats är London Gatwick med 42,8 miljoner passagerare 2025, efter Heathrow (84,5 miljoner). Trea är Manchester (32,1 miljoner), enligt den brittiska luftfartsmyndigheten CAA. London betjänas av fem stora flygplatser. Valet påverkar resväg, tid och kostnad för att ta sig in till centrum. Nedan följer en kort beskrivning av var och en.
           </p>
         </div>
       </section>
