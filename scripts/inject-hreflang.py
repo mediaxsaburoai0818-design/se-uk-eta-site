@@ -23,7 +23,8 @@ for _l, _path in HMAP.get("_home", {}).items():
 ORIGIN = "https://eta-se.com"
 # 旧方式と新方式で「同じ内容」と確認済みのページだけ、両方式をまたいで1組の hreflang に結ぶ。
 # pageKey（新方式）→ 旧方式の共通パス。2026-10-26: 「ETA とは」13言語組と8言語組を1組に（okina 10/25 既定案）。
-BRIDGE = {"what-is-eta": "/eta-info/what-is-eta/"}
+# 2026-11-02: 「ETA アプリ」英語 /en/uk-eta-app/ を旧方式8言語 mobile-app 組に結ぶ（GSC「uk eta app」が it/de/fr に分散していたため）。
+BRIDGE = {"what-is-eta": "/eta-info/what-is-eta/", "mobile-app": "/eta-info/mobile-app/"}
 BRIDGE_REV = {v: k for k, v in BRIDGE.items()}
 REWRITE = {"/de":"https://eta-de.com","/it":"https://eta-italia.com","/ro":"https://eta-ro.com","/el":"https://eta-gr.com","/fr":"https://eta-fr.com","/hr":"https://eta-hr.com","/pl":"https://eta-pl.com"}
 
