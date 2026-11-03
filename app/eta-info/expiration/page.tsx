@@ -56,8 +56,6 @@ export default function Expiration() {
             <li>När det har gått 2 år sedan ETA utfärdades</li>
             <li>När du har fått ett nytt pass</li>
             <li>Vid namnbyte</li>
-            <li>Vid byte av medborgarskap</li>
-            <li>Vid könsbyte</li>
             <li>Vid förändrade omständigheter som påverkar berättigandet</li>
           </ul>
         </div>
