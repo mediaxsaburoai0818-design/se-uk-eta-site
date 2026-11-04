@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Kontanter, valuta och dricks i Storbritannien (2026)",
+  title: "Valuta i England och Skottland 2026: brittiskt pund (GBP) – kontanter, växling och dricks",
   description:
-    "Valutan är brittiskt pund (GBP). £10 000 eller mer måste deklareras. Kort accepteras nästan överallt - så fungerar växling och dricks i UK.",
+    "Valutan i England, Skottland och London är brittiskt pund (GBP, £) även 2026. Behöver man kontanter? Oftast inte – kort räcker långt. Från £10 000: deklarera.",
   alternates: { canonical: "https://eta-se.com/uk-entry/money-currency/" },
 };
 
@@ -14,6 +14,22 @@ export default function MoneyCurrency() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
+      {
+        "@type": "Question",
+        name: "Vilken valuta används i England och Skottland 2026?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Brittiskt pund (GBP, £) i hela Storbritannien. I Skottland ger tre banker ut egna sedlar, men valutan är densamma.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Behöver man kontanter i London?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Oftast inte: kort, särskilt kontaktlösa betalningar, är mycket utbrett och kollektivtrafiken (TfL) betalar du med kontaktlöst kort eller Oyster. Lite kontanter kan vara praktiskt för mindre butiker, marknader och dricks.",
+        },
+      },
       {
         "@type": "Question",
         name: "Från vilket belopp måste jag deklarera kontanter vid inresa till Storbritannien?",
@@ -49,10 +65,10 @@ export default function MoneyCurrency() {
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>INRESA TILL UK</p>
           <h1 className="deco-head text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-noto-serif), serif" }}>
             <span className="deco-line" />
-            Kontanter, valuta och dricks i Storbritannien
+            Valuta i England och Skottland: brittiskt pund, kontanter och dricks
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            Valutan i Storbritannien är brittiskt pund. Så mycket kontanter får du ta med utan att deklarera, hur du växlar pengar smidigast och vad som gäller för kort och dricks under din resa.
+            Valutan i England, Skottland, Wales och Nordirland är brittiskt pund (GBP, £) – även 2026. Så mycket kontanter får du ta med utan att deklarera, hur du växlar pengar smidigast och vad som gäller för kort och dricks under din resa.
           </p>
         </div>
       </section>
@@ -60,9 +76,9 @@ export default function MoneyCurrency() {
       <section className="py-12 md:py-16 bg-white">
         <article className="max-w-4xl mx-auto px-6 space-y-10">
           <div>
-            <h2 className="heading-band mb-4">Valutan: brittiskt pund (GBP, £)</h2>
+            <h2 className="heading-band mb-4">Vilken valuta används i England och Skottland? Brittiskt pund (GBP, £)</h2>
             <p className="leading-relaxed" style={{ color: "var(--color-text-light)" }}>
-              Betalmedlet i Storbritannien är <strong>brittiskt pund (GBP, £)</strong>. Euro och andra valutor accepteras generellt inte i vanliga butiker, så du behöver antingen kort eller pund i kontanter för dina utgifter på plats.
+              Betalmedlet i Storbritannien är <strong>brittiskt pund (GBP, £)</strong>. Euro och andra valutor accepteras generellt inte i vanliga butiker, så du behöver antingen kort eller pund i kontanter för dina utgifter på plats. I Skottland är valutan också pund. Där ger Bank of Scotland, Clydesdale Bank och The Royal Bank of Scotland ut egna sedlar, medan Bank of England ger ut sedlarna i England och Wales (källa: Bank of England).
             </p>
           </div>
 
@@ -74,9 +90,9 @@ export default function MoneyCurrency() {
           </div>
 
           <div>
-            <h2 className="heading-band mb-4">Kort eller kontanter?</h2>
+            <h2 className="heading-band mb-4">Behöver man kontanter i London och England? Kort eller kontanter</h2>
             <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-light)" }}>
-              <strong>Kort, särskilt kontaktlösa betalningar, är mycket utbrett</strong> i Storbritannien. I många situationer klarar du dig helt utan kontanter - från kollektivtrafik och kaféer till större butiker.
+              <strong>Kort, särskilt kontaktlösa betalningar, är mycket utbrett</strong> i Storbritannien. I många situationer klarar du dig helt utan kontanter - från kollektivtrafik och kaféer till större butiker. Kollektivtrafiken i London (TfL) betalar du med kontaktlöst kort eller Oyster (källa: TfL).
             </p>
             <ul className="space-y-2 text-sm" style={{ color: "var(--color-text-light)" }}>
               <li>&bull; Det kan ändå vara <strong>praktiskt med lite kontanter</strong> för mindre butiker, marknader och dricks.</li>
