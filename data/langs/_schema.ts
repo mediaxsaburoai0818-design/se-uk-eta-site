@@ -39,6 +39,7 @@ export type PageContent = {
   h1: string;
   lead: string;
   sections: { h: string; p: string[] }[];
+  officialLink?: { href: string; label: string }; // 本文下のボタン先を変えるとき（無ければ officialLinkLabel で申請ページへ）
 };
 
 export type LangContent = {

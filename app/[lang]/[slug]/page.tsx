@@ -68,9 +68,9 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
         ))}
 
         <div className="mt-10">
-          <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"
+          <a href={page.officialLink?.href ?? "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta"}
              target="_blank" rel="noopener noreferrer" className="btn">
-            {c.officialLinkLabel} <span className="arrow" aria-hidden="true">→</span>
+            {page.officialLink?.label ?? c.officialLinkLabel} <span className="arrow" aria-hidden="true">→</span>
           </a>
         </div>
         {/* 同じ言語のほかのページ（各ページが言語TOPからの1本しか張られていなかった・2026-10-14） */}

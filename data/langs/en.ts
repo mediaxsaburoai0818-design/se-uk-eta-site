@@ -121,19 +121,20 @@ const en: LangContent = {
     },
     "status-check": {
       slug: "check-status",
-      title: "Check your UK ETA status: where to check and what you need | 2026",
-      description: "How to check whether your UK ETA has been approved: the decision comes by email, and the status can be looked up with your passport number.",
+      title: "Check UK ETA status: official GOV.UK page and what you need | 2026",
+      description: "Check your UK ETA on GOV.UK (gov.uk/check-eta) with the passport you applied with. It shows if you have an ETA and when it expires, not pending applications.",
       h1: "Checking your UK ETA status",
-      lead: "The decision is sent by email. If it has not arrived, you can look up the status using the details of the passport you applied with.",
+      lead: "Check your UK ETA on the official GOV.UK page, gov.uk/check-eta, using the passport you applied with. It shows whether you have an ETA and when it expires. You cannot use it while you are still waiting for a decision: that comes by email.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Check your ETA on GOV.UK" },
       sections: [
-        { h: "Check your email first", p: [
-          "The approval goes to the address you gave in the application. Check your spam folder before assuming something went wrong.",
-          "No printable document is issued: the authorisation is recorded against your passport." ] },
+        { h: "Where to check your UK ETA", p: [
+          "The official service is Check your electronic travel authorisation (ETA) at gov.uk/check-eta. It shows whether you have an ETA and when it expires.",
+          "Your ETA is linked to the passport you applied with, and you only need to show your passport when you travel." ] },
         { h: "What you need", p: [
-          "The passport number you applied with, and your personal details exactly as you entered them.",
-          "If you applied with a different passport, the check will not find it." ] },
-        { h: "If it takes longer", p: [
-          `Most decisions arrive within 1 day, but allow up to ${F.decisionDays} working days. If it takes longer and your departure is close, contact the official channels.`,
+          "The passport you used when you applied for your ETA.",
+          "If your passport has expired or changed, you need to apply for a new ETA. The same applies if your ETA has expired." ] },
+        { h: "If you are still waiting for a decision", p: [
+          `The decision comes by email, usually within a day, but allow up to ${F.decisionDays} working days (Monday to Friday). Check your spam or junk folder. If you applied on another website and got no confirmation email, contact that website. If you have no decision after ${F.decisionDays} working days, contact UKVI. You must wait for the email confirming your ETA before you travel to the UK.`,
         ] },
       ],
     },
