@@ -4,9 +4,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { JsonLd, pageLd, str } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "UK ETA-avgift 2026 £20 - höjning från £16 och betalsätt",
+  title: "ETA kostnad 2026: £20 (cirka 260 kr) – vad kostar ETA till Storbritannien?",
   description:
-    "Den aktuella UK ETA-avgiften 2026 är £20 (höjning från £16 sedan 9 april 2025). Engångsbetalning, giltighet 2 år, inga dolda kostnader.",
+    "Vad kostar ETA till Storbritannien? Kostnaden är £20 (cirka 260 kr) enligt GOV.UK sedan 8 april 2026, per person och även för barn. Ingen återbetalning.",
 };
 
 export default function Fee() {
@@ -24,18 +24,17 @@ export default function Fee() {
             style={{ fontFamily: "var(--font-noto-serif), serif" }}
           >
             <span className="deco-line" />
-            Avgifter för UK ETA-ansökan
+            ETA-kostnad 2026: vad kostar UK ETA?
           </h1>
           <p className="text-white/85 leading-relaxed">
-            Den officiella avgiften för att ansöka om UK ETA är <strong>&pound;20</strong> (cirka 250 kr).
-            Nedan presenterar vi detaljerad information om kostnader och betalsätt.
+            Vad kostar en ETA? Den officiella kostnaden för att ansöka om UK ETA, per person och även för barn, är <strong>&pound;20</strong> (cirka 260 kr) enligt GOV.UK sedan 8 april 2026, då avgiften höjdes från &pound;16. Nedan presenterar vi detaljerad information om kostnader och betalsätt.
           </p>
         </div>
       </section>
 
       <section className="bg-gray-50 reveal">
         <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Avgiftsstruktur</h2>
+          <h2 className="heading-band mb-6">Vad kostar en ETA till Storbritannien 2026?</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border border-gray-200 bg-white">
               <thead className="bg-gray-100">
@@ -69,9 +68,9 @@ export default function Fee() {
 
       <section className="bg-white reveal">
         <div className="max-w-4xl mx-auto px-6 py-10">
-          <h2 className="heading-band mb-6">Omräkning till svenska kronor</h2>
+          <h2 className="heading-band mb-6">Vad kostar ETA i svenska kronor?</h2>
           <p className="text-gray-600 leading-relaxed">
-            &pound;20 motsvarar cirka 250 kr (beroende på aktuell växelkurs).
+            &pound;20 motsvarar cirka 260 kr (ECB:s referenskurser 4 november 2026; beror på aktuell växelkurs).
             Det exakta beloppet i kronor beror på den kurs som tillämpas av
             banken som utfärdat betalkortet. En extra avgift för
             valutaväxling kan tillkomma.
