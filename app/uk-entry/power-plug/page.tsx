@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Eluttag och spänning i Storbritannien: Type G (2026)",
+  title: "Eluttag i Storbritannien och London: typ G, 230 V (2026)",
   description:
-    "Storbritannien har eluttag typ G (fyrkantig trestift), 230 V, 50 Hz. Med INPUT 100-240 V räcker en reseadapter - kontrollera alltid märkningen.",
+    "Brittiska eluttag i Storbritannien och London är typ G (BS 1363, tre fyrkantiga stift), 230 V, 50 Hz. Med INPUT 100-240 V räcker en reseadapter.",
   alternates: { canonical: "https://eta-se.com/uk-entry/power-plug/" },
 };
 
@@ -32,10 +32,10 @@ export default function PowerPlug() {
       },
       {
         "@type": "Question",
-        name: "Vilken typ av eluttag används i Storbritannien?",
+        name: "Vilka eluttag har Storbritannien och London?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Storbritannien använder eluttag av typ G, med tre fyrkantiga stift. Spänningen är 230 V och frekvensen 50 Hz.",
+          text: "Brittiska eluttag, i London som i resten av Storbritannien, är av typ G med tre fyrkantiga stift (BS 1363, 13 A). Spänningen är 230 V och frekvensen 50 Hz.",
         },
       },
     ],
@@ -49,10 +49,10 @@ export default function PowerPlug() {
           <p className="kicker mb-3" style={{ color: "var(--color-gold)" }}>INRESA TILL UK</p>
           <h1 className="deco-head text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-noto-serif), serif" }}>
             <span className="deco-line" />
-            Eluttag och spänning i Storbritannien
+            Eluttag i Storbritannien och London
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            Storbritannien använder eluttag av typ G med tre fyrkantiga stift, och spänningen är 230 V. Vilken reseadapter du behöver, när det räcker med bara en adapter och när en spänningsomvandlare kan krävas - allt avgörs av apparatens märkning.
+            Brittiska eluttag, i London som i resten av Storbritannien, är av typ G med tre fyrkantiga stift, och spänningen är 230 V. Vilken reseadapter du behöver, när det räcker med bara en adapter och när en spänningsomvandlare kan krävas - allt avgörs av apparatens märkning.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function PowerPlug() {
       <section className="py-12 md:py-16 bg-white">
         <article className="max-w-4xl mx-auto px-6 space-y-10">
           <div>
-            <h2 className="heading-band mb-4">Type G och 230 V: så ser den brittiska standarden ut</h2>
+            <h2 className="heading-band mb-4">Vilka eluttag har Storbritannien och London?</h2>
             <p className="leading-relaxed" style={{ color: "var(--color-text-light)" }}>
               Eluttagen i Storbritannien är av <strong>typ G</strong> - kontakten har <strong>tre fyrkantiga stift</strong>. Spänningen är <strong>230 V</strong> och frekvensen <strong>50 Hz</strong>. För att kunna ansluta utrustning med annan kontakttyp behöver du en <strong>reseadapter till typ G</strong>.
             </p>
@@ -109,10 +109,10 @@ export default function PowerPlug() {
 
           <p className="text-sm text-gray-500">
             Officiell och teknisk referens:{" "}
-            <a href="https://www.gov.uk/guidance/electrical-products-and-appliances" target="_blank" rel="noopener noreferrer" className="content-link">GOV.UK - Electrical products and appliances</a>. Den brittiska standarden för stickproppar och uttag är BS 1363 (typ G).
+            <a href="https://www.legislation.gov.uk/uksi/2002/2665/regulation/27/made" target="_blank" rel="noopener noreferrer" className="content-link">legislation.gov.uk - ESQCR 2002, reg. 27 (230 V, 50 Hz)</a>. Den brittiska standarden för 13 A-stickproppar och uttag är BS 1363 (typ G; Plugs and Sockets etc. (Safety) Regulations 1994). 230 V och 50 Hz: Electricity Safety, Quality and Continuity Regulations 2002, reg. 27.
           </p>
 
-          <Breadcrumb items={[{ label: "Inresa till Storbritannien och visum", href: "/uk-entry/wjazd-i-wiza/" }, { label: "Eluttag och spänning i Storbritannien" }]} />
+          <Breadcrumb items={[{ label: "Inresa till Storbritannien och visum", href: "/uk-entry/wjazd-i-wiza/" }, { label: "Eluttag i Storbritannien och London" }]} />
         </article>
       </section>
     </div>
