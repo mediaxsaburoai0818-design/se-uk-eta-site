@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Vad får man ta med till England? Tullregler (2026)",
+  title: "Vad får man ta med till England – och hur mycket alkohol hem? (2026)",
   description:
-    "Kött och mejeriprodukter från EU får inte tas in i UK (undantag: modersmjölksersättning, max 2 kg). Tullfria kvoter för alkohol och tobak samt £10 000-regeln.",
+    "Från England till Sverige: 1 l sprit, 4 l vin, 16 l starköl tullfritt (Tullverket). Till UK: 4 l sprit, 18 l vin, 42 l öl; inget kött eller mejeri från EU.",
   alternates: { canonical: "https://eta-se.com/uk-entry/uk-customs-rules/" },
 };
 
@@ -32,6 +32,14 @@ export default function UkCustomsRules() {
       },
       {
         "@type": "Question",
+        name: "Hur mycket sprit och alkohol får man ta med från England till Sverige?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Tullfritt 1 liter sprit eller 2 liter starkvin, 4 liter vin och 16 liter starköl enligt Tullverket. Du ska ha fyllt 20 år och ha varit utomlands minst 20 timmar eller komma med kommersiellt flyg. Har du mer ska du välja den röda filen och betala tull och skatt.",
+        },
+      },
+      {
+        "@type": "Question",
         name: "Måste jag deklarera kontanter vid inresa till Storbritannien?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -52,7 +60,7 @@ export default function UkCustomsRules() {
             Vad får man ta med till England? Tullen i Storbritannien
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            Den viktigaste regeln: från EU får du inte ta med kött och mejeriprodukter till Storbritannien. Vilka livsmedel som är tillåtna, vilka undantag som gäller för spädbarn, kvoterna för alkohol och tobak och när kontanter måste deklareras.
+            Den viktigaste regeln: från EU får du inte ta med kött och mejeriprodukter till Storbritannien. Hem från England till Sverige gäller Tullverkets kvot: 1 liter sprit eller 2 liter starkvin, 4 liter vin och 16 liter starköl. Vilka livsmedel som är tillåtna, vilka undantag som gäller för spädbarn, kvoterna för alkohol och tobak och när kontanter måste deklareras.
           </p>
         </div>
       </section>
@@ -128,7 +136,7 @@ export default function UkCustomsRules() {
               </table>
             </div>
             <p className="leading-relaxed mt-3 text-sm" style={{ color: "var(--color-text-light)" }}>
-              Allt som överstiger kvoterna måste deklareras, och tillhörande avgifter måste betalas.
+              Allt som överstiger kvoterna måste deklareras, och tillhörande avgifter måste betalas. Det här är Storbritanniens kvoter vid ankomst. Hem till Sverige gäller Tullverkets regler: 1 liter sprit eller 2 liter starkvin, 4 liter vin och 16 liter starköl tullfritt, om du fyllt 20 år och varit utomlands minst 20 timmar eller kommer med kommersiellt flyg. Har du mer ska du välja den röda filen.
             </p>
           </div>
 
