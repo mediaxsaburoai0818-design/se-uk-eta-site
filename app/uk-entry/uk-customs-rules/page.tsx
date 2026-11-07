@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Vad får man ta med till England – och hur mycket alkohol hem? (2026)",
   description:
-    "Från England till Sverige: 1 l sprit, 4 l vin, 16 l starköl tullfritt (Tullverket). Till UK: 4 l sprit, 18 l vin, 42 l öl; inget kött eller mejeri från EU.",
+    "Från England till Sverige: 1 l sprit, 4 l vin, 16 l starköl tullfritt (Tullverket). Till UK: 4 l sprit, 18 l vin, 42 l öl; inget mejeri eller rött kött från EU.",
   alternates: { canonical: "https://eta-se.com/uk-entry/uk-customs-rules/" },
 };
 
