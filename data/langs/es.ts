@@ -76,20 +76,21 @@ const es: LangContent = {
     },
     "status-check": {
       slug: "consultar-estado",
-      title: "Consultar el estado de la UK ETA: dónde y qué necesitas | 2026",
+      title: "Consultar el estado de la UK ETA: página oficial de GOV.UK y qué necesitas | 2026",
       description:
-        "Cómo saber si tu UK ETA está aprobada: el aviso llega por correo y el estado se consulta con el número de pasaporte. Qué hacer si no recibes respuesta.",
+        "Consulta tu UK ETA en GOV.UK (gov.uk/check-eta) con el pasaporte de la solicitud. Muestra si tienes ETA y cuándo caduca, no las solicitudes pendientes.",
       h1: "Cómo consultar el estado de tu UK ETA",
-      lead: "La decisión se comunica por correo electrónico. Si no te ha llegado, puedes comprobar el estado con los datos del pasaporte con el que solicitaste la autorización.",
+      lead: "Consulta tu UK ETA en la página oficial de GOV.UK, gov.uk/check-eta, con el pasaporte con el que la solicitaste. Muestra si tienes una ETA y cuándo caduca. No puedes usarla mientras esperas la decisión: esta llega por correo electrónico.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Consultar tu ETA en GOV.UK" },
       sections: [
-        { h: "Primero revisa el correo", p: [
-          "El aviso de aprobación se envía a la dirección que indicaste al solicitarla. Revisa también la carpeta de spam antes de dar por perdida la solicitud.",
-          "No se emite ningún documento para imprimir: la autorización queda registrada junto al pasaporte." ] },
+        { h: "Dónde consultar tu UK ETA", p: [
+          "El servicio oficial es «Check your electronic travel authorisation (ETA)», en gov.uk/check-eta. Muestra si tienes una ETA y cuándo caduca.",
+          "Tu ETA está vinculada al pasaporte con el que la solicitaste, y al viajar solo tienes que mostrar el pasaporte." ] },
         { h: "Qué necesitas para consultar", p: [
-          "El número del pasaporte con el que hiciste la solicitud y los datos personales tal y como los introdujiste.",
-          "Si solicitaste la ETA con otro pasaporte, la consulta no la encontrará." ] },
-        { h: "Si tarda más de lo previsto", p: [
-          `La mayoría de decisiones llegan en 1 día, pero conviene contar con hasta ${F.decisionDays} días laborables. Si se supera ese plazo y tienes el vuelo cerca, contacta por los canales oficiales.`,
+          "El pasaporte que usaste al solicitar la ETA.",
+          "Si tu pasaporte ha caducado o lo has cambiado, tienes que solicitar una nueva ETA. Lo mismo si tu ETA ha caducado." ] },
+        { h: "Si aún esperas la decisión", p: [
+          `La decisión llega por correo electrónico, normalmente en un día, pero cuenta con hasta ${F.decisionDays} días laborables (de lunes a viernes). Revisa la carpeta de spam o correo no deseado. Si la solicitaste en otra web y no recibiste correo de confirmación, contacta con esa web. Si a los ${F.decisionDays} días laborables no tienes decisión, contacta con UKVI. Debes esperar al correo que confirma tu ETA antes de viajar al Reino Unido.`,
         ] },
       ],
     },

@@ -72,19 +72,20 @@ const fi: LangContent = {
     },
     "status-check": {
       slug: "tilan-tarkistus",
-      title: "UK ETA:n tilan tarkistus: mistä ja mitä tarvitset | 2026",
-      description: "Näin tarkistat, onko UK ETA hyväksytty: ilmoitus tulee sähköpostiin ja tilan voi tarkistaa passin numerolla.",
+      title: "UK ETA:n tilan tarkistus: virallinen GOV.UK-sivu ja mitä tarvitset | 2026",
+      description: "Tarkista UK ETA GOV.UK:ssa (gov.uk/check-eta) sillä passilla, jolla hait. Näet, onko sinulla ETA ja milloin se päättyy – et vielä käsiteltäviä hakemuksia.",
       h1: "UK ETA:n tilan tarkistaminen",
-      lead: "Päätös ilmoitetaan sähköpostitse. Jos viestiä ei ole tullut, voit tarkistaa tilan sen passin tiedoilla, jolla haun teit.",
+      lead: "Tarkista UK ETA virallisella GOV.UK-sivulla, gov.uk/check-eta, sillä passilla, jolla haun teit. Näet, onko sinulla ETA ja milloin se päättyy. Palvelua ei voi käyttää, kun odotat vielä päätöstä: se tulee sähköpostiin.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Tarkista ETA GOV.UK:ssa" },
       sections: [
-        { h: "Katso ensin sähköpostisi", p: [
-          "Hyväksyntä lähetetään osoitteeseen, jonka ilmoitit hakemuksessa. Tarkista myös roskapostikansio ennen kuin oletat, että jokin meni pieleen.",
-          "Tulostettavaa asiakirjaa ei anneta: lupa on merkitty passiisi." ] },
+        { h: "Mistä UK ETA tarkistetaan", p: [
+          "Virallinen palvelu on Check your electronic travel authorisation (ETA) osoitteessa gov.uk/check-eta. Se näyttää, onko sinulla ETA ja milloin se päättyy.",
+          "ETA on sidottu passiin, jolla hait, ja matkalla riittää, että näytät passisi." ] },
         { h: "Mitä tarvitset", p: [
-          "Passin numeron, jolla haun teit, ja henkilötietosi sellaisina kuin ne täytit.",
-          "Jos haet toisen passin tiedoilla, tarkistus ei löydä lupaa." ] },
-        { h: "Jos käsittely venyy", p: [
-          `Useimmat päätökset tulevat vuorokaudessa, mutta varaudu enintään ${F.decisionDays} arkipäivään. Jos käsittely venyy pidemmälle ja lähtö lähestyy, ota yhteyttä virallisia kanavia pitkin.`,
+          "Passi, jota käytit hakiessasi ETA:a.",
+          "Jos passisi on vanhentunut tai vaihtunut, sinun on haettava uusi ETA. Sama koskee tilannetta, jossa ETA on päättynyt." ] },
+        { h: "Jos odotat vielä päätöstä", p: [
+          `Päätös tulee sähköpostiin, yleensä vuorokauden kuluessa, mutta varaudu enintään ${F.decisionDays} arkipäivään (maanantaista perjantaihin). Tarkista roskapostikansio. Jos hait toisen sivuston kautta etkä saanut vahvistusviestiä, ota yhteyttä kyseiseen sivustoon. Jos päätöstä ei ole tullut ${F.decisionDays} arkipäivän jälkeen, ota yhteyttä UKVI:hin. Odota ETA:n vahvistava sähköposti ennen kuin matkustat Isoon-Britanniaan.`,
         ] },
       ],
     },

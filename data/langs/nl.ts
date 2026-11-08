@@ -72,19 +72,20 @@ const nl: LangContent = {
     },
     "status-check": {
       slug: "status-controleren",
-      title: "Status van uw UK ETA controleren: waar en wat u nodig heeft | 2026",
-      description: "Zo controleert u of uw UK ETA is goedgekeurd: de melding komt per e-mail en de status vraagt u op met uw paspoortnummer.",
+      title: "Status van uw UK ETA controleren: officiële GOV.UK-pagina en wat u nodig heeft | 2026",
+      description: "Controleer uw UK ETA op GOV.UK (gov.uk/check-eta) met het paspoort van uw aanvraag. U ziet of u een ETA heeft en wanneer die verloopt, geen lopende aanvragen.",
       h1: "De status van uw UK ETA controleren",
-      lead: "De beslissing wordt per e-mail meegedeeld. Is die niet aangekomen, dan kunt u de status opvragen met de gegevens van het paspoort waarmee u de aanvraag deed.",
+      lead: "Controleer uw UK ETA op de officiële GOV.UK-pagina, gov.uk/check-eta, met het paspoort waarmee u de aanvraag deed. U ziet of u een ETA heeft en wanneer die verloopt. Wacht u nog op een beslissing, dan kunt u de dienst niet gebruiken: die beslissing komt per e-mail.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Uw ETA controleren op GOV.UK" },
       sections: [
-        { h: "Kijk eerst in uw e-mail", p: [
-          "De goedkeuring gaat naar het adres dat u bij de aanvraag opgaf. Kijk ook in de map ongewenste e-mail voordat u ervan uitgaat dat er iets misging.",
-          "Er wordt geen document verstrekt om af te drukken: de toestemming staat geregistreerd bij uw paspoort." ] },
+        { h: "Waar u uw UK ETA controleert", p: [
+          "De officiële dienst heet Check your electronic travel authorisation (ETA) en staat op gov.uk/check-eta. U ziet of u een ETA heeft en wanneer die verloopt.",
+          "Uw ETA is gekoppeld aan het paspoort waarmee u de aanvraag deed; op reis hoeft u alleen uw paspoort te tonen." ] },
         { h: "Wat u nodig heeft", p: [
-          "Het paspoortnummer waarmee u de aanvraag deed en uw persoonsgegevens zoals u ze heeft ingevuld.",
-          "Heeft u de ETA met een ander paspoort aangevraagd, dan vindt de controle hem niet." ] },
-        { h: "Als het langer duurt", p: [
-          `De meeste beslissingen komen binnen 1 dag, maar houd rekening met maximaal ${F.decisionDays} werkdagen. Duurt het langer en nadert uw vertrek, neem dan contact op via de officiële kanalen.`,
+          "Het paspoort dat u gebruikte toen u de ETA aanvroeg.",
+          "Is uw paspoort verlopen of heeft u een nieuw paspoort, dan moet u een nieuwe ETA aanvragen. Dat geldt ook als uw ETA is verlopen." ] },
+        { h: "Als u nog op een beslissing wacht", p: [
+          `De beslissing komt per e-mail, meestal binnen een dag, maar houd rekening met maximaal ${F.decisionDays} werkdagen (maandag tot en met vrijdag). Kijk in de map spam of ongewenste e-mail. Heeft u via een andere website aangevraagd en geen bevestigingsmail ontvangen, neem dan contact op met die website. Heeft u na ${F.decisionDays} werkdagen nog geen beslissing, neem dan contact op met UKVI. Wacht op de e-mail die uw ETA bevestigt voordat u naar het VK reist.`,
         ] },
       ],
     },

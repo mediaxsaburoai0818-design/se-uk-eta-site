@@ -73,19 +73,20 @@ const pt: LangContent = {
     },
     "status-check": {
       slug: "consultar-estado",
-      title: "Consultar o estado da UK ETA: onde e o que precisa | 2026",
-      description: "Como confirmar se a UK ETA foi aprovada: o aviso chega por email e o estado consulta-se com o número do passaporte.",
+      title: "Consultar o estado da UK ETA: página oficial GOV.UK e o que precisa | 2026",
+      description: "Consulte a sua UK ETA no GOV.UK (gov.uk/check-eta) com o passaporte do pedido. Mostra se tem ETA e quando expira, não os pedidos ainda pendentes.",
       h1: "Como consultar o estado da UK ETA",
-      lead: "A decisão é comunicada por email. Se não chegou, pode consultar o estado com os dados do passaporte usado no pedido.",
+      lead: "Consulte a sua UK ETA na página oficial do GOV.UK, gov.uk/check-eta, com o passaporte usado no pedido. Mostra se tem uma ETA e quando expira. Não a pode usar enquanto aguarda a decisão: essa chega por email.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Consultar a ETA no GOV.UK" },
       sections: [
-        { h: "Verifique primeiro o email", p: [
-          "O aviso de aprovação é enviado para o endereço indicado no pedido. Veja também a pasta de spam antes de dar o pedido como perdido.",
-          "Não é emitido nenhum documento para imprimir: a autorização fica registada junto do passaporte." ] },
+        { h: "Onde consultar a UK ETA", p: [
+          "O serviço oficial é o «Check your electronic travel authorisation (ETA)», em gov.uk/check-eta. Mostra se tem uma ETA e quando expira.",
+          "A ETA fica associada ao passaporte usado no pedido e, ao viajar, só precisa de mostrar o passaporte." ] },
         { h: "O que precisa para consultar", p: [
-          "O número do passaporte usado no pedido e os dados pessoais tal como os introduziu.",
-          "Se pediu a ETA com outro passaporte, a consulta não a encontra." ] },
-        { h: "Se demorar mais do que o previsto", p: [
-          `A maioria das decisões chega em 1 dia, mas convém contar com até ${F.decisionDays} dias úteis. Se ultrapassar esse prazo e tiver o voo próximo, contacte pelos canais oficiais.`,
+          "O passaporte que usou quando pediu a ETA.",
+          "Se o passaporte expirou ou mudou, tem de pedir uma nova ETA. O mesmo se aplica se a ETA tiver expirado." ] },
+        { h: "Se ainda aguarda a decisão", p: [
+          `A decisão chega por email, normalmente num dia, mas conte com até ${F.decisionDays} dias úteis (de segunda a sexta). Veja a pasta de spam ou lixo eletrónico. Se fez o pedido noutro site e não recebeu email de confirmação, contacte esse site. Se não tiver decisão ao fim de ${F.decisionDays} dias úteis, contacte a UKVI. Tem de esperar pelo email que confirma a ETA antes de viajar para o Reino Unido.`,
         ] },
       ],
     },

@@ -72,19 +72,20 @@ const da: LangContent = {
     },
     "status-check": {
       slug: "tjek-status",
-      title: "Tjek status på din UK ETA: hvor og hvad du skal bruge | 2026",
-      description: "Sådan tjekker du, om din UK ETA er godkendt: beskeden kommer på e-mail, og status slår du op med dit pasnummer.",
+      title: "Tjek status på din UK ETA: officiel GOV.UK-side og hvad du skal bruge | 2026",
+      description: "Tjek din UK ETA på GOV.UK (gov.uk/check-eta) med det pas, du søgte med. Du ser, om du har en ETA, og hvornår den udløber – ikke ansøgninger under behandling.",
       h1: "Tjek status på din UK ETA",
-      lead: "Afgørelsen meddeles på e-mail. Er den ikke kommet, kan du slå status op med oplysningerne fra det pas, du søgte med.",
+      lead: "Tjek din UK ETA på den officielle GOV.UK-side, gov.uk/check-eta, med det pas, du søgte med. Du ser, om du har en ETA, og hvornår den udløber. Du kan ikke bruge tjenesten, mens du venter på en afgørelse: den kommer på e-mail.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Tjek din ETA på GOV.UK" },
       sections: [
-        { h: "Se først i din e-mail", p: [
-          "Godkendelsen sendes til den adresse, du oplyste i ansøgningen. Kig også i spam-mappen, før du går ud fra, at noget er gået galt.",
-          "Der udstedes ikke et dokument til udprintning: tilladelsen er registreret på dit pas." ] },
+        { h: "Her tjekker du din UK ETA", p: [
+          "Den officielle tjeneste hedder Check your electronic travel authorisation (ETA) og ligger på gov.uk/check-eta. Den viser, om du har en ETA, og hvornår den udløber.",
+          "Din ETA er knyttet til det pas, du søgte med, og på rejsen skal du kun vise dit pas." ] },
         { h: "Det skal du bruge", p: [
-          "Det pasnummer, du søgte med, og dine personoplysninger, som du udfyldte dem.",
-          "Har du søgt med et andet pas, finder opslaget den ikke." ] },
-        { h: "Hvis det trækker ud", p: [
-          `De fleste afgørelser kommer inden for 1 dag, men regn med op til ${F.decisionDays} hverdage. Trækker det længere ud, og nærmer afrejsen sig, så kontakt de officielle kanaler.`,
+          "Det pas, du brugte, da du søgte om din ETA.",
+          "Er dit pas udløbet eller skiftet ud, skal du søge om en ny ETA. Det samme gælder, hvis din ETA er udløbet." ] },
+        { h: "Hvis du stadig venter på en afgørelse", p: [
+          `Afgørelsen kommer på e-mail, som regel inden for en dag, men regn med op til ${F.decisionDays} hverdage (mandag til fredag). Kig i spam- eller uønsket post-mappen. Har du søgt via en anden hjemmeside og ikke fået en bekræftelsesmail, så kontakt den hjemmeside. Har du ingen afgørelse efter ${F.decisionDays} hverdage, så kontakt UKVI. Du skal vente på den e-mail, der bekræfter din ETA, før du rejser til Storbritannien.`,
         ] },
       ],
     },

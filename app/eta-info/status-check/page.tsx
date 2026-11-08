@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Kontrollera ETA-status: så verifierar du din UK ETA (2026)",
+  title: "Check UK ETA: kontrollera din ETA på gov.uk/check-eta – giltighet och status (2026)",
   description:
-    "Kontrollera status på din UK ETA: officiella verktyget gov.uk/check-eta, beslut via e-post inom 1 dag (max 3 arbetsdagar) och vad du gör om beskedet dröjer.",
+    "Check UK ETA: på gov.uk/check-eta ser du med passet från ansökan om du har en ETA och när den löper ut. En pågående ansökan syns inte – beslut via e-post.",
 };
 
 export default function StatusCheck() {
@@ -24,12 +24,7 @@ export default function StatusCheck() {
             <span className="deco-line" />
             Kontrollera status på UK ETA-ansökan
           </h1>
-          <p className="text-white/85 leading-relaxed">
-            Beslutet om din UK ETA skickas via e-post från UK Visas and
-            Immigration (UKVI). Här förklarar vi hur lång tid det tar, hur du
-            använder det officiella kontrollverktyget på GOV.UK och vad du gör
-            om beskedet dröjer.
-          </p>
+          <p className="text-white/85 leading-relaxed">Check UK ETA: den officiella tjänsten är gov.uk/check-eta. Med passet du ansökte med ser du om du har en ETA och när den löper ut. En ansökan som fortfarande handläggs syns inte där – beslutet skickas via e-post från UK Visas and Immigration (UKVI), oftast inom en dag och senast inom 3 arbetsdagar. Här förklarar vi hur du använder verktyget och vad du gör om beskedet dröjer.</p>
         </div>
       </section>
 

@@ -78,19 +78,20 @@ const zhTw: LangContent = {
     },
     "status-check": {
       slug: "status-check",
-      title: "查詢 UK ETA 的申請狀態：在哪裡查、需要什麼｜2026",
-      description: "如何確認 UK ETA 是否核准：結果會以電子郵件通知，也可以用護照資料查詢狀態。",
+      title: "查詢 UK ETA 狀態：GOV.UK 官方頁面與需要準備的東西｜2026",
+      description: "UK ETA 請在 GOV.UK（gov.uk/check-eta）用申請時的護照查詢，可確認是否持有 ETA 及到期日；審查中的申請查不到。",
       h1: "查詢 UK ETA 的狀態",
-      lead: "結果會以電子郵件通知。若沒有收到，可以用申請時使用的護照資料查詢狀態。",
+      lead: "請在 GOV.UK 官方頁面 gov.uk/check-eta，用申請時使用的護照查詢 UK ETA。可以確認是否持有 ETA，以及何時到期。還在等待審查結果時無法使用；結果會以電子郵件通知。",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "在 GOV.UK 查詢 ETA" },
       sections: [
-        { h: "先檢查電子郵件", p: [
-          "核准通知會寄到申請時填寫的地址。判斷是不是出問題之前，請先看過垃圾郵件匣。",
-          "不會核發需要列印的文件；許可是記錄在您的護照上。" ] },
+        { h: "在哪裡查詢 UK ETA", p: [
+          "官方服務是 gov.uk/check-eta 的 Check your electronic travel authorisation (ETA)，可以確認是否持有 ETA 以及何時到期。",
+          "ETA 與申請時使用的護照連結，入境時只需出示護照。" ] },
         { h: "查詢時需要的東西", p: [
-          "申請時使用的護照號碼，以及當時填寫的個人資料。",
-          "若用別本護照查詢，是查不到的。" ] },
-        { h: "等比較久的時候", p: [
-          `多數結果在 1 天內就會出來，但請預留最多 ${F.decisionDays} 個工作天。若時間拉長而出發日逼近，請透過官方管道聯繫。`,
+          "申請 ETA 時使用的護照。",
+          "若護照已過期或換了新護照，需要重新申請 ETA。ETA 已過期時也一樣。" ] },
+        { h: "還在等待結果時", p: [
+          `結果會以電子郵件通知，通常在 1 天內，但請預留最多 ${F.decisionDays} 個工作天（週一至週五）。請先看垃圾郵件匣。若是透過其他網站申請且沒有收到確認信，請聯絡該網站。超過 ${F.decisionDays} 個工作天仍沒有結果，請聯絡 UKVI。必須收到確認 ETA 的電子郵件後，才能前往英國。`,
         ] },
       ],
     },

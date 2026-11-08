@@ -72,19 +72,20 @@ const hu: LangContent = {
     },
     "status-check": {
       slug: "statusz-ellenorzese",
-      title: "Az UK ETA státuszának ellenőrzése: hol és mire van szükség | 2026",
-      description: "Így ellenőrizheti, jóváhagyták-e az UK ETA-t: az értesítés e-mailben érkezik, a státusz pedig az útlevélszámmal kérdezhető le.",
+      title: "Az UK ETA státuszának ellenőrzése: hivatalos GOV.UK-oldal és mire van szükség | 2026",
+      description: "Az UK ETA-t a GOV.UK-n (gov.uk/check-eta) ellenőrizheti az igénylés útlevelével. Megmutatja, van-e ETA-ja és mikor jár le – a folyamatban lévő kérelmet nem.",
       h1: "Az UK ETA státuszának ellenőrzése",
-      lead: "A döntésről e-mailben értesítik. Ha nem érkezett meg, a státuszt lekérdezheti annak az útlevélnek az adataival, amellyel igényelte.",
+      lead: "Az UK ETA-t a hivatalos GOV.UK-oldalon, a gov.uk/check-eta címen ellenőrizheti azzal az útlevéllel, amellyel igényelte. Megmutatja, van-e ETA-ja és mikor jár le. Amíg a döntésre vár, a szolgáltatás nem használható: a döntés e-mailben érkezik.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "ETA ellenőrzése a GOV.UK-n" },
       sections: [
-        { h: "Először nézze meg az e-mailjét", p: [
-          "A jóváhagyás arra a címre érkezik, amelyet az igénylésben megadott. Mielőtt hibára gyanakodna, nézze meg a levélszemét mappát is.",
-          "Nyomtatható dokumentumot nem állítanak ki: az engedély az útleveléhez van rögzítve." ] },
+        { h: "Hol ellenőrizheti az UK ETA-t", p: [
+          "A hivatalos szolgáltatás neve Check your electronic travel authorisation (ETA), címe gov.uk/check-eta. Megmutatja, van-e ETA-ja és mikor jár le.",
+          "Az ETA ahhoz az útlevélhez kapcsolódik, amellyel igényelte, utazáskor csak az útlevelét kell bemutatnia." ] },
         { h: "Mire lesz szüksége", p: [
-          "Az útlevélszámra, amellyel az igénylést benyújtotta, és a személyes adataira úgy, ahogyan megadta őket.",
-          "Ha másik útlevéllel igényelte, a lekérdezés nem találja meg." ] },
-        { h: "Ha elhúzódik", p: [
-          `A döntések többsége 1 napon belül megérkezik, de számoljon legfeljebb ${F.decisionDays} munkanappal. Ha ennél tovább tart és közeledik az indulás, forduljon a hivatalos elérhetőségekhez.`,
+          "Az útlevél, amelyet az ETA igénylésekor használt.",
+          "Ha az útlevele lejárt vagy újat kapott, új ETA-t kell igényelnie. Ugyanez a helyzet, ha az ETA-ja lejárt." ] },
+        { h: "Ha még a döntésre vár", p: [
+          `A döntés e-mailben érkezik, általában egy napon belül, de számoljon legfeljebb ${F.decisionDays} munkanappal (hétfőtől péntekig). Nézze meg a spam vagy levélszemét mappát. Ha másik weboldalon igényelte, és nem kapott visszaigazoló e-mailt, forduljon ahhoz a weboldalhoz. Ha ${F.decisionDays} munkanap után sincs döntés, forduljon az UKVI-hoz. Az Egyesült Királyságba csak az ETA-t visszaigazoló e-mail megérkezése után utazzon.`,
         ] },
       ],
     },

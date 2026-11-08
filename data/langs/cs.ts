@@ -72,19 +72,20 @@ const cs: LangContent = {
     },
     "status-check": {
       slug: "overeni-stavu",
-      title: "Ověření stavu UK ETA: kde a co k tomu potřebujete | 2026",
-      description: "Jak zjistit, zda byla vaše UK ETA schválena: oznámení přijde e-mailem a stav si ověříte podle čísla pasu.",
+      title: "Ověření stavu UK ETA: oficiální stránka GOV.UK a co potřebujete | 2026",
+      description: "UK ETA si ověříte na GOV.UK (gov.uk/check-eta) s pasem, se kterým jste žádali. Uvidíte, zda ETA máte a kdy vyprší – ne žádosti, které se ještě posuzují.",
       h1: "Jak ověřit stav UK ETA",
-      lead: "Rozhodnutí se oznamuje e-mailem. Pokud nedorazilo, můžete si stav ověřit podle údajů z pasu, se kterým jste žádali.",
+      lead: "UK ETA si ověříte na oficiální stránce GOV.UK, gov.uk/check-eta, s pasem, se kterým jste žádali. Uvidíte, zda ETA máte a kdy vyprší. Dokud čekáte na rozhodnutí, službu použít nelze: rozhodnutí přijde e-mailem.",
+      officialLink: { href: "https://www.gov.uk/check-eta", label: "Ověřit ETA na GOV.UK" },
       sections: [
-        { h: "Nejdřív se podívejte do e-mailu", p: [
-          "Schválení míří na adresu, kterou jste v žádosti uvedli. Než usoudíte, že se něco pokazilo, zkontrolujte i složku s nevyžádanou poštou.",
-          "Nevydává se žádný dokument k vytištění: povolení je vedeno u vašeho pasu." ] },
+        { h: "Kde si UK ETA ověříte", p: [
+          "Oficiální služba se jmenuje Check your electronic travel authorisation (ETA) a najdete ji na gov.uk/check-eta. Ukáže, zda ETA máte a kdy vyprší.",
+          "ETA je vázána na pas, se kterým jste žádali, a při cestě stačí předložit pas." ] },
         { h: "Co k tomu potřebujete", p: [
-          "Číslo pasu, se kterým jste žádali, a osobní údaje tak, jak jste je vyplnili.",
-          "Pokud jste žádali s jiným pasem, ověření povolení nenajde." ] },
-        { h: "Když to trvá déle", p: [
-          `Většina rozhodnutí přijde do 1 dne, ale počítejte až s ${F.decisionDays} pracovními dny. Trvá-li to déle a blíží se odlet, obraťte se na oficiální kontakty.`,
+          "Pas, se kterým jste o ETA žádali.",
+          "Pokud vám pas vypršel nebo máte nový, musíte požádat o novou ETA. Totéž platí, když vypršela ETA." ] },
+        { h: "Pokud stále čekáte na rozhodnutí", p: [
+          `Rozhodnutí přijde e-mailem, obvykle do jednoho dne, ale počítejte až s ${F.decisionDays} pracovními dny (pondělí až pátek). Zkontrolujte složku se spamem či nevyžádanou poštou. Pokud jste žádali přes jiný web a nepřišel vám potvrzovací e-mail, obraťte se na tento web. Pokud nemáte rozhodnutí ani po ${F.decisionDays} pracovních dnech, kontaktujte UKVI. Do Spojeného království vycestujte až po e-mailu, který vaši ETA potvrzuje.`,
         ] },
       ],
     },
