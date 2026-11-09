@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Får man köra bil i Storbritannien med utländskt körkort? Regler för besökare (2026)",
+  title: "Körkortsålder i England: 17 år för bil – köra i UK med svenskt körkort (2026)",
   description:
-    "Besökare bosatta utomlands får köra på giltigt hemlandskörkort upp till 12 månader från inresan. Lägsta ålder för bil 17 år, vänstertrafik, försäkring krävs.",
+    "Körkortsålder i England: personbil från 17 år. Besökare kör på giltigt svenskt körkort upp till 12 månader från inresan. Vänstertrafik, försäkring krävs.",
   alternates: { canonical: "https://eta-se.com/uk-entry/driving-in-uk/" },
 };
 
@@ -32,10 +32,10 @@ export default function DrivingInUk() {
       },
       {
         "@type": "Question",
-        name: "Vad gäller för trafiken i Storbritannien - vilken sida och lägsta ålder?",
+        name: "När får man ta körkort i England – vilken är körkortsåldern?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "I Storbritannien kör man på vänster sida av vägen. Lägsta ålder för att köra personbil är 17 år, och det är obligatoriskt att ha en giltig bilförsäkring.",
+          text: "Körkortsåldern för personbil i England (och resten av Storbritannien) är 17 år – då kan de flesta börja övningsköra. I Storbritannien kör man på vänster sida av vägen, och det är obligatoriskt att ha en giltig bilförsäkring.",
         },
       },
     ],
@@ -52,7 +52,7 @@ export default function DrivingInUk() {
             Får man köra bil i Storbritannien med utländskt körkort?
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            Besökare bosatta utanför Storbritannien får köra på ett giltigt hemlandskörkort i upp till 12 månader. Här är reglerna om körtid, internationellt körkort, vänstertrafik, lägsta ålder och försäkring - samt varför en ETA inte är samma sak som ett körtillstånd.
+            När får man ta körkort i England? Lägsta åldern för att köra personbil i Storbritannien är 17 år – då börjar de flesta övningsköra (GOV.UK). Som besökare bosatt utanför Storbritannien får du köra på ett giltigt hemlandskörkort, till exempel ett svenskt, i upp till 12 månader från inresan. Här är reglerna om körtid, internationellt körkort, vänstertrafik och försäkring - samt varför en ETA inte är samma sak som ett körtillstånd.
           </p>
         </div>
       </section>
