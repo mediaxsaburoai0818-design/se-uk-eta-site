@@ -119,7 +119,7 @@ export default function WhatIsEta() {
                 <tr>
                   <td className="p-3 border-b border-gray-100">Kostnad</td>
                   <td className="p-3 border-b border-gray-100">&pound;20</td>
-                  <td className="p-3 border-b border-gray-100">från &pound;100</td>
+                  <td className="p-3 border-b border-gray-100">från &pound;135</td>
                 </tr>
                 <tr>
                   <td className="p-3 border-b border-gray-100">Handläggningstid</td>

@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "Vad \u00e4r skillnaden mellan UK ETA och ett visum?",
-    a: "UK ETA \u00e4r en f\u00f6renklad elektronisk auktorisation f\u00f6r korta vistelser (upp till 6 m\u00e5nader). Kostnad: \u00a320, ans\u00f6kan online. Ett brittiskt visum kr\u00e4ver bes\u00f6k p\u00e5 ett viseringscenter, kostar fr\u00e5n \u00a3100 och till\u00e5ter l\u00e4ngre vistelser eller arbete.",
+    a: "UK ETA \u00e4r en f\u00f6renklad elektronisk auktorisation f\u00f6r korta vistelser (upp till 6 m\u00e5nader). Kostnad: \u00a320, ans\u00f6kan online. Ett brittiskt visum kr\u00e4ver bes\u00f6k p\u00e5 ett viseringscenter, kostar fr\u00e5n \u00a3135 och till\u00e5ter l\u00e4ngre vistelser eller arbete.",
   },
   {
     q: "Omfattas Sverige av kravet på UK ETA?",

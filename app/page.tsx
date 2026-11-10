@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Vad är skillnaden mellan UK ETA och ett visum?",
-    a: "UK ETA är en förenklad elektronisk auktorisation för korta vistelser (upp till 6 månader). Den kostar £20 och ansökan görs online. Ett brittiskt visum kräver besök på ett viseringscenter, kostar från £100 och tillåter längre vistelser eller arbete.",
+    a: "UK ETA är en förenklad elektronisk auktorisation för korta vistelser (upp till 6 månader). Den kostar £20 och ansökan görs online. Ett brittiskt visum kräver besök på ett viseringscenter, kostar från £135 och tillåter längre vistelser eller arbete.",
   },
   {
     q: "Behöver barn från Sverige UK ETA?",
