@@ -121,7 +121,7 @@ const fi: LangContent = {
           "Hakemukset, jotka on käytävä läpi käsin (esimerkiksi kun taustakysymykseen vastaa «kyllä»), kestävät pidempään kuin automaattisesti käsitellyt.",
         ] },
         { h: "Jos mitään ei kuulu", p: [
-          "Tarkista roskapostikansio ja se, että ilmoittamasi osoite on oikein. Tarkista sen jälkeen tila passin tiedoilla.",
+          `Tarkista roskapostikansio ja se, että ilmoittamasi osoite on oikein. Palvelua gov.uk/check-eta ei voi käyttää, kun odotat vielä päätöstä. Jos hait toisen sivuston kautta etkä saanut vahvistusviestiä, ota yhteyttä kyseiseen sivustoon. Jos päätöstä ei ole tullut ${F.decisionDays} arkipäivän jälkeen, ota yhteyttä UKVI:hin.`,
         ] },
       ],
     },

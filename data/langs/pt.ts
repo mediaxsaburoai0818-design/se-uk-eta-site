@@ -122,7 +122,7 @@ const pt: LangContent = {
           "Os casos que precisam de análise manual (por exemplo, respostas afirmativas nas perguntas sobre antecedentes) demoram mais do que os automáticos.",
         ] },
         { h: "O que fazer se não chegar", p: [
-          "Verifique a pasta de spam e confirme que o email indicado está correto. Depois consulte o estado com os dados do passaporte.",
+          `Veja a pasta de spam ou lixo eletrónico e confirme que o email indicado está correto. Enquanto aguarda a decisão, não pode usar gov.uk/check-eta. Se fez o pedido noutro site e não recebeu email de confirmação, contacte esse site. Se não tiver decisão ao fim de ${F.decisionDays} dias úteis, contacte a UKVI.`,
         ] },
       ],
     },

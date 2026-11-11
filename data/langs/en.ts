@@ -170,7 +170,7 @@ const en: LangContent = {
           "Applications that need to be reviewed by a person (for example when a suitability question is answered « yes ») take longer than those handled automatically.",
         ] },
         { h: "If nothing arrives", p: [
-          "Check your spam folder and that the address you entered is correct. Then look up the status using your passport details.",
+          `Check your spam or junk folder and that the address you entered is correct. You cannot use gov.uk/check-eta while you are still waiting for a decision. If you applied on another website and got no confirmation email, contact that website. If you have no decision after ${F.decisionDays} working days, contact UKVI.`,
         ] },
       ],
     },

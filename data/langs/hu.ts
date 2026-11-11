@@ -121,7 +121,7 @@ const hu: LangContent = {
           "Azok a kérelmek, amelyeket kézzel kell átnézni (például ha valamelyik háttérkérdésre «igen» a válasz), tovább tartanak, mint az automatikusan feldolgozottak.",
         ] },
         { h: "Ha semmi nem érkezik", p: [
-          "Nézze meg a levélszemét mappát, és hogy helyes-e a megadott cím. Ezután kérdezze le a státuszt az útlevéladatokkal.",
+          `Nézze meg a spam vagy levélszemét mappát, és hogy helyes-e a megadott cím. Amíg a döntésre vár, a gov.uk/check-eta szolgáltatás nem használható. Ha másik weboldalon igényelte, és nem kapott visszaigazoló e-mailt, forduljon ahhoz a weboldalhoz. Ha ${F.decisionDays} munkanap után sincs döntés, forduljon az UKVI-hoz.`,
         ] },
       ],
     },

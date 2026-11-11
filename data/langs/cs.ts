@@ -121,7 +121,7 @@ const cs: LangContent = {
           "Žádosti, které musí posoudit člověk (například když na některou otázku k bezúhonnosti odpovíte «ano»), trvají déle než ty vyřízené automaticky.",
         ] },
         { h: "Když nic nepřijde", p: [
-          "Zkontrolujte složku s nevyžádanou poštou a správnost zadané adresy. Pak si ověřte stav podle údajů z pasu.",
+          `Zkontrolujte složku se spamem či nevyžádanou poštou a správnost zadané adresy. Dokud čekáte na rozhodnutí, službu gov.uk/check-eta použít nelze. Pokud jste žádali přes jiný web a nepřišel vám potvrzovací e-mail, obraťte se na tento web. Pokud nemáte rozhodnutí ani po ${F.decisionDays} pracovních dnech, kontaktujte UKVI.`,
         ] },
       ],
     },

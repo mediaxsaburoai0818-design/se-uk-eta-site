@@ -121,7 +121,7 @@ const nl: LangContent = {
           "Aanvragen die handmatig moeten worden bekeken (bijvoorbeeld bij een «ja» op de achtergrondvragen) duren langer dan aanvragen die automatisch worden afgehandeld.",
         ] },
         { h: "Als er niets komt", p: [
-          "Controleer de map ongewenste e-mail en of het opgegeven adres klopt. Vraag daarna de status op met uw paspoortgegevens.",
+          `Kijk in de map spam of ongewenste e-mail en controleer of het opgegeven adres klopt. Zolang u op een beslissing wacht, kunt u gov.uk/check-eta niet gebruiken. Heeft u via een andere website aangevraagd en geen bevestigingsmail ontvangen, neem dan contact op met die website. Heeft u na ${F.decisionDays} werkdagen nog geen beslissing, neem dan contact op met UKVI.`,
         ] },
       ],
     },

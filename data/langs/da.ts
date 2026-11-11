@@ -121,7 +121,7 @@ const da: LangContent = {
           "Ansøgninger, der skal gennemgås manuelt (for eksempel ved et «ja» til baggrundsspørgsmålene), tager længere tid end dem, der behandles automatisk.",
         ] },
         { h: "Hvis der ikke kommer noget", p: [
-          "Tjek spam-mappen, og om den oplyste adresse er rigtig. Slå derefter status op med dine pasoplysninger.",
+          `Kig i spam- eller uønsket post-mappen, og tjek, om den oplyste adresse er rigtig. Mens du venter på en afgørelse, kan du ikke bruge gov.uk/check-eta. Har du søgt via en anden hjemmeside og ikke fået en bekræftelsesmail, så kontakt den hjemmeside. Har du ingen afgørelse efter ${F.decisionDays} hverdage, så kontakt UKVI.`,
         ] },
       ],
     },

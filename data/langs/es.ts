@@ -128,7 +128,7 @@ const es: LangContent = {
           "Los casos que necesitan revisión manual (por ejemplo, respuestas afirmativas en las preguntas sobre antecedentes) tardan más que los automáticos.",
         ] },
         { h: "Qué hacer si no llega", p: [
-          "Revisa la carpeta de spam y confirma que el correo que indicaste es correcto. Después, consulta el estado con los datos del pasaporte.",
+          `Revisa la carpeta de spam o correo no deseado y confirma que el correo que indicaste es correcto. Mientras esperas la decisión no puedes usar gov.uk/check-eta. Si la solicitaste en otra web y no recibiste correo de confirmación, contacta con esa web. Si a los ${F.decisionDays} días laborables no tienes decisión, contacta con UKVI.`,
         ] },
       ],
     },

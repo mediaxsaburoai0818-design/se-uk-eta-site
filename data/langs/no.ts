@@ -121,7 +121,7 @@ const no: LangContent = {
           "Søknader som må gjennomgås manuelt (for eksempel ved et «ja» på bakgrunnsspørsmålene) tar lengre tid enn de som behandles automatisk.",
         ] },
         { h: "Hvis ingenting kommer", p: [
-          "Sjekk søppelpostmappen og om adressen du oppga er riktig. Slå deretter opp status med passopplysningene dine.",
+          `Sjekk søppelpost- eller spam-mappen og om adressen du oppga er riktig. Mens du venter på en avgjørelse, kan du ikke bruke gov.uk/check-eta. Har du søkt via et annet nettsted og ikke fått en bekreftelse på e-post, kontakt det nettstedet. Har du ingen avgjørelse etter ${F.decisionDays} virkedager, kontakt UKVI.`,
         ] },
       ],
     },
