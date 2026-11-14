@@ -3,9 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Passkrav för resa till Storbritannien: giltighet och ETA (2026)",
+  title: "Passregler England 2026: passet ska gälla hela vistelsen – id-kort räcker sällan",
   description:
-    "Du behöver ett giltigt pass som i regel gäller hela vistelsen i UK. ETA kopplas till passet och alla, även spädbarn, behöver eget pass. Se kraven på gov.uk.",
+    "Passregler för England/UK: svenskar och andra EU-medborgare behöver ett pass som gäller hela vistelsen. Id-kort räcker bara i vissa fall, t.ex. settled status.",
   alternates: { canonical: "https://eta-se.com/uk-entry/passport-requirements/" },
 };
 
@@ -52,7 +52,7 @@ export default function PassportRequirements() {
             Passkrav för resa till Storbritannien: giltighet och ETA
           </h1>
           <p className="text-white/85 leading-relaxed max-w-2xl">
-            För att besöka Storbritannien behöver du ett giltigt pass som i regel ska gälla under hela vistelsen. Passet är dessutom kopplat till din ETA. Här går vi igenom vad som brukar gälla för passets giltighet, hur passet hänger ihop med ETA:n och varför alla resenärer behöver ett eget pass.
+            Passregler för England och resten av Storbritannien: som svensk eller annan EU-medborgare behöver du ett giltigt pass som gäller under hela vistelsen. Ett nationellt id-kort räcker bara i vissa fall, till exempel om du har settled eller pre-settled status. Passet är dessutom kopplat till din ETA (£20). Här går vi igenom vad som brukar gälla för passets giltighet, hur passet hänger ihop med ETA:n och varför alla resenärer behöver ett eget pass.
           </p>
         </div>
       </section>
