@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/zh-tw";
 
 // 繁体字（台湾）。2026-09-17に一次情報で確認した事実:
 //  ⚠️ 台湾旅券は UK ETA の対象。ただし**旅券に台湾の国民身分証番号が記載されているものに限る**。
@@ -18,6 +19,8 @@ const zhTw: LangContent = {
   nav: { info: "關於 ETA", entry: "入境英國", faq: "常見問題" },
   officialLinkLabel: "前往 GOV.UK 官方網站申請",
   updatedLabel: "更新日",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "what-is-eta",

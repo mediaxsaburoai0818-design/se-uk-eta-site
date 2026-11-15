@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/zh-cn";
 
 // 簡体字（中国本土）。2026-09-17に一次情報で確認した事実:
 //  🚨 **中国本土の旅券は UK ETA の対象外**。英国は中国を visa national に指定しており、
@@ -20,6 +21,8 @@ const zhCn: LangContent = {
   nav: { info: "关于 ETA", entry: "入境英国", faq: "常见问题" },
   officialLinkLabel: "到 GOV.UK 官方网站确认你需要哪一种",
   updatedLabel: "更新日",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "what-is-eta",

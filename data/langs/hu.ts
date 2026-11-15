@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/hu";
 
 // ハンガリー語。英国への渡航が多く、ハンガリー語で書かれたETA解説は競合が薄い。
 const hu: LangContent = {
@@ -15,6 +16,8 @@ const hu: LangContent = {
   nav: { info: "Az ETA-ról", entry: "Utazás az Egyesült Királyságba", faq: "Gyakori kérdések" },
   officialLinkLabel: "Igénylés a GOV.UK hivatalos oldalán",
   updatedLabel: "Frissítve",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "mi-az-eta",

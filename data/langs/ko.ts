@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/ko";
 
 // 韓国語。⚠️ラテン文字ではないため、フォントのフォールバック指定が必要（globals.css を参照）。
 const ko: LangContent = {
@@ -15,6 +16,8 @@ const ko: LangContent = {
   nav: { info: "ETA 안내", entry: "영국 입국", faq: "자주 묻는 질문" },
   officialLinkLabel: "GOV.UK 공식 사이트에서 신청하기",
   updatedLabel: "업데이트",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "eta-ran",

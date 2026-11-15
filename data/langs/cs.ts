@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/cs";
 
 // チェコ語。英国への渡航・就労移動が多く、チェコ語で書かれたETA解説はまだ薄い。
 const cs: LangContent = {
@@ -15,6 +16,8 @@ const cs: LangContent = {
   nav: { info: "O ETA", entry: "Cesta do Spojeného království", faq: "Časté dotazy" },
   officialLinkLabel: "Požádat na oficiálních stránkách GOV.UK",
   updatedLabel: "Aktualizováno",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "co-je-eta",

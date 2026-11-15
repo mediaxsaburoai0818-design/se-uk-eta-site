@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/he";
 
 // ヘブライ語。
 // ⚠️ 右から左に読む言語（RTL）。dir: "rtl" を必ず指定する。
@@ -20,6 +21,8 @@ const he: LangContent = {
   nav: { info: "על ה‑ETA", entry: "נסיעה לבריטניה", faq: "שאלות נפוצות" },
   officialLinkLabel: "להגשת בקשה באתר הרשמי GOV.UK",
   updatedLabel: "עודכן",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "ma-ze-eta",
