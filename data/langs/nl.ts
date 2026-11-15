@@ -92,7 +92,7 @@ const nl: LangContent = {
     validity: {
       slug: "geldigheid",
       title: `UK ETA: ${F.validYears} jaar geldig of tot uw paspoort verloopt | 2026`,
-      description: `De UK ETA is ${F.validYears} jaar geldig vanaf de goedkeuring en geldt voor meerdere reizen. Bij een nieuw paspoort vraagt u hem opnieuw aan.`,
+      description: `Hoe lang is de UK ETA geldig? ${F.validYears} jaar, of tot uw paspoort verloopt als dat eerder is. Reis zo vaak u wilt (max. ${F.staySixMonths} maanden per keer). Nieuw paspoort: nieuwe ETA.`,
       h1: "Hoe lang is de UK ETA geldig",
       lead: `De toestemming is ${F.validYears} jaar geldig, of tot de vervaldatum van uw paspoort als die eerder valt.`,
       sections: [
