@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/en";
 
 // 英語。8月対象シートのオーストラリア(No.9)・ニュージーランド(No.37)がUK ETA対象で英語圏のため必要。
 // ⚠️ 英語はGOV.UK公式と正面から競合する。当サイトの役割は「公式より読みやすい要約」であり、
@@ -17,6 +18,8 @@ const en: LangContent = {
   nav: { info: "About the ETA", entry: "Travelling to the UK", faq: "Frequently asked questions" },
   officialLinkLabel: "Apply on the official GOV.UK site",
   updatedLabel: "Updated",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "what-is-the-eta",

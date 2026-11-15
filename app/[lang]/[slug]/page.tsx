@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { allRoutes, findPage } from "@/data/langs";
+import { allRoutes, findExtra, findPage } from "@/data/langs";
+import LangArticle from "@/components/LangArticle";
 import { JsonLd, pageLd, faqLd } from "@/lib/jsonld";
 
+export const dynamicParams = false;
 export function generateStaticParams() {
   return allRoutes();
 }
@@ -11,6 +13,20 @@ const SITE = "https://eta-se.com";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params;
+  const ex = findExtra(lang, slug);
+  if (ex) {
+    // 追加トピック（data/langs/extra/）: 12ページと同じ組み方。hreflang はステージングの inject-hreflang.py が
+    // out/hreflang-map.json（TopicKey 単位・gen-hreflang-map.ts）から張る
+    return {
+      title: { absolute: `${ex.page.title} | ${ex.content.siteName}` },
+      openGraph: { title: ex.page.title, description: ex.page.description,
+                   siteName: ex.content.siteName,
+                   images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: ex.content.siteName }], locale: ex.content.code.replace('-', '_'), type: 'article' },
+      twitter: { card: 'summary_large_image', images: ['/og-image.jpg'], title: ex.page.title, description: ex.page.description },
+      description: ex.page.description,
+      alternates: { canonical: `${SITE}/${lang}/${slug}/` },
+    };
+  }
   const hit = findPage(lang, slug);
   if (!hit) return {};
   return {
@@ -28,6 +44,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function LangPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
   const { lang, slug } = await params;
+  const ex = findExtra(lang, slug);
+  if (ex) return <LangArticle lang={lang} c={ex.content} page={ex.page} topic={ex.key} />;
   const hit = findPage(lang, slug);
   if (!hit) return null;
   const { content: c, page, key } = hit;

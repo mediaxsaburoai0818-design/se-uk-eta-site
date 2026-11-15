@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/nl";
 
 // オランダ語。未着手の中で最大市場（渡航者約200万人）。ベルギー北部もカバーできる。
 const nl: LangContent = {
@@ -15,6 +16,8 @@ const nl: LangContent = {
   nav: { info: "Over de ETA", entry: "Reizen naar het VK", faq: "Veelgestelde vragen" },
   officialLinkLabel: "Aanvragen op de officiële site van GOV.UK",
   updatedLabel: "Bijgewerkt",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "wat-is-de-eta",

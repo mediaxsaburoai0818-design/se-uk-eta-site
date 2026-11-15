@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/pt";
 
 // ポルトガル語（ポルトガル向け・pt-PT）。渡航者約80万人だが競合3で最も薄い。
 // ⚠️ ブラジル(pt-BR)とは表記が異なるため、code は pt-PT を明示する。
@@ -16,6 +17,8 @@ const pt: LangContent = {
   nav: { info: "Sobre a ETA", entry: "Entrada no Reino Unido", faq: "Perguntas frequentes" },
   officialLinkLabel: "Pedir no site oficial GOV.UK",
   updatedLabel: "Atualizado",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "o-que-e-a-eta",

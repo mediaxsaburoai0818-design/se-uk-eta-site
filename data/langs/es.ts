@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/es";
 
 // スペイン語（スペイン居住者向け）。渡航者約180万人・競合4。
 // ⚠️ 中南米SERPと混在するため、表記は「スペインから渡航する人」を前提にする。
@@ -16,6 +17,8 @@ const es: LangContent = {
   nav: { info: "Sobre la ETA", entry: "Entrada al Reino Unido", faq: "Preguntas frecuentes" },
   officialLinkLabel: "Solicitar en la web oficial de GOV.UK",
   updatedLabel: "Actualizado",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "que-es-la-eta",

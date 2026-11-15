@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/fi";
 
 // フィンランド語。北欧圏で既存のスウェーデン語サイトと補完関係。英語圏サイトが少ない言語。
 const fi: LangContent = {
@@ -15,6 +16,8 @@ const fi: LangContent = {
   nav: { info: "Tietoa ETA:sta", entry: "Matka Britanniaan", faq: "Usein kysytyt kysymykset" },
   officialLinkLabel: "Hae GOV.UK:n virallisilta sivuilta",
   updatedLabel: "Päivitetty",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "mika-on-eta",

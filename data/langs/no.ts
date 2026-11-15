@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/no";
 
 // ノルウェー語（ブークモール）。デンマーク語と語彙は近いが別言語なので使い回さず個別に書く。
 const no: LangContent = {
@@ -15,6 +16,8 @@ const no: LangContent = {
   nav: { info: "Om ETA", entry: "Reise til Storbritannia", faq: "Ofte stilte spørsmål" },
   officialLinkLabel: "Søk på GOV.UK sine offisielle sider",
   updatedLabel: "Oppdatert",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "hva-er-eta",

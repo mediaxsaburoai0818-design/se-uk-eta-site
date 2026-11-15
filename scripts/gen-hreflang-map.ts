@@ -11,13 +11,18 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { LANGS } from "../data/langs/index";
+import { LANGS, extraList } from "../data/langs/index";
 
 const map: Record<string, Record<string, string>> = { _home: {}, _codes: {} };
 for (const [lang, c] of Object.entries(LANGS)) {
   map._home[lang] = `/${lang}/`;
   map._codes[lang] = c.code;
   for (const [key, page] of Object.entries(c.pages)) {
+    (map[key] ??= {})[lang] = `/${lang}/${page.slug}/`;
+  }
+  // 追加トピック（data/langs/extra/・2026-11-15）も TopicKey で同じ表に載せる。
+  // mobile-app は en が pages 側・他言語が extra 側に持つので、同じキーに入って1組になる（BRIDGE の旧方式組とも結ばれる）
+  for (const { key, page } of extraList(c)) {
     (map[key] ??= {})[lang] = `/${lang}/${page.slug}/`;
   }
 }

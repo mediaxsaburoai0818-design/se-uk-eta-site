@@ -1,5 +1,6 @@
 import type { LangContent } from "./_schema";
 import { FACTS as F } from "./_schema";
+import extra, { ui as extraUI } from "./extra/da";
 
 // デンマーク語。英国への渡航が多い北欧市場で、既存のスウェーデン語サイトと補完関係になる。
 const da: LangContent = {
@@ -15,6 +16,8 @@ const da: LangContent = {
   nav: { info: "Om ETA", entry: "Rejse til Storbritannien", faq: "Ofte stillede spørgsmål" },
   officialLinkLabel: "Ansøg på GOV.UK's officielle side",
   updatedLabel: "Opdateret",
+  extraUI,
+  extra,
   pages: {
     "what-is-eta": {
       slug: "hvad-er-eta",
